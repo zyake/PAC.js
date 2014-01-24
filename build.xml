@@ -1,0 +1,10 @@
+<project name="my_lib_js">
+ <property file="build.properties"/>
+
+ <target name="run-unit-tests">
+ <exec failonerror="true" executable="${phantomjs.path}">
+     <arg value="${qunit.path}"/>
+     <arg value="src/HttpClientTest.html"/>
+ </exec>
+</target>
+</project>
