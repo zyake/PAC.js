@@ -13,7 +13,7 @@
  * repository.addFactory("id", function() { return "ID-1" });
  * repository.addFactory("defaultName", function() { return this.get("id") + "-001" });
  *
- * // The value "ID-1" will be showed.
+ * // The value "ID-1-001" will be showed.
  * alert(repository.get("defaultName"));
  *
  * The central repository also supports hierarchical event propagating mechanism,
