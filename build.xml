@@ -6,5 +6,10 @@
      <arg value="${qunit.path}"/>
      <arg value="src/HttpClientTest.html"/>
  </exec>
-</target>
+
+ <exec failonerror="true" executable="${phantomjs.path}">
+     <arg value="${qunit.path}"/>
+     <arg value="src/ComponentRepositoryTest.html"/>
+ </exec>
+ </target>
 </project>

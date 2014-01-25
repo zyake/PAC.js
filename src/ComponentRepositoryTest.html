@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>ComponentRepositoryTest</title>
+    <link rel="stylesheet" href="css/qunit-1.13.0.css">
+</head>
+<body>
+<div id="qunit"></div>
+<div id="qunit-fixture"></div>
+<script src="js/external/qunit-1.13.0.js"></script>
+<script src="js/QUnitCommon.js"></script>
+<script src="js/component/ComponentRepository.js"></script>
+<script>
+    test("get success", function() {
+        var repository = new ComponentRepository();
+        repository.addFactory("id", function(){ return "hoge!" });
+
+        var result = repository.get("id");
+        equal("hoge!", result);
+    });
+
+    test("get with arguments success", function() {
+        var repository = new ComponentRepository();
+        repository.addFactory("id", function(args){ return args; });
+
+        var args = new Array("test1", "test2");
+        var result = repository.get("id", args);
+        ok(args == result, "args hasn't matched");
+    });
+
+    test("get a component when there is a parent", function() {
+        var parent = new ComponentRepository();
+        parent.addFactory("id", function() { return "parent" });
+
+        var child = new ComponentRepository(parent);
+        child.addFactory("id", function(){ return "child"; });
+
+        var result = child.get("id");
+        equal("child", result);
+    });
+
+    test("get a component when there is a parent and there no factory on the child",
+        function() {
+        var parent = new ComponentRepository();
+        parent.addFactory("id", function() { return "parent" });
+
+        var child = new ComponentRepository(parent);
+
+        var result = child.get("id");
+        equal("parent", result);
+    });
+
+    test("get a component when both of them have no factories",
+        function() {
+        var parent = new ComponentRepository();
+        var child = new ComponentRepository(parent);
+
+        try {
+            var result = child.get("id");
+        } catch(e) {
+            ok(true);
+            return;
+        }
+        throw new Error("No Error occured");
+    });
+</script>
+</body>
+</html>
