@@ -2,18 +2,19 @@
 // imports net/HttpClient.js
 
 /**
- * SPA(Single Page Application)モデルにおける、Widgetの遷移を扱うための管理機構です。
- * 画面の遷移IDを登録することで、その遷移IDに紐づくViewの有効化などを行います。
- * 一度有効化されたViewはキャッシュされ、次回以降はサーバとの通信無しに取得します。
+ * A widget transition manager in the SPA(Single Page Application) model.
+ * Registering widgets into a central repository, the manager will
+ * turn on and off the widgets using a widget id.
  */
  function TransitionManager(containerElem, repository) {
-    this.currentId = "";
+    this.currentId = null;
     this.containerElem = containerElem;
     this.idToElemMap = [];
     this.isTransiting = false;
-    this.repository = repository; /* a ComponentRepository to get components */
+    this.repository = repository; // A ComponentRepository to get components
     this.templateRootPath = "template/";
     this.templateSuffix = ".html";
+    this.httpClient = HttpClient;
  }
 
  TransitionManager.prototype.transit = function(id) {
@@ -21,34 +22,40 @@
         return;
     }
     if ( this.idToElemMap[id] != null ) {
-        this.doTransit(id);
+        doTransit(id);
         return;
     }
 
     this.isTransiting = true;
     var templatePath = this.templateRootPath + id + this.templateSuffix;
-    HttpClient.send(templatePath, function(event) {
+    var me = this;
+    this.httpClient.send(templatePath, function(event) {
+        me.isTransiting = false;
         var xhr = event.target;
-        if ( HttpClient.isSuccess(xhr) ) {
-            this.isTransiting = false;
-
+        if ( me.httpClient.isSuccess(xhr) ) {
             var newElem = document.createElement("DIV");
+            if ( document.getElementById(id) != null ) {
+                throw new Error("duplicated id found!: id=" + id);
+            }
             newElem.id = id;
             newElem.style.display = "none";
-            this.idToElemMap[id] = newElem;
             newElem.innerHTML = xhr.responseText;
-            this.containerElem.appendChild(newElem);
 
-            this.repository.get(newElem);
-            this.doTransit(id);
+            me.idToElemMap[id] = newElem;
+            me.containerElem.appendChild(newElem);
+            me.repository.get(id, newElem);
+
+            doTransit(id);
+        } else {
+            throw new Error("transition failed!");
         }
     });
 
-    var me = this;
     function doTransit(id) {
         if ( me.currentId != null ) {
             me.idToElemMap[me.currentId].style.display = "none";
         }
+        me.currentId = id;
         me.idToElemMap[id].style.display = "block";
     }
  }

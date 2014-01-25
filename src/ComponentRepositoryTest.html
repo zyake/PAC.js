@@ -64,6 +64,36 @@
         }
         throw new Error("No Error occured");
     });
+
+    test("get with a recursive reference", function() {
+        var target = new ComponentRepository();
+        try {
+            target.addFactory("id", function() {
+                return this.get("id");
+            });
+            target.get("id");
+        } catch(e) {
+            console.log(e);
+            ok(true);
+            return;
+        }
+
+        throw new Error("No error occurred");
+    });
+
+    test("notify with no references", function() {
+        var target = new ComponentRepository();
+        target.raiseEvent("event");
+        ok(true);
+    });
+
+    test("notify with references", function() {
+        var target = new ComponentRepository();
+        target.addFactory("id", function() {
+                return { notify: function(event, args) { equal(event, "event"); } }
+        }, ["event"]);
+        target.raiseEvent("event");
+    });
 </script>
 </body>
 </html>
