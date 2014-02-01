@@ -2,65 +2,68 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>TransitionManagerTest</title>
+    <title>AcceptanceTest</title>
     <link rel="stylesheet" href="css/qunit-1.13.0.css">
 </head>
-<body>
-<div id="qunit"></div>
-<div id="qunit-fixture"></div>
-<script src="js/external/qunit-1.13.0.js"></script>
-<script src="js/QUnitCommon.js"></script>
-<script src="js/net/HttpClient.js"></script>
 <script src="js/component/ComponentRepository.js"></script>
+<script src="js/component/AbstractionProxy.js"></script>
+<script src="js/component/Control.js"></script>
+<script src="js/net/HttpClient.js"></script>
+<script src="js/view/Presentation.js"></script>
 <script src="js/view/TransitionManager.js"></script>
+<script src="js/view/Widget.js"></script>
+<script src="js/view/Application.js"></script>
 <script>
 
-    QUnit.testDone(function( details ) {
-        // clean up
-        document.getElementById("containerElem").innerHTML = "";
+    var app;
+
+    TestPresentation1 = Object.create(Presentation, {
+        initialize: { value: function(control) {
+            Presentation.initialize.call(this, control);
+            this.elem.innerHTML = "load completed!: widget1"; }}
     });
 
-    asyncTest("test transit with no DOM cache", function() {
-        var repository = new ComponentRepository();
-        repository.addFactory("form", function(newElem) {
-            return { elem: newElem };
-        });
-
-        var manager = new TransitionManager(
-            document.getElementById("containerElem"),
-            repository);
-
-        manager.transit("form");
-
-        setTimeout(function() {
-            var form = document.getElementById("form");
-            equal(form.innerHTML, "<div>hoge</div>");
-            start();
-         }, 1000);
+    TestPresentation2 = Object.create(Presentation, {
+        initialize: { value: function(control) {
+        Presentation.initialize.call(this, control);
+        this.elem.innerHTML = "load completed!: widget2"; }}
     });
 
-    asyncTest("test transit with DOM caches", function() {
-        var repository = new ComponentRepository();
-        var manager = new TransitionManager(
-            document.getElementById("containerElem"),
-            repository);
+    window.addEventListener("load", function() {
+        app = Application.create(document.querySelector("#containerElem"), {
+            widget1: function(id, elem, repository) {
+                var widget1 = Widget.create(id, elem, repository);
+                widget1
+                .defineComponents({
+                "model1": function() {
+                return AbstractionProxy.create("model1", "view.url", "view.contents","contents"); },
+                "view1": function(id, elem) {
+                    return TestPresentation1.create(elem.querySelector(".control1"), id);} })
+                .defineControls({
+                "control1": function(id, widget) { return Control.create(widget, this.get("view1", widget.elem), this.get("model1")); } });
 
-        repository.addFactory("form", function(id, newElem) {
-            equal(newElem.outerHTML,
-                '<div id="form" style="display: block; "><div>hoge</div></div>');
-            setTimeout(function() { manager.transit("search"); }, 500);
-            return { elem: newElem, finish: function() {}, initialize: function() {} };
+                return widget1;
+            },
+            widget2: function(id, elem, repository) {
+                var widget2 = Widget.create(id, elem, repository);
+                widget2
+                .defineComponents({
+                "model2": function() {
+                return AbstractionProxy.create("model2", "view.url2", "view.contents2","contents"); },
+                "view2": function(id, elem) {
+                return TestPresentation2.create(elem.querySelector(".control2"), id);} })
+                .defineControls({
+                "control2": function(id, widget) { return Control.create(widget, this.get("view2", widget.elem), this.get("model2")); } });
+
+                return widget2;
+            },
         });
-        repository.addFactory("search", function(id, newElem) {
-            console.log(newElem);
-            equal(newElem.outerHTML,
-                 '<div id="search" style="display: block; "><div>search</div></div>');
-            start();
-            return { elem: newElem, finish: function() {}, initialize: function() {} };
-        });
-        manager.transit("form");
+        app.start("widget1");
     });
 </script>
+<body>
+<a href="#widget1">widget1</a>
+<a href="#widget2">widget2</a>
 <div id="containerElem"></div>
 </body>
 </html>

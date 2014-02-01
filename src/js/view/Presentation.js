@@ -5,16 +5,19 @@
  * Because Presentation is very simple and has no rendering logic,
  * you must extend it and implement own rendering logics.
  */
- function Presentation(elem) {
-    this.control = null;
-    this.elem = elem;
- }
+Presentation = {
 
-Presentation.prototype = {
+    create: function(elem, id) {
+      var presentation = Object.create(this);
+      presentation.elem = elem;
+      presentation.id = id;
+
+      return presentation;
+    },
 
     initialize: function(control) {
         this.control = control;
-     },
+    },
 
      getById: function(id) {
          return this.elem.getElementById(id);
@@ -30,5 +33,10 @@ Presentation.prototype = {
 
     forEachNode: function(nodeList, func) {
         Array.prototype.slice.call(nodeList).forEach(func, this);
+    },
+
+    on: function(elem, event, callback) {
+        var me = this;
+        elem.addEventListener(event, function(event) { return callback.call(me, event) });
     }
 };

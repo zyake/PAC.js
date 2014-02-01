@@ -2,13 +2,16 @@
 /**
  * A control to mediate exchanging data among Presentation, Abstraction, and Widgets.
  */
-function Control(widget, presentation, abstraction) {
-    this.widget = widget;
-    this.presentation = presentation;
-    this.abstraction = abstraction;
-}
+Control = {
 
-Control.prototype = {
+    create: function(widget, presentation, abstraction) {
+        var control = Object.create(this);
+        control.widget = widget;
+        control.presentation = presentation;
+        control.abstraction = abstraction;
+
+        return control;
+    },
 
     initialize: function() {
         this.presentation.initialize(this);

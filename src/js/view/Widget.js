@@ -16,16 +16,19 @@
  * the event that was raised by a component may be
  * propagated to parent repositories and other widgets.
  */
-function Widget(id, elem, parentRepository) {
-    this.id = id;
-    this.elem = elem;
-    this.controls = [];
-    this.components = [];
-    this.initialized = false;
-    this.repository = new ComponentRepository(parentRepository);
-}
+Widget  = {
 
-Widget.prototype  = {
+    create: function(id, elem, parentRepository) {
+        var widget = Object.create(this);
+        widget.id = id;
+        widget.elem = elem;
+        widget.controls = [];
+        widget.components = [];
+        widget.initialized = false;
+        widget.repository = ComponentRepository.create(parentRepository);
+
+        return widget;
+    },
 
     initialize: function() {
         if ( this.initialized ) {
@@ -33,10 +36,6 @@ Widget.prototype  = {
         }
         this.initialized = true;
         this.controls.forEach(function(controlId) { this.repository.get(controlId, this).initialize(); }, this);
-    },
-
-    finish: function() {
-        this.controls.forEach(function(controlId) { this.repository.get(controlId, this).finish(); }, this);
     },
 
     defineComponents: function(def) {

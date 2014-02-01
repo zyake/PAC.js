@@ -13,16 +13,16 @@
 <script src="js/component/ComponentRepository.js"></script>
 <script>
     test("get success", function() {
-        var repository = new ComponentRepository();
-        repository.addFactory("id", function(){ return "hoge!" });
+        var repository = ComponentRepository.create();
+        repository.addFactory("id", function(id){ return "hoge!" });
 
         var result = repository.get("id");
         equal("hoge!", result);
     });
 
     test("get multiply", function() {
-        var repository = new ComponentRepository();
-        repository.addFactory("id", function(){ return "hoge!" });
+        var repository = ComponentRepository.create();
+        repository.addFactory("id", function(id){ return "hoge!" });
 
         var result1 = repository.get("id");
         var result2 = repository.get("id");
@@ -30,8 +30,8 @@
     });
 
     test("get with arguments success", function() {
-        var repository = new ComponentRepository();
-        repository.addFactory("id", function(args){ return args; });
+        var repository = ComponentRepository.create();
+        repository.addFactory("id", function(id, args) { return args; });
 
         var args = new Array("test1", "test2");
         var result = repository.get("id", args);
@@ -39,11 +39,11 @@
     });
 
     test("get a component when there is a parent", function() {
-        var parent = new ComponentRepository();
-        parent.addFactory("id", function() { return "parent" });
+        var parent = ComponentRepository.create();
+        parent.addFactory("id", function(id) { return "parent" });
 
-        var child = new ComponentRepository(parent);
-        child.addFactory("id", function(){ return "child"; });
+        var child = ComponentRepository.create();
+        child.addFactory("id", function(id){ return "child"; });
 
         var result = child.get("id");
         equal("child", result);
@@ -51,10 +51,10 @@
 
     test("get a component when there is a parent and there no factory on the child",
         function() {
-        var parent = new ComponentRepository();
-        parent.addFactory("id", function() { return "parent" });
+        var parent = ComponentRepository.create();
+        parent.addFactory("id", function(id) { return "parent" });
 
-        var child = new ComponentRepository(parent);
+        var child = ComponentRepository.create(parent);
 
         var result = child.get("id");
         equal("parent", result);
@@ -62,8 +62,8 @@
 
     test("get a component when both of them have no factories",
         function() {
-        var parent = new ComponentRepository();
-        var child = new ComponentRepository(parent);
+        var parent = ComponentRepository.create();
+        var child = ComponentRepository.create(parent);
 
         try {
             var result = child.get("id");
@@ -75,9 +75,9 @@
     });
 
     test("get with a recursive reference", function() {
-        var target = new ComponentRepository();
+        var target = ComponentRepository.create();
         try {
-            target.addFactory("id", function() {
+            target.addFactory("id", function(id) {
                 return this.get("id");
             });
             target.get("id");
@@ -91,14 +91,14 @@
     });
 
     test("notify with no references", function() {
-        var target = new ComponentRepository();
+        var target = ComponentRepository.create();
         target.raiseEvent("event");
         ok(true);
     });
 
     test("notify with references", function() {
-        var target = new ComponentRepository();
-        target.addFactory("id", function() {
+        var target = ComponentRepository.create();
+        target.addFactory("id", function(id) {
                 return { notify: function(event, args) { equal(event, "event"); } }
         }, ["event"]);
         target.raiseEvent("event");

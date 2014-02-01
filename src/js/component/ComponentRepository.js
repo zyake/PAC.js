@@ -10,7 +10,7 @@
  * you can refer to them using a get method in the factory method context.
  *
  * - for example
- * var repository = new ComponentRepository();
+ * var repository = ComponentRepository.create();
  * repository.defineFactories({
  *   "id": function() { return "ID-1" },
  *   "defaultName": function() { return this.get("id") + "-001" }
@@ -23,21 +23,30 @@
  * which can be used to notify a event data to parent repositories that
  * can manage a whole application configuration.
  */
-function ComponentRepository(parent) {
-    this.parent = parent;
-    this.components = {};
-    this.factories = {};
-    this.events = {};
-    this.children = [];
-    this.routeStack = []; // This stack is used for detecting recursive references.
+ComponentRepository = {
 
-    parent != null && parent.children.push(this);
-}
+    create: function(parent) {
+        var repository = Object.create(this);
+        repository.initialize(parent);
 
-ComponentRepository.prototype = {
+        return repository;
+    },
+
+    initialize: function(parent) {
+        this.components = {};
+        this.factories = {};
+        this.events = {};
+        this.children = [];
+        this.routeStack = [];
+        this.parent = parent;
+
+        parent != null && this.parent.children.push(this);
+    },
 
     defineFactories: function(def) {
-        def.forEach(function(id) { this.addFactory(id, def[id]) }, this);
+        for (id in def ) {
+            this.addFactory(id, def[id]);
+        }
     },
 
     addFactory: function(id, factory, eventRefs) {
@@ -74,7 +83,7 @@ ComponentRepository.prototype = {
         this.children.forEach(function(child) { child != caller && child.raiseEvent(event, this, args); }, this);
     },
 
-    get: function(id, args) {
+    get: function(id, arg) {
         var recursiveRefFound = this.routeStack.indexOf(id) > -1;
         recursiveRefFound && this.doThrow("The recursive reference found: route=" + this.routeStack);
 
@@ -86,13 +95,13 @@ ComponentRepository.prototype = {
 
             var targetFactory = this.factories[id];
             if ( targetFactory  != null ) {
-                var newComponent = targetFactory.call(this, args);
+                var newComponent = targetFactory.call(this, id, arg);
                 this.components[id] = newComponent;
                 return newComponent;
             }
 
             this.parent == null && this.doThrow("target factory not found: id=" + id);
-            var component = this.parent.get(id, args);
+            var component = this.parent.get(id, arg);
             component == null && this.doThrow("target factory not found: id=" + id);
 
             return component;

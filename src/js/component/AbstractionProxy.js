@@ -7,42 +7,40 @@
  * the actual implementation of the abstraction.
  *
  * If a AbstractionProxy was received a request event,
- * it sends a request event as json to a abstraction that
+ * it sends the event as json to a abstraction that
  * resides in a server.
  */
- function AbstractionProxy(id, requestKey, responseKey, url, reqHandler, resHandler) {
-    this.id = id;
-    this.control = null;
-    this.httpClient = HttpClient;
-    this.isRequesting = false;
-    this.requestKey = requestKey;
-    this.responseKey = responseKey;
-    this.url = url;
-    this.reqHandler = reqHandler || AbstractionProxy.FOR_DEFAULT;
-    this.resHandler = resHandler || AbstractionProxy.AS_DEFAULT;
- }
+AbstractionProxy = {
 
-AbstractionProxy.AS_JSON = function(xhr) {
-    return JSON.parse(xhr.responseText);
-}
+    AS_JSON: function(xhr) {
+        return JSON.parse(xhr.responseText);
+     },
 
-AbstractionProxy.AS_TEXT= function(xhr) {
-    return xhr.responseText;
-}
+    AS_TEXT: function(xhr) {
+        return xhr.responseText;
+    },
 
-AbstractionProxy.AS_DEFAULT = AbstractionProxy.AS_JSON;
+    FOR_JSON:  function(obj, xhr) {
+        return JSON.stringify(obj);
+    },
 
-AbstractionProxy.FOR_JSON = function(obj, xhr) {
-    return JSON.stringify(obj);
-}
+    FOR_TEXT: function(obj, xhr) {
+        return obj.toString();
+    },
 
-AbstractionProxy.FOR_TEXT = function(obj, xhr) {
-    return obj.toString();
-}
+    create: function(id,  requestKey, responseKey, url) {
+        var proxy = Object.create(this);
+        proxy.id = id;
+        proxy.requestKey = requestKey;
+        proxy.responseKey = responseKey;
+        proxy.url = url;
+        proxy.httpClient = window.HttpClient;
+        proxy.isRequesting = false;
+        proxy.reqHandler = this.FOR_DEFAULT;
+        proxy.resHandler = this.AS_DEFAULT;
 
-AbstractionProxy.FOR_DEFAULT = AbstractionProxy.FOR_JSON;
-
-AbstractionProxy.prototype = {
+        return proxy;
+    },
 
     initialize: function(control) {
         this.control = control;

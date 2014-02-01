@@ -5,26 +5,29 @@
  * Registering widgets into a central repository, the manager will
  * turn on and off the widgets by a widget id.
  */
- function TransitionManager(containerElem, repository, errorHandler) {
-    this.currentId = null;
-    this.containerElem = containerElem;
-    this.idToElemMap = [];
-    this.isTransiting = false;
-    this.repository = repository; // A ComponentRepository to get components
-    this.templateRootPath = "template/";
-    this.templateSuffix = ".html";
-    this.httpClient = HttpClient;
-    this.errorHandler = errorHandler || function() {};
- }
+ TransitionManager = {
 
- TransitionManager.prototype = {
+    create: function(containerElem, repository, errorHandler) {
+        var manager = Object.create(this);
+        manager.currentId = null;
+        manager.containerElem = containerElem;
+        manager.idToElemMap = [];
+        manager.isTransiting = false;
+        manager.repository = repository; // A ComponentRepository to get components
+        manager.templateRootPath = "template/";
+        manager.templateSuffix = ".html";
+        manager.httpClient = HttpClient;
+        manager.errorHandler = errorHandler || function() {};
 
-     transit: function(id) {
+       return manager;
+    },
+
+    transit: function(id) {
          if ( this.isTransiting ) {
              return;
          }
          if ( this.idToElemMap[id] != null ) {
-             doTransit(id);
+             this.doTransit(id);
              return;
          }
 
@@ -45,23 +48,22 @@
 
                  me.idToElemMap[id] = newElem;
                  me.containerElem.appendChild(newElem);
-                 doTransit(id, newElem);
+                 me.doTransit(id, newElem);
              } else {
-                 this.errorHandler(xhr);
+                 me.errorHandler(xhr);
              }
          });
-
-         function doTransit(id, newElem) {
-             if ( me.currentId != null ) {
-                 var prevWidgetElem = me.idToElemMap[me.currentId];
-                 var prevWidget = me.repository.get(me.currentId, prevWidgetElem, this.repository);
-                 prevWidget.finish && prevWidget.finish();
-                 prevWidgetElem.style.display = "none";
-             }
-             me.currentId = id;
-             me.idToElemMap[id].style.display = "block";
-             var currentWidget = me.repository.get(id, newElem, this.repository);
-             currentWidget.initialize && currentWidget.initialize();
-         }
       },
+
+      doTransit: function(id, newElem) {
+           if ( this.currentId != null ) {
+               var prevWidgetElem = this.idToElemMap[this.currentId];
+               var prevWidget = this.repository.get(this.currentId, prevWidgetElem, this.repository);
+               prevWidgetElem.style.display = "none";
+           }
+           this.currentId = id;
+           this.idToElemMap[id].style.display = "block";
+           var currentWidget = this.repository.get(id, newElem, this.repository);
+           currentWidget.initialize();
+      }
  };
