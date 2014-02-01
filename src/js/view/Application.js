@@ -11,7 +11,8 @@ Application.prototype ={
     }
     ,
     start: function(initWidgetId) {
-        this.defineWidgets();
+        this.centralRepository.defineFactories(this.defineWidgets());
+
         var me = this;
         window.addEventListener("hashchange", function(event) {
             var newWidgetId = event.newUrl.substring(1);

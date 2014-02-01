@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>TransitionManagerTest</title>
+    <link rel="stylesheet" href="css/qunit-1.13.0.css">
+</head>
+<body>
+<div id="qunit"></div>
+<div id="qunit-fixture"></div>
+<script src="js/external/qunit-1.13.0.js"></script>
+<script src="js/QUnitCommon.js"></script>
+<script src="js/net/HttpClient.js"></script>
+<script src="js/component/ComponentRepository.js"></script>
+<script src="js/view/TransitionManager.js"></script>
+<script>
+
+    QUnit.testDone(function( details ) {
+        // clean up
+        document.getElementById("containerElem").innerHTML = "";
+    });
+
+    asyncTest("test transit with no DOM cache", function() {
+        var repository = new ComponentRepository();
+        repository.addFactory("form", function(newElem) {
+            return { elem: newElem };
+        });
+
+        var manager = new TransitionManager(
+            document.getElementById("containerElem"),
+            repository);
+
+        manager.transit("form");
+
+        setTimeout(function() {
+            var form = document.getElementById("form");
+            equal(form.innerHTML, "<div>hoge</div>");
+            start();
+         }, 1000);
+    });
+
+    asyncTest("test transit with DOM caches", function() {
+        var repository = new ComponentRepository();
+        var manager = new TransitionManager(
+            document.getElementById("containerElem"),
+            repository);
+
+        repository.addFactory("form", function(id, newElem) {
+            equal(newElem.outerHTML,
+                '<div id="form" style="display: block; "><div>hoge</div></div>');
+            setTimeout(function() { manager.transit("search"); }, 500);
+            return { elem: newElem, finish: function() {}, initialize: function() {} };
+        });
+        repository.addFactory("search", function(id, newElem) {
+            console.log(newElem);
+            equal(newElem.outerHTML,
+                 '<div id="search" style="display: block; "><div>search</div></div>');
+            start();
+            return { elem: newElem, finish: function() {}, initialize: function() {} };
+        });
+        manager.transit("form");
+    });
+</script>
+<div id="containerElem"></div>
+</body>
+</html>
