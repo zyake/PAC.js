@@ -2,13 +2,13 @@
  * VERY simple http client.
  */
  HttpClient = {};
- HttpClient.send = function(url, loaded, data, method) {
+ HttpClient.send = function(url, loaded, data, reqCallback, method) {
     var method = method || "GET";
-
+    var reqCallback = reqCallback || function() { return data; }
     var xhr = new XMLHttpRequest();
     xhr.addEventListener("load", loaded);
     xhr.open(method, url, true);
-    xhr.send(data);
+    xhr.send(reqCallback(data, xhr));
 
     return xhr;
  };

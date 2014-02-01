@@ -1,19 +1,41 @@
 <project name="my_lib_js">
  <property file="build.properties"/>
 
+  <target name="clean">
+      <delete failonerror="false" dir="dist"/>
+      <mkdir dir="dist"/>
+  </target>
+
  <target name="run-uts">
      <run-ut name="HttpClientTest"/>
      <run-ut name="ComponentRepositoryTest"/>
      <run-ut name="TransitionManagerTest"/>
+     <run-ut name="IntegrationTest"/>
+ </target>
+
+ <target name="concat-js">
+     <concat destfile="dist/simple-pac.js" append="false">
+       <fileset dir="src/js/component">
+           <include name="*.js"/>
+       </fileset>
+       <fileset dir="src/js/net">
+           <include name="*.js"/>
+       </fileset>
+       <fileset dir="src/js/view">
+           <include name="*.js"/>
+       </fileset>
+     </concat>
  </target>
 
  <macrodef name="run-ut">
      <attribute name="name"/>
      <sequential>
+         <echo>--------- start @{name} ---------</echo>
          <exec failonerror="true" executable="${phantomjs.path}">
              <arg value="${qunit.path}"/>
              <arg value="src/@{name}.html"/>
          </exec>
+         <echo>--------- end @{name} ---------</echo>
      </sequential>
  </macrodef>
 

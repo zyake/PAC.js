@@ -10,8 +10,10 @@
  *
  * - for example
  * var repository = new ComponentRepository();
- * repository.addFactory("id", function() { return "ID-1" });
- * repository.addFactory("defaultName", function() { return this.get("id") + "-001" });
+ * repository.defineFactories({
+ *   "id": function() { return "ID-1" },
+ *   "defaultName": function() { return this.get("id") + "-001" }
+ * });
  *
  * // The value "ID-1-001" will be showed.
  * alert(repository.get("defaultName"));
@@ -28,80 +30,74 @@ function ComponentRepository(parent) {
     this.children = [];
     this.routeStack = []; // This stack is used for detecting recursive references.
 
-    if ( parent != null ) {
-        parent.children.push(this);
-    }
+    parent != null && parent.children.push(this);
 }
 
-ComponentRepository.prototype.addFactory = function(id, factory, refEvents) {
-    var duplicatedKey = this.factories[id] != null;
-    if ( duplicatedKey ) {
-        throw new Error("duplicated id: id=" + id);
-    }
+ComponentRepository.prototype.defineFactories = function(def) {
+    def.forEach(function(id) { this.addFactory(id, def[id]) }, this);
+}
 
+ComponentRepository.prototype.addFactory = function(id, factory, eventRefs) {
+    this.factories[id] != null && this.doThrow("duplicated id: id=" + id);
     this.factories[id] = factory;
-    for ( key in refEvents ) {
-        var refEvent = refEvents[key];
-        this.events[refEvent] || (this.events[refEvent] = []);
-        this.events[refEvent].push(id);
-    }
+    eventRefs && eventRefs.forEach(function(eventRef) {
+        this.events[eventRef] || (this.events[eventRef] = []);
+        if ( this.events[eventRef].indexOf(id) == -1 ) {
+            this.events[eventRef].push(id);
+        }
+    }, this);
+}
+
+ComponentRepository.prototype.addEventRef = function(id, eventRef) {
+    this.events[eventRef] || (this.events[eventRef] = []);
+    this.events[eventRef].push(id);
+}
+
+ComponentRepository.prototype.removeEventRef = function(id, eventRef) {
+    delete this.events[eventRef][id];
 }
 
 ComponentRepository.prototype.raiseEvent = function(event, caller, args) {
     var noRefsFound = this.events[event] == null;
     if ( noRefsFound ) {
         return;
-    }
+     }
 
     var listeners = this.events[event];
-    for ( key in listeners ) {
-        var listener = this.get(listeners[key]);
-        listener.notify(event, args);
-    }
+    listeners.forEach(function(listenerId) { this.get(listenerId).notify(event, args); }, this);
 
-    if ( this.parent != null && this.parent != caller ) {
-       this.parent.raiseEvent(event, this, args);
-    }
-
-    for ( key in this.children ) {
-        var child = this.children[key];
-        if ( child != caller ) {
-            child.raiseEvent(event, this, args);
-        }
-    }
+    var parentShouldBeCalled = this.parent != null && this.parent != caller;
+    parentShouldBeCalled && this.parent.raiseEvent(event, this, args);
+    this.children.forEach(function(child) { child != caller && child.raiseEvent(event, this, args); }, this);
 }
 
 ComponentRepository.prototype.get = function(id, args) {
     var recursiveRefFound = this.routeStack.indexOf(id) > -1;
-    if ( recursiveRefFound ) {
-        throw new Error("The recursive reference found: route=" + this.routeStack);
-    }
+    recursiveRefFound && this.doThrow("The recursive reference found: route=" + this.routeStack);
 
     try {
         this.routeStack.push(id);
-        var existsComponent = this.components[id] != null;
-        if ( existsComponent ) {
-            var component = this.components[id];
-            return component;
+        if ( this.components[id] != null ) {
+            return  this.components[id];
         }
 
         var targetFactory = this.factories[id];
-        if ( targetFactory  == null ) {
-            if ( this.parent == null ) {
-                throw new Error("target factory not found: id=" + id);
-            }
-
-            var component = this.parent.get(id, args);
-            if ( component == null ) {
-                throw new Error("target factory not found: id=" + id);
-            }
-            return component;
+        if ( targetFactory  != null ) {
+            var newComponent = targetFactory.call(this, args);
+            this.components[id] = newComponent;
+            return newComponent;
         }
-        var newComponent = targetFactory.call(this, args);
-        this.components[id] = newComponent;
 
-        return newComponent;
+        this.parent == null && this.doThrow("target factory not found: id=" + id);
+        var component = this.parent.get(id, args);
+        component == null && this.doThrow("target factory not found: id=" + id);
+
+        return component;
     } finally {
         this.routeStack.pop();
     }
+}
+
+ComponentRepository.prototype.doThrow = function(msg) {
+    throw new Error(msg);
 }

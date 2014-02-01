@@ -20,6 +20,15 @@
         equal("hoge!", result);
     });
 
+    test("get multiply", function() {
+        var repository = new ComponentRepository();
+        repository.addFactory("id", function(){ return "hoge!" });
+
+        var result1 = repository.get("id");
+        var result2 = repository.get("id");
+        ok(result1 === result2);
+    });
+
     test("get with arguments success", function() {
         var repository = new ComponentRepository();
         repository.addFactory("id", function(args){ return args; });

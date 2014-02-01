@@ -1,7 +1,6 @@
 QUnit.log(function(details) {
-    if ( ! details.result ) {
-      console.log(details.message);
-    }
+  console.log("actual: " + details.actual + ", expected: " + details.expected + ", message: " + details.message);
+  console.log(details.source);
 });
 
 QUnit.testStart(function( details ) {

@@ -1,12 +1,10 @@
-// imports view/TransitionManager.js
-// imports net/HttpClient.js
-
 /**
  * A widget transition manager in the SPA(Single Page Application) model.
+ *
  * Registering widgets into a central repository, the manager will
- * turn on and off the widgets using a widget id.
+ * turn on and off the widgets by a widget id.
  */
- function TransitionManager(containerElem, repository) {
+ function TransitionManager(containerElem, repository, errorHandler) {
     this.currentId = null;
     this.containerElem = containerElem;
     this.idToElemMap = [];
@@ -15,6 +13,7 @@
     this.templateRootPath = "template/";
     this.templateSuffix = ".html";
     this.httpClient = HttpClient;
+    this.errorHandler = errorHandler || function() {};
  }
 
  TransitionManager.prototype.transit = function(id) {
@@ -43,19 +42,22 @@
 
             me.idToElemMap[id] = newElem;
             me.containerElem.appendChild(newElem);
-            me.repository.get(id, newElem);
-
-            doTransit(id);
+            doTransit(id, newElem);
         } else {
-            throw new Error("transition failed!");
+            this.errorHandler(xhr);
         }
     });
 
-    function doTransit(id) {
+    function doTransit(id, newElem) {
         if ( me.currentId != null ) {
-            me.idToElemMap[me.currentId].style.display = "none";
+            var prevWidgetElem = me.idToElemMap[me.currentId];
+            var prevWidget = me.repository.get(me.currentId, prevWidgetElem, this.repository);
+            prevWidget.finish && prevWidget.finish();
+            prevWidgetElem.style.display = "none";
         }
         me.currentId = id;
         me.idToElemMap[id].style.display = "block";
+        var currentWidget = me.repository.get(id, newElem, this.repository);
+        currentWidget.initialize && currentWidget.initialize();
     }
  }

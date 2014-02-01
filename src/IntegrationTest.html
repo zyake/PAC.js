@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>IntegrationTest</title>
+    <link rel="stylesheet" href="css/qunit-1.13.0.css">
+</head>
+<body>
+<div id="qunit"></div>
+<div id="qunit-fixture"></div>
+<script src="js/external/qunit-1.13.0.js"></script>
+<script src="js/QUnitCommon.js"></script>
+<script src="js/component/ComponentRepository.js"></script>
+<script src="js/component/AbstractionProxy.js"></script>
+<script src="js/component/Control.js"></script>
+<script src="js/net/HttpClient.js"></script>
+<script src="js/view/Presentation.js"></script>
+<script src="js/view/TransitionManager.js"></script>
+<script src="js/view/Widget.js"></script>
+<script>
+
+    test("test-widget", function() {
+        var masterRepository = new ComponentRepository();
+
+        var manager = new TransitionManager(
+        document.getElementById("test-apps-01"),
+        masterRepository);
+
+        // define widgets
+        masterRepository.addFactory("widget1", function(elem) {
+        var widget1 = new Widget("widget1", elem, masterRepository);
+        widget1
+        .defineComponents({
+        "model1": function() { return new AbstractionProxy("model1", "view.url", "view.contents", "contents");  },
+        "view1": function(elem) { return new Presentation(elem.querySelector(".control1"));} })
+        .defineControls({
+        "control1": function(widget) { return new Control(widget, this.get("view1", widget.elem), this.get("model1")); } });
+
+        return widget1;
+        });
+
+        var widget1 = masterRepository.get("widget1", document.getElementById("test-widget"));
+        ok(widget1 != null);
+
+        var control1 = widget1.getControl("control1");
+        ok(control1 != null);
+
+        ok(control1.presentation != null);
+        ok(control1.presentation.elem != null);
+
+        ok(control1.abstraction != null);
+    });
+
+    asyncTest("test-transition", function() {
+        var masterRepository = new ComponentRepository();
+
+        // define widgets
+        masterRepository.addFactory("widget1", function(elem, repository) {
+            var widget1 = new Widget("widget1", elem, repository);
+            widget1
+            .defineComponents({
+                "model1": function() { return new AbstractionProxy("model1", "view.url", "view.contents", "contents");  },
+                "view1": function(elem) { return new Presentation(elem.querySelector(".control1"));} })
+            .defineControls({
+                "control1": function(widget) { return new Control(widget, this.get("view1", widget.elem), this.get("model1")); } });
+
+            return widget1;
+        });
+
+        var transitionManager = new TransitionManager(
+            document.querySelector("#test-transition"),
+            masterRepository);
+
+        transitionManager.transit("widget1");
+        setTimeout(function() {
+            equal(document.getElementById("test-transition").innerHTML,
+                    '<div id="widget1" style="display: block; "><div class="control1"></div></div>');
+            start();
+        }, 0);
+    });
+
+</script>
+<div id="test-widget">
+   <div class="control1"></div>
+</div>
+
+<div id="test-transition"></div>
+</body>
+</html>
