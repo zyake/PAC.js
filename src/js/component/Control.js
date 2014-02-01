@@ -1,3 +1,4 @@
+
 /**
  * A control to mediate exchanging data among Presentation, Abstraction, and Widgets.
  */
@@ -7,19 +8,22 @@ function Control(widget, presentation, abstraction) {
     this.abstraction = abstraction;
 }
 
-Control.prototype.initialize = function() {
-    this.presentation.initialize(this);
-    this.abstraction.initialize(this);
-}
+Control.prototype = {
 
-Control.prototype.raiseEvent = function(event, args) {
-    this.widget.raiseEvent(event, args);
-}
+    initialize: function() {
+        this.presentation.initialize(this);
+        this.abstraction.initialize(this);
+    },
 
-Control.prototype.addEventRef = function(id, eventRef) {
-    this.widget.addEventRef(id, eventRef);
-}
+    raiseEvent: function(event, args) {
+        this.widget.raiseEvent(event, args);
+    },
 
-Control.prototype.removeEventRef = function(id, eventRef) {
-     this.widget.removeEventRef(id, eventRef);
-}
+    addEventRef: function(id, eventRef) {
+        this.widget.addEventRef(id, eventRef);
+    },
+
+    removeEventRef: function(id, eventRef) {
+         this.widget.removeEventRef(id, eventRef);
+    }
+};

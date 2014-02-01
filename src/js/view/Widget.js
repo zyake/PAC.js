@@ -1,3 +1,4 @@
+
 /**
  * A widget to manage underlying controls.
  *
@@ -24,58 +25,61 @@ function Widget(id, elem, parentRepository) {
     this.repository = new ComponentRepository(parentRepository);
 }
 
-Widget.prototype.initialize = function() {
-    if ( this.initialized ) {
-        return;
-    }
-    this.initialized = true;
-    this.controls.forEach(function(controlId) { this.repository.get(controlId, this).initialize(); }, this);
-}
+Widget.prototype  = {
 
-Widget.prototype.finish = function() {
-    this.controls.forEach(function(controlId) { this.repository.get(controlId, this).finish(); }, this);
-}
+    initialize: function() {
+        if ( this.initialized ) {
+            return;
+        }
+        this.initialized = true;
+        this.controls.forEach(function(controlId) { this.repository.get(controlId, this).initialize(); }, this);
+    },
 
-Widget.prototype.defineComponents= function(def) {
-   for ( id in def ) {
-    this.components.push(id);
-    this.repository.addFactory(id, def[id]);
-    }
+    finish: function() {
+        this.controls.forEach(function(controlId) { this.repository.get(controlId, this).finish(); }, this);
+    },
 
-    return this;
-}
-
-Widget.prototype.getComponent = function(id, args) {
-    this.components.indexOf(id) == -1 && this.doThrow(id + " is not component!");
-    return this.repository.get(id, args);
-}
-
-Widget.prototype.defineControls = function(def) {
-    for( id in def ) {
-        this.controls.push(id);
+    defineComponents: function(def) {
+       for ( id in def ) {
+        this.components.push(id);
         this.repository.addFactory(id, def[id]);
+        }
+
+        return this;
+    },
+
+    getComponent: function(id, args) {
+        this.components.indexOf(id) == -1 && this.doThrow(id + " is not component!");
+        return this.repository.get(id, args);
+    },
+
+    defineControls: function(def) {
+        for( id in def ) {
+            this.controls.push(id);
+            this.repository.addFactory(id, def[id]);
+        }
+
+        return this;
+    },
+
+    getControl: function(id) {
+        this.controls.indexOf(id) == -1 && this.doThrow(id + " is not control!");
+        return this.repository.get(id, this);
+    },
+
+    raiseEvent: function(event, args) {
+        this.repository.raiseEvent(event, args);
+    },
+
+    addEventRef: function(id, eventRef) {
+        this.repository.addEventRef(id, eventRef);
+    },
+
+    removeEventRef: function(id, eventRef) {
+        this.repository.removeEventRef(id, eventRef);
+    },
+
+    doThrow: function(msg) {
+        throw new Error(msg);
     }
-
-    return this;
-}
-
-Widget.prototype.getControl = function(id) {
-    this.controls.indexOf(id) == -1 && this.doThrow(id + " is not control!");
-    return this.repository.get(id, this);
-}
-
-Widget.prototype.raiseEvent = function(event, args) {
-    this.repository.raiseEvent(event, args);
-}
-
-Widget.prototype.addEventRef = function(id, eventRef) {
-    this.repository.addEventRef(id, eventRef);
-}
-
-Widget.prototype.removeEventRef = function(id, eventRef) {
-     this.repository.removeEventRef(id, eventRef);
-}
-
-Widget.prototype.doThrow = function(msg) {
-    throw new Error(msg);
-}
+};

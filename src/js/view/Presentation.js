@@ -1,3 +1,4 @@
+
 /**
  * A html presentation component.
  *
@@ -9,22 +10,25 @@
     this.elem = elem;
  }
 
- Presentation.prototype.initialize = function(control) {
-    this.control = control;
- }
+Presentation.prototype = {
 
-Presentation.prototype.getById = function(id) {
-    return this.elem.getElementById(id);
-}
+    initialize: function(control) {
+        this.control = control;
+     },
 
-Presentation.prototype.query = function(query) {
-    return this.elem.querySelector(query);
-}
+     getById: function(id) {
+         return this.elem.getElementById(id);
+     },
 
-Presentation.prototype.queryAll = function(query) {
-    return this.elem.querySelectorAll(query);
-}
+    query: function(query) {
+        return this.elem.querySelector(query);
+    },
 
-Presentation.prototype.forEachNode = function(nodeList, func) {
-    Array.prototype.slice.call(nodeList).forEach(func, this);
-}
+    queryAll: function(query) {
+        return this.elem.querySelectorAll(query);
+    },
+
+    forEachNode: function(nodeList, func) {
+        Array.prototype.slice.call(nodeList).forEach(func, this);
+    }
+};

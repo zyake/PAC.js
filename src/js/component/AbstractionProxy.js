@@ -1,3 +1,4 @@
+
 /**
  * A proxy of a abstraction.
  *
@@ -41,36 +42,39 @@ AbstractionProxy.FOR_TEXT = function(obj, xhr) {
 
 AbstractionProxy.FOR_DEFAULT = AbstractionProxy.FOR_JSON;
 
-AbstractionProxy.prototype.initialize = function(control) {
-    this.control = control;
-    this.control.addEventRef(this.id, this.requestKey);
-}
+AbstractionProxy.prototype = {
 
-AbstractionProxy.prototype.fetch = function(args) {
-    if ( this.isRequesting == true ) {
-        return;
-    }
-    this.isRequesting = true;
-    var me = this;
-    this.httpClient.send(this.url, function(xhr) {
-        me.isRequesting = false;
-        if ( me.httpClient.isSuccess(xhr) ) {
-            me.successCallback(xhr);
-        } else {
-            me.failureCallback(xhr);
+    initialize: function(control) {
+        this.control = control;
+        this.control.addEventRef(this.id, this.requestKey);
+    },
+
+    fetch: function(args) {
+        if ( this.isRequesting == true ) {
+            return;
         }
-    }, args, this.reqHandler);
-}
+        this.isRequesting = true;
+        var me = this;
+        this.httpClient.send(this.url, function(xhr) {
+            me.isRequesting = false;
+            if ( me.httpClient.isSuccess(xhr) ) {
+                me.successCallback(xhr);
+            } else {
+                me.failureCallback(xhr);
+            }
+        }, args, this.reqHandler);
+    },
 
-AbstractionProxy.prototype.notify = function(event, args) {
-    this.fetch(args);
-}
+    notify: function(event, args) {
+        this.fetch(args);
+    },
 
-AbstractionProxy.prototype.successCallback = function(xhr) {
-    var responseData = this.resHandler(xhr);
-    this.control.raiseEvent(this.responseKey, this, responseData);
-}
+    successCallback: function(xhr) {
+        var responseData = this.resHandler(xhr);
+        this.control.raiseEvent(this.responseKey, this, responseData);
+    },
 
-AbstractionProxy.prototype.failureCallback = function(xhr) {
-    this.control.raiseEvent(this.id + ".error", this, xhr.responseText);
-}
+    failureCallback: function(xhr) {
+        this.control.raiseEvent(this.id + ".error", this, xhr.responseText);
+    }
+};

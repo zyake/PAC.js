@@ -1,3 +1,4 @@
+
 /**
  * A widget transition manager in the SPA(Single Page Application) model.
  *
@@ -16,48 +17,51 @@
     this.errorHandler = errorHandler || function() {};
  }
 
- TransitionManager.prototype.transit = function(id) {
-    if ( this.isTransiting ) {
-        return;
-    }
-    if ( this.idToElemMap[id] != null ) {
-        doTransit(id);
-        return;
-    }
+ TransitionManager.prototype = {
 
-    this.isTransiting = true;
-    var templatePath = this.templateRootPath + id + this.templateSuffix;
-    var me = this;
-    this.httpClient.send(templatePath, function(event) {
-        me.isTransiting = false;
-        var xhr = event.target;
-        if ( me.httpClient.isSuccess(xhr) ) {
-            var newElem = document.createElement("DIV");
-            if ( document.getElementById(id) != null ) {
-                throw new Error("duplicated id found!: id=" + id);
-            }
-            newElem.id = id;
-            newElem.style.display = "none";
-            newElem.innerHTML = xhr.responseText;
+     transit: function(id) {
+         if ( this.isTransiting ) {
+             return;
+         }
+         if ( this.idToElemMap[id] != null ) {
+             doTransit(id);
+             return;
+         }
 
-            me.idToElemMap[id] = newElem;
-            me.containerElem.appendChild(newElem);
-            doTransit(id, newElem);
-        } else {
-            this.errorHandler(xhr);
-        }
-    });
+         this.isTransiting = true;
+         var templatePath = this.templateRootPath + id + this.templateSuffix;
+         var me = this;
+         this.httpClient.send(templatePath, function(event) {
+             me.isTransiting = false;
+             var xhr = event.target;
+             if ( me.httpClient.isSuccess(xhr) ) {
+                 var newElem = document.createElement("DIV");
+                 if ( document.getElementById(id) != null ) {
+                     throw new Error("duplicated id found!: id=" + id);
+                 }
+                 newElem.id = id;
+                 newElem.style.display = "none";
+                 newElem.innerHTML = xhr.responseText;
 
-    function doTransit(id, newElem) {
-        if ( me.currentId != null ) {
-            var prevWidgetElem = me.idToElemMap[me.currentId];
-            var prevWidget = me.repository.get(me.currentId, prevWidgetElem, this.repository);
-            prevWidget.finish && prevWidget.finish();
-            prevWidgetElem.style.display = "none";
-        }
-        me.currentId = id;
-        me.idToElemMap[id].style.display = "block";
-        var currentWidget = me.repository.get(id, newElem, this.repository);
-        currentWidget.initialize && currentWidget.initialize();
-    }
- }
+                 me.idToElemMap[id] = newElem;
+                 me.containerElem.appendChild(newElem);
+                 doTransit(id, newElem);
+             } else {
+                 this.errorHandler(xhr);
+             }
+         });
+
+         function doTransit(id, newElem) {
+             if ( me.currentId != null ) {
+                 var prevWidgetElem = me.idToElemMap[me.currentId];
+                 var prevWidget = me.repository.get(me.currentId, prevWidgetElem, this.repository);
+                 prevWidget.finish && prevWidget.finish();
+                 prevWidgetElem.style.display = "none";
+             }
+             me.currentId = id;
+             me.idToElemMap[id].style.display = "block";
+             var currentWidget = me.repository.get(id, newElem, this.repository);
+             currentWidget.initialize && currentWidget.initialize();
+         }
+      },
+ };
