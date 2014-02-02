@@ -1,5 +1,11 @@
-<project name="my_lib_js">
+<project name="my_lib_js" default="main">
  <property file="build.properties"/>
+
+  <target name="main">
+      <antcall target="clean"/>
+      <antcall target="run-uts"/>
+      <antcall target="concat-js"/>
+  </target>
 
   <target name="clean">
       <delete failonerror="false" dir="dist"/>
