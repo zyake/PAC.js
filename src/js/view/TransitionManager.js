@@ -8,16 +8,16 @@
  TransitionManager = {
 
     create: function(containerElem, repository, errorHandler) {
-        var manager = Object.create(this);
-        manager.currentId = null;
-        manager.containerElem = containerElem;
-        manager.idToElemMap = [];
-        manager.isTransiting = false;
-        manager.repository = repository; // A ComponentRepository to get components
-        manager.templateRootPath = "template/";
-        manager.templateSuffix = ".html";
-        manager.httpClient = HttpClient;
-        manager.errorHandler = errorHandler || function() {};
+        var manager = Object.create(this, {
+            currentId: { value: null },
+            containerElem: { value: containerElem },
+            idToElemMap: { value: [] },
+            repository: { value: repository },
+            templateRootPath: { value: "template/" },
+            templateSuffix: { value: ".html" },
+            httpClient: { value: window.HttpClient },
+            errorHandler: { value: errorHandler || function() {} }
+        });
 
        return manager;
     },

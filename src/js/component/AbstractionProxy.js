@@ -12,6 +12,9 @@
  */
 AbstractionProxy = {
 
+    AS_DEFAULT: this.AS_JSON,
+    FOR_DEFAULT: this.FOR_JSON,
+
     AS_JSON: function(xhr) {
         return JSON.parse(xhr.responseText);
      },
@@ -29,15 +32,16 @@ AbstractionProxy = {
     },
 
     create: function(id,  requestKey, responseKey, url) {
-        var proxy = Object.create(this);
-        proxy.id = id;
-        proxy.requestKey = requestKey;
-        proxy.responseKey = responseKey;
-        proxy.url = url;
-        proxy.httpClient = window.HttpClient;
-        proxy.isRequesting = false;
-        proxy.reqHandler = this.FOR_DEFAULT;
-        proxy.resHandler = this.AS_DEFAULT;
+        var proxy = Object.create(this, {
+            id: { value: id },
+            requestKey: { value: requestKey },
+            responseKey: { value: responseKey },
+            url: { value: url },
+            httpClient: { value: window.HttpClient },
+            isRequesting: { value: false },
+            reqHandler: { value: this. FOR_DEFAULT },
+            resHandler: { value: this.AS_DEFAULT }
+        });
 
         return proxy;
     },

@@ -26,21 +26,21 @@
 ComponentRepository = {
 
     create: function(parent) {
-        var repository = Object.create(this);
-        repository.initialize(parent);
+        var repository = Object.create(this, {
+            components: { value: {} },
+            factories: { value: {} },
+            events: { value: {} },
+            children: { value: [] },
+            routeStack: { value: [] },
+            parent: { value: parent }
+        });
+        repository.initialize();
 
         return repository;
     },
 
-    initialize: function(parent) {
-        this.components = {};
-        this.factories = {};
-        this.events = {};
-        this.children = [];
-        this.routeStack = [];
-        this.parent = parent;
-
-        parent != null && this.parent.children.push(this);
+    initialize: function() {
+        this.parent != null && this.parent.children.push(this);
     },
 
     defineFactories: function(def) {

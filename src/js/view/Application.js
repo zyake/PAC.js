@@ -11,14 +11,15 @@
 Application = {
 
    create: function(appElem, widgetDef) {
-        var app = Object.create(this);
+        var app = Object.create(this, {
+            centralRepository: { value: ComponentRepository.create() }
+        });
         app.initialize(appElem, widgetDef);
 
         return app;
    },
 
     initialize: function(appElem, widgetDef) {
-        this.centralRepository = ComponentRepository.create();
         this.centralRepository.defineFactories(widgetDef);
         this.transitionManager = TransitionManager.create(appElem, this.centralRepository);
     },

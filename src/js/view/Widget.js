@@ -19,13 +19,14 @@
 Widget  = {
 
     create: function(id, elem, parentRepository) {
-        var widget = Object.create(this);
-        widget.id = id;
-        widget.elem = elem;
-        widget.controls = [];
-        widget.components = [];
-        widget.initialized = false;
-        widget.repository = ComponentRepository.create(parentRepository);
+        var widget = Object.create(this, {
+            id: { value: id },
+            elem: { value: elem },
+            controls: { value: [] },
+            components: { value: [] },
+            initialized: { value: false },
+            repository: { value: ComponentRepository.create(parentRepository) }
+        });
 
         return widget;
     },

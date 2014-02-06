@@ -5,10 +5,11 @@
 Control = {
 
     create: function(widget, presentation, abstraction) {
-        var control = Object.create(this);
-        control.widget = widget;
-        control.presentation = presentation;
-        control.abstraction = abstraction;
+        var control = Object.create(this, {
+            widget: { value: widget },
+            presentation: { value: presentation },
+            abstraction: { value: abstraction }
+        });
 
         return control;
     },
