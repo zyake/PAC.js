@@ -30,6 +30,9 @@
        <fileset dir="src/js/view">
            <include name="*.js"/>
        </fileset>
+       <fileset dir="src/js/common">
+          <include name="*.js"/>
+       </fileset>
      </concat>
  </target>
 
