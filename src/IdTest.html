@@ -17,8 +17,7 @@
 <script>
     test("onAbstraction load from abstraction", function() {
         var myAbstraction = Object.create(AbstractionProxy, {
-            id: { value: "abstraction1" },
-            control: { value: { id: "control1", widget: { id: "widget1" } } }
+            control: { value: { id: "control1", widget: { id: "widget1" }, abstraction: { id: "abstraction1"}  } }
         });
         var id = Id.onAbstraction(myAbstraction).load();
         equal(id, "widget1.control1.abstraction1.load");
@@ -57,11 +56,11 @@
 
     test("onPresentation load from presentation", function() {
         var myPresentation = Object.create(Presentation, {
-            id: { value: "presentation1" },
             control: { value: {
-            id: "control1",
-            widget: { id: "widget1" } } }
-        });
+                id: "control1",
+                widget: { id: "widget1" } ,
+                presentation: { id: "presentation1" } }
+        }});
         var id = Id.onPresentation(myPresentation).load();
         equal(id, "widget1.control1.presentation1.load");
     });

@@ -17,6 +17,7 @@
      <run-ut name="ComponentRepositoryTest"/>
      <run-ut name="TransitionManagerTest"/>
      <run-ut name="IntegrationTest"/>
+     <run-ut name="IdTest"/>
  </target>
 
  <target name="concat-js">

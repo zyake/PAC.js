@@ -2,17 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="39257a0f-548a-4da6-87e0-5429559af94c" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/simple-pac.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/common/Id.js" afterPath="$PROJECT_DIR$/src/js/common/Id.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/IdTest.html" afterPath="$PROJECT_DIR$/src/IdTest.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.xml" afterPath="$PROJECT_DIR$/build.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="my_lib_js.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="39257a0f-548a-4da6-87e0-5429559af94c" time="1391692311989" ignored="false" />
+    <file path="/Dummy.txt" changelist="39257a0f-548a-4da6-87e0-5429559af94c" time="1391938648414" ignored="false" />
     <file path="/TransitionManager.js" changelist="39257a0f-548a-4da6-87e0-5429559af94c" time="1391524224245" ignored="false" />
     <file path="/HttpClient.js" changelist="39257a0f-548a-4da6-87e0-5429559af94c" time="1391232815436" ignored="false" />
     <file path="/HttpClientTest.html" changelist="39257a0f-548a-4da6-87e0-5429559af94c" time="1390584321132" ignored="false" />
     <file path="/Test.txt" changelist="39257a0f-548a-4da6-87e0-5429559af94c" time="1390486880625" ignored="false" />
-    <file path="/build.xml" changelist="39257a0f-548a-4da6-87e0-5429559af94c" time="1391692343856" ignored="false" />
+    <file path="/build.xml" changelist="39257a0f-548a-4da6-87e0-5429559af94c" time="1391938981116" ignored="false" />
     <file path="/build.properties" changelist="39257a0f-548a-4da6-87e0-5429559af94c" time="1390576130885" ignored="false" />
     <file path="/HttpClientTest.js" changelist="39257a0f-548a-4da6-87e0-5429559af94c" time="1390574980373" ignored="false" />
     <file path="/ComponentRepositoryTest.html" changelist="39257a0f-548a-4da6-87e0-5429559af94c" time="1391259686519" ignored="false" />
@@ -26,7 +29,7 @@
     <file path="/a.dummy" changelist="39257a0f-548a-4da6-87e0-5429559af94c" time="1391426975400" ignored="false" />
     <file path="/Presentation.js" changelist="39257a0f-548a-4da6-87e0-5429559af94c" time="1391524128153" ignored="false" />
     <file path="/Abstraction.js" changelist="39257a0f-548a-4da6-87e0-5429559af94c" time="1391001974410" ignored="false" />
-    <file path="/AbstractionProxy.js" changelist="39257a0f-548a-4da6-87e0-5429559af94c" time="1391524576107" ignored="false" />
+    <file path="/AbstractionProxy.js" changelist="39257a0f-548a-4da6-87e0-5429559af94c" time="1391695443178" ignored="false" />
     <file path="/IntegrationTest.html" changelist="39257a0f-548a-4da6-87e0-5429559af94c" time="1391263172904" ignored="false" />
     <file path="/widget1.html" changelist="39257a0f-548a-4da6-87e0-5429559af94c" time="1391003301939" ignored="false" />
     <file path="/InpageNavigator.js" changelist="39257a0f-548a-4da6-87e0-5429559af94c" time="1391091022829" ignored="false" />
@@ -35,8 +38,8 @@
     <file path="$PROJECT_DIR$/../solr_ui/src/main/webapp/js/configure/SolrUiApplication.js" changelist="39257a0f-548a-4da6-87e0-5429559af94c" time="1391246861423" ignored="false" />
     <file path="/AcceptanceTest.html" changelist="39257a0f-548a-4da6-87e0-5429559af94c" time="1391263510839" ignored="false" />
     <file path="/Application.js" changelist="39257a0f-548a-4da6-87e0-5429559af94c" time="1391524858494" ignored="false" />
-    <file path="/Id.js" changelist="39257a0f-548a-4da6-87e0-5429559af94c" time="1391691426746" ignored="false" />
-    <file path="/IdTest.html" changelist="39257a0f-548a-4da6-87e0-5429559af94c" time="1391691139044" ignored="false" />
+    <file path="/Id.js" changelist="39257a0f-548a-4da6-87e0-5429559af94c" time="1391938830772" ignored="false" />
+    <file path="/IdTest.html" changelist="39257a0f-548a-4da6-87e0-5429559af94c" time="1391939068704" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,7 +117,7 @@
       <file leaf-file-name="AbstractionProxy.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/js/component/AbstractionProxy.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="3" selection-start="353" selection-end="353" vertical-scroll-proportion="0.0">
+            <state line="51" column="6" selection-start="1386" selection-end="1386" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -123,7 +126,7 @@
       <file leaf-file-name="Id.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/js/common/Id.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="66" column="0" selection-start="2385" selection-end="2385" vertical-scroll-proportion="0.0">
+            <state line="46" column="47" selection-start="1764" selection-end="1764" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -132,25 +135,16 @@
       <file leaf-file-name="build.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/build.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="17" selection-start="707" selection-end="707" vertical-scroll-proportion="0.0">
+            <state line="19" column="25" selection-start="543" selection-end="543" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="simple-pac.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/dist/simple-pac.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="315.35294">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IdTest.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="IdTest.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/IdTest.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="58" column="25" selection-start="2231" selection-end="2231" vertical-scroll-proportion="0.0">
+            <state line="53" column="21" selection-start="2091" selection-end="2091" vertical-scroll-proportion="1.6013864">
               <folding />
             </state>
           </provider>
@@ -220,12 +214,12 @@
         <option value="$PROJECT_DIR$/src/js/view/Presentation.js" />
         <option value="$PROJECT_DIR$/src/js/view/Widget.js" />
         <option value="$PROJECT_DIR$/src/js/view/TransitionManager.js" />
-        <option value="$PROJECT_DIR$/src/js/component/AbstractionProxy.js" />
         <option value="$PROJECT_DIR$/src/js/component/ComponentRepository.js" />
         <option value="$PROJECT_DIR$/src/js/view/Application.js" />
-        <option value="$PROJECT_DIR$/src/IdTest.html" />
+        <option value="$PROJECT_DIR$/src/js/component/AbstractionProxy.js" />
         <option value="$PROJECT_DIR$/src/js/common/Id.js" />
         <option value="$PROJECT_DIR$/build.xml" />
+        <option value="$PROJECT_DIR$/src/IdTest.html" />
       </list>
     </option>
   </component>
@@ -233,10 +227,10 @@
     <treeState />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="46" />
-    <option name="y" value="569" />
+    <option name="x" value="-4" />
+    <option name="y" value="-4" />
     <option name="width" value="1374" />
-    <option name="height" value="134" />
+    <option name="height" value="776" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -388,20 +382,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="phantomjs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="my_lib_js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="my_lib_js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dist" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -576,14 +556,14 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="46" y="569" width="1374" height="134" extended-state="0" />
+    <frame x="-4" y="-4" width="1374" height="776" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Statistic" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.102118" sideWeight="0.6784074" order="1" side_tool="false" content_ui="tabs" x="776" y="81" width="387" height="653" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.102118" sideWeight="0.6784074" order="2" side_tool="false" content_ui="tabs" x="776" y="81" width="387" height="653" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.330781" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -591,15 +571,15 @@
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32159266" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32980332" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32980332" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.18986385" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19062027" sideWeight="0.6784074" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" x="96" y="96" width="1174" height="576" />
+      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" x="96" y="96" width="1174" height="576" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.669219" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -694,9 +674,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/AcceptanceTest.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="7" selection-start="811" selection-end="811" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="23" column="7" selection-start="811" selection-end="811" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/js/net/HttpClient.js">
@@ -706,9 +684,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/js/component/Control.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="0" selection-start="360" selection-end="360" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="12" column="0" selection-start="360" selection-end="360" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/js/view/TransitionManager.js">
@@ -732,13 +708,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/component/AbstractionProxy.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="3" selection-start="353" selection-end="353" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/js/view/Application.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="19" column="5" selection-start="577" selection-end="577" vertical-scroll-proportion="0.0">
@@ -753,30 +722,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/IdTest.html">
+    <entry file="file://$PROJECT_DIR$/src/js/component/AbstractionProxy.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="25" selection-start="2231" selection-end="2231" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/common/Id.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="66" column="0" selection-start="2385" selection-end="2385" vertical-scroll-proportion="0.0">
+        <state line="51" column="6" selection-start="1386" selection-end="1386" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/build.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="17" selection-start="707" selection-end="707" vertical-scroll-proportion="0.0">
+        <state line="19" column="25" selection-start="543" selection-end="543" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dist/simple-pac.js">
+    <entry file="file://$PROJECT_DIR$/src/js/common/Id.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="315.35294">
+        <state line="46" column="47" selection-start="1764" selection-end="1764" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/IdTest.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="53" column="21" selection-start="2091" selection-end="2091" vertical-scroll-proportion="1.6013864">
           <folding />
         </state>
       </provider>

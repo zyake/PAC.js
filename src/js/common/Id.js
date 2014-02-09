@@ -13,7 +13,7 @@
  * ${WIDGET_ID}.${CONTROL_ID}.[${PRESENTATION_ID} | ${ABSTRACTION_ID}].${ACTION_CODE}
  */
 Id = {
-
+    idString: "",
     onAbstraction: function(target) {
       var id = Object.create(this, {
         target: { value: target },
@@ -26,11 +26,11 @@ Id = {
       } else if ( AbstractionProxy.isPrototypeOf(target) ) {
         id.idString += target.control.widget.id;
         id.idString += ("." + target.control.id);
-        id.idString += ("." + target.id);
+        id.idString += ("." + target.control.abstraction.id);
       } else if ( Control.isPrototypeOf(target) ) {
         id.idString = target.widget.id;
-        id.idString += "." + target.id;
-        id.idString += "." + target.abstraction.id;
+        id.idString += ("." + target.id);
+        id.idString += ("." + target.abstraction.id);
       } else {
         throw new Error("invalid target:" + target);
       }
@@ -45,16 +45,16 @@ Id = {
         
       if ( Presentation.isPrototypeOf(target) ) {
         id.idString = target.control.widget.id;
-        id.idString += "." + target.control.id;
-        id.idString += "." + target.id;
+        id.idString += ("." + target.control.id);
+        id.idString += ("." + target.control.presentation.id);
       } else if ( AbstractionProxy.isPrototypeOf(target) ) {
         id.idString = target.control.widget.id;
-        id.idString +="." + target.control.id;
-        id.idString += "." + target.control.presentation.id;
+        id.idString += ("." + target.control.id);
+        id.idString += ("." + target.control.presentation.id);
       } else if ( Control.isPrototypeOf(target) ) {
         id.idString = target.widget.id;
-        id.idString += "." + target.id;
-        id.idString += "." + target.presentation.id;
+        id.idString += ("." + target.id);
+        id.idString += ("." + target.presentation.id);
       } else {
         throw new Error("invalid target:" + target);
       }
@@ -71,6 +71,14 @@ Id = {
 
     start: function() {
         return this.idString + ".start";
+    },
+
+    change: function() {
+        return this.idString + ".change";
+    },
+
+    checkAction: function(target, event) {
+        return target.endWith(event.idString);
     },
 
     on: function(func) {
