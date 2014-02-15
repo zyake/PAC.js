@@ -28,6 +28,7 @@ Widget  = {
             initialized: { value: false },
             repository: { value: ComponentRepository.create(id + "Repository", parentRepository) }
         });
+        Object.defineProperties(widget, this.fields || {});
         Object.seal(widget);
         return widget;
     },

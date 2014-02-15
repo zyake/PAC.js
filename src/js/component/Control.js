@@ -13,6 +13,7 @@ Control = {
             presentation: { value: presentation },
             abstraction: { value: abstraction }
         });
+        Object.defineProperties(control, this.fields || {});
         Object.seal(control);
 
         return control;

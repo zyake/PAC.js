@@ -7,7 +7,7 @@
  */
 Presentation = {
 
-    create: function(elem, id) {
+    create: function(elem, id, fields/* can be null! */) {
       Assert.notNullAll(this, [ [ elem, "elem" ], [ id, "id" ] ]);
 
       var presentation = Object.create(this, {
@@ -15,6 +15,7 @@ Presentation = {
         id: { value: id },
         control: { value: null, writable: true }
       });
+      Object.defineProperties(presentation, this.fields || {});
       Object.seal(presentation);
       return presentation;
     },

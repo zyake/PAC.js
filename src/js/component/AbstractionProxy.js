@@ -40,17 +40,17 @@ AbstractionProxy = {
             [ responseKey, "responseKey" ], [ url, "url" ] ]);
 
         var proxy = Object.create(this, {
-            id: { value: id },
-            requestKey: { value: requestKey },
-            responseKey: { value: responseKey },
-            url: { value: url },
-            httpClient: { value: window.HttpClient },
-            isRequesting: { value: false },
-            reqHandler: { value: this. FOR_DEFAULT, writable: true },
-            resHandler: { value: this.AS_DEFAULT, writable: true },
-            control: { value: null, writable: true }
+          id: { value: id },
+          requestKey: { value: requestKey },
+          responseKey: { value: responseKey },
+          url: { value: url },
+          httpClient: { value: window.HttpClient },
+          isRequesting: { value: false },
+          reqHandler: { value: this. FOR_DEFAULT, writable: true },
+          resHandler: { value: this.AS_DEFAULT, writable: true },
+          control: { value: null, writable: true }
         });
-
+        Object.defineProperties(proxy, this.fields || {});
         Object.seal(proxy);
 
         return proxy;

@@ -19,6 +19,7 @@
             httpClient: { value: window.HttpClient, writable: true },
             errorHandler: { value: errorHandler || function() {} }
         });
+       Object.defineProperties(manager, this.fields || {});
        Object.seal(manager);
        return manager;
     },

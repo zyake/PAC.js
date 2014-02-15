@@ -40,17 +40,17 @@ AbstractionProxy = {
             [ responseKey, "responseKey" ], [ url, "url" ] ]);
 
         var proxy = Object.create(this, {
-            id: { value: id },
-            requestKey: { value: requestKey },
-            responseKey: { value: responseKey },
-            url: { value: url },
-            httpClient: { value: window.HttpClient },
-            isRequesting: { value: false },
-            reqHandler: { value: this. FOR_DEFAULT, writable: true },
-            resHandler: { value: this.AS_DEFAULT, writable: true },
-            control: { value: null, writable: true }
+          id: { value: id },
+          requestKey: { value: requestKey },
+          responseKey: { value: responseKey },
+          url: { value: url },
+          httpClient: { value: window.HttpClient },
+          isRequesting: { value: false },
+          reqHandler: { value: this. FOR_DEFAULT, writable: true },
+          resHandler: { value: this.AS_DEFAULT, writable: true },
+          control: { value: null, writable: true }
         });
-
+        Object.defineProperties(proxy, this.fields || {});
         Object.seal(proxy);
 
         return proxy;
@@ -141,6 +141,7 @@ ComponentRepository = {
             routeStack: { value: [] },
             parent: { value: parent }
         });
+        Object.defineProperties(repository, this.fields || {});
         Object.seal(repository);
         repository.initialize();
 
@@ -247,6 +248,7 @@ Control = {
             presentation: { value: presentation },
             abstraction: { value: abstraction }
         });
+        Object.defineProperties(control, this.fields || {});
         Object.seal(control);
 
         return control;
@@ -318,6 +320,7 @@ Application = {
             centralRepository: { value: ComponentRepository.create("applicationRepository") },
             transitionManager: { value: null, writable: true }
         });
+        Object.defineProperties(app, this.fields || {});
         Object.seal(app);
         app.initialize(appElem, widgetDef);
 
@@ -349,7 +352,7 @@ Application = {
  */
 Presentation = {
 
-    create: function(elem, id) {
+    create: function(elem, id, fields/* can be null! */) {
       Assert.notNullAll(this, [ [ elem, "elem" ], [ id, "id" ] ]);
 
       var presentation = Object.create(this, {
@@ -357,6 +360,7 @@ Presentation = {
         id: { value: id },
         control: { value: null, writable: true }
       });
+      Object.defineProperties(presentation, this.fields || {});
       Object.seal(presentation);
       return presentation;
     },
@@ -438,6 +442,7 @@ Presentation = {
             httpClient: { value: window.HttpClient, writable: true },
             errorHandler: { value: errorHandler || function() {} }
         });
+       Object.defineProperties(manager, this.fields || {});
        Object.seal(manager);
        return manager;
     },
@@ -522,6 +527,7 @@ Widget  = {
             initialized: { value: false },
             repository: { value: ComponentRepository.create(id + "Repository", parentRepository) }
         });
+        Object.defineProperties(widget, this.fields || {});
         Object.seal(widget);
         return widget;
     },

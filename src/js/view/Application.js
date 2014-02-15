@@ -17,6 +17,7 @@ Application = {
             centralRepository: { value: ComponentRepository.create("applicationRepository") },
             transitionManager: { value: null, writable: true }
         });
+        Object.defineProperties(app, this.fields || {});
         Object.seal(app);
         app.initialize(appElem, widgetDef);
 
