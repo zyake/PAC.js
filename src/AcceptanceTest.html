@@ -32,7 +32,7 @@
     });
 
     window.addEventListener("load", function() {
-        app = Application.create(document.querySelector("#containerElem"), {
+        app = Application.create("app1", document.querySelector("#containerElem"), {
             widget1: function(id, elem, repository) {
                 var widget1 = Widget.create(id, elem, repository);
                 widget1

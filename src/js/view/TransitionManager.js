@@ -8,7 +8,7 @@
  TransitionManager = {
 
     create: function(containerElem, repository, errorHandler /* can be null! */) {
-        Assert.notNullAll([ [ containerElem, "containerElem" ], [ repository, "repository" ] ]);
+        Assert.notNullAll(this, [ [ containerElem, "containerElem" ], [ repository, "repository" ] ]);
         var manager = Object.create(this, {
             currentId: { value: null, writable: true },
             containerElem: { value: containerElem },
@@ -24,7 +24,7 @@
     },
 
     transit: function(id) {
-        Assert.notNull(id, "id");
+        Assert.notNull(this, id, "id");
          if ( this.isTransiting ) {
              return;
          }
@@ -58,7 +58,7 @@
       },
 
       doTransit: function(id, newElem) {
-           Assert.notNullAll([ [ id, "id" ], [ newElem, "newElem" ] ]);
+           Assert.notNullAll(this, [ [ id, "id" ], [ newElem, "newElem" ] ]);
            if ( this.currentId != null ) {
                var prevWidgetElem = this.idToElemMap[this.currentId];
                var prevWidget = this.repository.get(this.currentId, prevWidgetElem, this.repository);
@@ -68,5 +68,9 @@
            this.idToElemMap[id].style.display = "block";
            var currentWidget = this.repository.get(id, newElem, this.repository);
            currentWidget.initialize();
+      },
+
+      toString: function() {
+        return "TransitionManager [ currentId: " + this.currentId + ", idToElemMap: " + this.idToElemMap + " ]";
       }
  };

@@ -10,10 +10,11 @@
  */
 Application = {
 
-   create: function(appElem, widgetDef) {
-        Assert.notNullAll([ [appElem, "appElem" ], [ widgetDef, "widgetDef" ] ]);
+   create: function(id, appElem, widgetDef) {
+        Assert.notNullAll(this, [ [ id, "id" ], [appElem, "appElem" ], [ widgetDef, "widgetDef" ] ]);
         var app = Object.create(this, {
-            centralRepository: { value: ComponentRepository.create() }
+            id: id,
+            centralRepository: { value: ComponentRepository.create("applicationRepository") }
         });
         app.initialize(appElem, widgetDef);
 
@@ -21,13 +22,13 @@ Application = {
    },
 
     initialize: function(appElem, widgetDef) {
-        Assert.notNullAll([ [appElem, "appElem" ], [ widgetDef, "widgetDef" ] ]);
+        Assert.notNullAll(this, [ [appElem, "appElem" ], [ widgetDef, "widgetDef" ] ]);
         this.centralRepository.defineFactories(widgetDef);
         this.transitionManager = TransitionManager.create(appElem, this.centralRepository);
     },
 
     start: function(initWidgetId) {
-        Assert.notNull(initWidgetId, "initWidgetId");
+        Assert.notNull(this, initWidgetId, "initWidgetId");
         var me = this;
         window.addEventListener("hashchange", function(event) {
             var hashIndex = event.newURL.lastIndexOf("#");

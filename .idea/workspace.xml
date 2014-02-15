@@ -2,21 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="39257a0f-548a-4da6-87e0-5429559af94c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/js/common/Assert.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/component/AbstractionProxy.js" afterPath="$PROJECT_DIR$/src/js/component/AbstractionProxy.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AcceptanceTest.html" afterPath="$PROJECT_DIR$/src/AcceptanceTest.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/view/Application.js" afterPath="$PROJECT_DIR$/src/js/view/Application.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/common/Assert.js" afterPath="$PROJECT_DIR$/src/js/common/Assert.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/component/ComponentRepository.js" afterPath="$PROJECT_DIR$/src/js/component/ComponentRepository.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ComponentRepositoryTest.html" afterPath="$PROJECT_DIR$/src/ComponentRepositoryTest.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/component/Control.js" afterPath="$PROJECT_DIR$/src/js/component/Control.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/net/HttpClient.js" afterPath="$PROJECT_DIR$/src/js/net/HttpClient.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/HttpClientTest.html" afterPath="$PROJECT_DIR$/src/HttpClientTest.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/common/Id.js" afterPath="$PROJECT_DIR$/src/js/common/Id.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/IdTest.html" afterPath="$PROJECT_DIR$/src/IdTest.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/IntegrationTest.html" afterPath="$PROJECT_DIR$/src/IntegrationTest.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/view/Presentation.js" afterPath="$PROJECT_DIR$/src/js/view/Presentation.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/view/TransitionManager.js" afterPath="$PROJECT_DIR$/src/js/view/TransitionManager.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/TransitionManagerTest.html" afterPath="$PROJECT_DIR$/src/TransitionManagerTest.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/view/Widget.js" afterPath="$PROJECT_DIR$/src/js/view/Widget.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/simple-pac.js" afterPath="$PROJECT_DIR$/dist/simple-pac.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
@@ -24,37 +21,37 @@
     <ignored path="my_lib_js.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="39257a0f-548a-4da6-87e0-5429559af94c" time="1392460164381" ignored="false" />
-    <file path="/TransitionManager.js" changelist="39257a0f-548a-4da6-87e0-5429559af94c" time="1392465156069" ignored="false" />
-    <file path="/HttpClient.js" changelist="39257a0f-548a-4da6-87e0-5429559af94c" time="1392464647706" ignored="false" />
+    <file path="/TransitionManager.js" changelist="39257a0f-548a-4da6-87e0-5429559af94c" time="1392468926170" ignored="false" />
+    <file path="/HttpClient.js" changelist="39257a0f-548a-4da6-87e0-5429559af94c" time="1392469094532" ignored="false" />
     <file path="/HttpClientTest.html" changelist="39257a0f-548a-4da6-87e0-5429559af94c" time="1390584321132" ignored="false" />
     <file path="/Test.txt" changelist="39257a0f-548a-4da6-87e0-5429559af94c" time="1390486880625" ignored="false" />
     <file path="/build.xml" changelist="39257a0f-548a-4da6-87e0-5429559af94c" time="1391938981116" ignored="false" />
     <file path="/build.properties" changelist="39257a0f-548a-4da6-87e0-5429559af94c" time="1390576130885" ignored="false" />
     <file path="/HttpClientTest.js" changelist="39257a0f-548a-4da6-87e0-5429559af94c" time="1390574980373" ignored="false" />
-    <file path="/ComponentRepositoryTest.html" changelist="39257a0f-548a-4da6-87e0-5429559af94c" time="1392465032328" ignored="false" />
-    <file path="/ComponentRepository.js" changelist="39257a0f-548a-4da6-87e0-5429559af94c" time="1392465107641" ignored="false" />
+    <file path="/ComponentRepositoryTest.html" changelist="39257a0f-548a-4da6-87e0-5429559af94c" time="1392469247262" ignored="false" />
+    <file path="/ComponentRepository.js" changelist="39257a0f-548a-4da6-87e0-5429559af94c" time="1392468645482" ignored="false" />
     <file path="/QUnitCommon.js" changelist="39257a0f-548a-4da6-87e0-5429559af94c" time="1391225924563" ignored="false" />
     <file path="/TransitionManagerTest.html" changelist="39257a0f-548a-4da6-87e0-5429559af94c" time="1391264413099" ignored="false" />
     <file path="/form.html" changelist="39257a0f-548a-4da6-87e0-5429559af94c" time="1390645891587" ignored="false" />
     <file path="/search.html" changelist="39257a0f-548a-4da6-87e0-5429559af94c" time="1391956586769" ignored="false" />
-    <file path="/Widget.js" changelist="39257a0f-548a-4da6-87e0-5429559af94c" time="1392465209360" ignored="false" />
-    <file path="/Control.js" changelist="39257a0f-548a-4da6-87e0-5429559af94c" time="1392462867671" ignored="false" />
-    <file path="/a.dummy" changelist="39257a0f-548a-4da6-87e0-5429559af94c" time="1391426975400" ignored="false" />
-    <file path="/Presentation.js" changelist="39257a0f-548a-4da6-87e0-5429559af94c" time="1392461429754" ignored="false" />
+    <file path="/Widget.js" changelist="39257a0f-548a-4da6-87e0-5429559af94c" time="1392468957333" ignored="false" />
+    <file path="/Control.js" changelist="39257a0f-548a-4da6-87e0-5429559af94c" time="1392468752476" ignored="false" />
+    <file path="/a.dummy" changelist="39257a0f-548a-4da6-87e0-5429559af94c" time="1392469412053" ignored="false" />
+    <file path="/Presentation.js" changelist="39257a0f-548a-4da6-87e0-5429559af94c" time="1392469449997" ignored="false" />
     <file path="/Abstraction.js" changelist="39257a0f-548a-4da6-87e0-5429559af94c" time="1391001974410" ignored="false" />
-    <file path="/AbstractionProxy.js" changelist="39257a0f-548a-4da6-87e0-5429559af94c" time="1392462350275" ignored="false" />
+    <file path="/AbstractionProxy.js" changelist="39257a0f-548a-4da6-87e0-5429559af94c" time="1392468289006" ignored="false" />
     <file path="/IntegrationTest.html" changelist="39257a0f-548a-4da6-87e0-5429559af94c" time="1392129734602" ignored="false" />
     <file path="/widget1.html" changelist="39257a0f-548a-4da6-87e0-5429559af94c" time="1391003301939" ignored="false" />
     <file path="/InpageNavigator.js" changelist="39257a0f-548a-4da6-87e0-5429559af94c" time="1391091022829" ignored="false" />
     <file path="/Applcation.js" changelist="39257a0f-548a-4da6-87e0-5429559af94c" time="1391246994975" ignored="false" />
     <file path="/contents.json" changelist="39257a0f-548a-4da6-87e0-5429559af94c" time="1391233908726" ignored="false" />
     <file path="$PROJECT_DIR$/../solr_ui/src/main/webapp/js/configure/SolrUiApplication.js" changelist="39257a0f-548a-4da6-87e0-5429559af94c" time="1391951068494" ignored="false" />
-    <file path="/AcceptanceTest.html" changelist="39257a0f-548a-4da6-87e0-5429559af94c" time="1392464515628" ignored="false" />
-    <file path="/Application.js" changelist="39257a0f-548a-4da6-87e0-5429559af94c" time="1392463926174" ignored="false" />
-    <file path="/Id.js" changelist="39257a0f-548a-4da6-87e0-5429559af94c" time="1392461519920" ignored="false" />
+    <file path="/AcceptanceTest.html" changelist="39257a0f-548a-4da6-87e0-5429559af94c" time="1392468838387" ignored="false" />
+    <file path="/Application.js" changelist="39257a0f-548a-4da6-87e0-5429559af94c" time="1392469440626" ignored="false" />
+    <file path="/Id.js" changelist="39257a0f-548a-4da6-87e0-5429559af94c" time="1392467362053" ignored="false" />
     <file path="/IdTest.html" changelist="39257a0f-548a-4da6-87e0-5429559af94c" time="1391939068704" ignored="false" />
     <file path="$PROJECT_DIR$/../solr_ui/src/main/webapp/js/external/simple-pac.js" changelist="39257a0f-548a-4da6-87e0-5429559af94c" time="1391962379957" ignored="false" />
-    <file path="$PROJECT_DIR$/../solr_ui/src/main/webapp/js/widget/SearchWidgetFactory.js" changelist="39257a0f-548a-4da6-87e0-5429559af94c" time="1391962016664" ignored="false" />
+    <file path="$PROJECT_DIR$/../solr_ui/src/main/webapp/js/widget/SearchWidgetFactory.js" changelist="39257a0f-548a-4da6-87e0-5429559af94c" time="1392467004660" ignored="false" />
     <file path="/SearchWidgetFactory.js" changelist="39257a0f-548a-4da6-87e0-5429559af94c" time="1391962014180" ignored="false" />
     <file path="/index.html" changelist="39257a0f-548a-4da6-87e0-5429559af94c" time="1391951128849" ignored="false" />
     <file path="$PROJECT_DIR$/../solr_ui/src/main/webapp/index.html" changelist="39257a0f-548a-4da6-87e0-5429559af94c" time="1391951132507" ignored="false" />
@@ -64,7 +61,9 @@
     <file path="/FacetView.js" changelist="39257a0f-548a-4da6-87e0-5429559af94c" time="1392131087591" ignored="false" />
     <file path="$PROJECT_DIR$/../solr_ui/src/main/webapp/js/model/FacetManager.js" changelist="39257a0f-548a-4da6-87e0-5429559af94c" time="1392131247222" ignored="false" />
     <file path="/FacetManager.js" changelist="39257a0f-548a-4da6-87e0-5429559af94c" time="1392131233115" ignored="false" />
-    <file path="/Assert.js" changelist="39257a0f-548a-4da6-87e0-5429559af94c" time="1392461176131" ignored="false" />
+    <file path="/Assert.js" changelist="39257a0f-548a-4da6-87e0-5429559af94c" time="1392469158453" ignored="false" />
+    <file path="$PROJECT_DIR$/../solr_ui/src/main/webapp/js/presentation/CompositePresentation.js" changelist="39257a0f-548a-4da6-87e0-5429559af94c" time="1392466983832" ignored="false" />
+    <file path="/AssertTest.html" changelist="39257a0f-548a-4da6-87e0-5429559af94c" time="1392469618887" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,34 +132,7 @@
       <file leaf-file-name="TransitionManager.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/js/view/TransitionManager.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="53" selection-start="697" selection-end="697" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AbstractionProxy.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/js/component/AbstractionProxy.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="96" column="35" selection-start="2937" selection-end="2937" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Assert.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/js/common/Assert.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="0" selection-start="327" selection-end="327" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="simple-pac.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/dist/simple-pac.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="17" selection-start="291" selection-end="291" vertical-scroll-proportion="-1.9901316">
+            <state line="60" column="35" selection-start="2183" selection-end="2183" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -169,16 +141,7 @@
       <file leaf-file-name="IntegrationTest.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/IntegrationTest.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="0" selection-start="704" selection-end="704" vertical-scroll-proportion="-14.193548">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TransitionManagerTest.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/TransitionManagerTest.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="0" selection-start="475" selection-end="475" vertical-scroll-proportion="-8.5161295">
+            <state line="24" column="71" selection-start="875" selection-end="875" vertical-scroll-proportion="8.354838">
               <folding />
             </state>
           </provider>
@@ -187,7 +150,34 @@
       <file leaf-file-name="Widget.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/js/view/Widget.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="79" selection-start="1049" selection-end="1049" vertical-scroll-proportion="0.0">
+            <state line="91" column="29" selection-start="2956" selection-end="2956" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AcceptanceTest.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/AcceptanceTest.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="12" column="17" selection-start="430" selection-end="430" vertical-scroll-proportion="-1.440208">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Presentation.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/js/view/Presentation.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="64" column="32" selection-start="1936" selection-end="1936" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Assert.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/js/common/Assert.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="8" column="30" selection-start="269" selection-end="269" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -196,25 +186,34 @@
       <file leaf-file-name="ComponentRepositoryTest.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ComponentRepositoryTest.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="43" selection-start="928" selection-end="928" vertical-scroll-proportion="-7.967742">
+            <state line="10" column="0" selection-start="225" selection-end="318" vertical-scroll-proportion="-7.096774">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ComponentRepository.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/js/component/ComponentRepository.js">
+      <file leaf-file-name="IdTest.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/IdTest.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="89" column="0" selection-start="3189" selection-end="3189" vertical-scroll-proportion="0.0">
+            <state line="60" column="31" selection-start="2366" selection-end="2366" vertical-scroll-proportion="-7.967742">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HttpClient.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/js/net/HttpClient.js">
+      <file leaf-file-name="HttpClientTest.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/HttpClientTest.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="66" selection-start="238" selection-end="238" vertical-scroll-proportion="0.0">
+            <state line="28" column="27" selection-start="800" selection-end="800" vertical-scroll-proportion="-10.387096">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Application.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/js/view/Application.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="24" column="32" selection-start="807" selection-end="807" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -238,22 +237,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/js/common/Assert.js" />
-        <option value="$PROJECT_DIR$/src/js/view/Presentation.js" />
+        <option value="$PROJECT_DIR$/src/IdTest.html" />
+        <option value="$PROJECT_DIR$/src/TransitionManagerTest.html" />
         <option value="$PROJECT_DIR$/src/js/common/Id.js" />
         <option value="$PROJECT_DIR$/src/js/component/AbstractionProxy.js" />
-        <option value="$PROJECT_DIR$/src/js/component/Control.js" />
-        <option value="$PROJECT_DIR$/src/js/view/Application.js" />
-        <option value="$PROJECT_DIR$/src/AcceptanceTest.html" />
-        <option value="$PROJECT_DIR$/src/HttpClientTest.html" />
-        <option value="$PROJECT_DIR$/src/IdTest.html" />
         <option value="$PROJECT_DIR$/src/IntegrationTest.html" />
-        <option value="$PROJECT_DIR$/src/TransitionManagerTest.html" />
-        <option value="$PROJECT_DIR$/src/js/net/HttpClient.js" />
-        <option value="$PROJECT_DIR$/src/ComponentRepositoryTest.html" />
         <option value="$PROJECT_DIR$/src/js/component/ComponentRepository.js" />
+        <option value="$PROJECT_DIR$/src/js/component/Control.js" />
+        <option value="$PROJECT_DIR$/src/AcceptanceTest.html" />
+        <option value="$PROJECT_DIR$/src/js/net/HttpClient.js" />
+        <option value="$PROJECT_DIR$/src/js/common/Assert.js" />
+        <option value="$PROJECT_DIR$/src/ComponentRepositoryTest.html" />
+        <option value="$PROJECT_DIR$/src/js/view/Application.js" />
+        <option value="$PROJECT_DIR$/src/js/view/Presentation.js" />
         <option value="$PROJECT_DIR$/src/js/view/TransitionManager.js" />
         <option value="$PROJECT_DIR$/src/js/view/Widget.js" />
+        <option value="$PROJECT_DIR$/src/AssertTest.html" />
       </list>
     </option>
   </component>
@@ -670,13 +669,14 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-4" y="-4" width="1374" height="776" extended-state="0" />
+    <frame x="-4" y="-4" width="1374" height="776" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Statistic" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32980332" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.49310872" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.102118" sideWeight="0.6784074" order="2" side_tool="false" content_ui="tabs" x="776" y="81" width="387" height="653" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.330781" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -692,7 +692,6 @@
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" x="96" y="96" width="1174" height="576" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.669219" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -771,114 +770,107 @@
     </buildFile>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/js/component/Control.js">
+    <entry file="file://$PROJECT_DIR$/dist/simple-pac.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="8" selection-start="1118" selection-end="1118" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/view/Application.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="53" selection-start="1038" selection-end="1038" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/view/Presentation.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="35" selection-start="468" selection-end="468" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AcceptanceTest.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="39" selection-start="594" selection-end="638" vertical-scroll-proportion="-7.806452">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/HttpClientTest.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="0" selection-start="355" selection-end="355" vertical-scroll-proportion="-9.225806">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/IdTest.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="0" selection-start="495" selection-end="495" vertical-scroll-proportion="-8.5161295">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/IntegrationTest.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="0" selection-start="704" selection-end="704" vertical-scroll-proportion="-14.193548">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/TransitionManagerTest.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="0" selection-start="475" selection-end="475" vertical-scroll-proportion="-8.5161295">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ComponentRepositoryTest.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="43" selection-start="928" selection-end="928" vertical-scroll-proportion="-7.967742">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/component/ComponentRepository.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="89" column="0" selection-start="3189" selection-end="3189" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/net/HttpClient.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="66" selection-start="238" selection-end="238" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/view/TransitionManager.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="53" selection-start="697" selection-end="697" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/view/Widget.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="79" selection-start="1049" selection-end="1049" vertical-scroll-proportion="0.0">
+        <state line="152" column="15" selection-start="4697" selection-end="4697" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/js/component/AbstractionProxy.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="96" column="35" selection-start="2937" selection-end="2937" vertical-scroll-proportion="0.0">
+        <state line="101" column="55" selection-start="3165" selection-end="3165" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/component/ComponentRepository.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="109" column="86" selection-start="4057" selection-end="4057" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/component/Control.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="40" column="32" selection-start="1324" selection-end="1324" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/net/HttpClient.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="33" selection-start="205" selection-end="205" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/js/common/Assert.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="0" selection-start="327" selection-end="327" vertical-scroll-proportion="0.0">
+        <state line="8" column="30" selection-start="269" selection-end="269" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dist/simple-pac.js">
+    <entry file="file://$PROJECT_DIR$/src/js/view/Application.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="17" selection-start="291" selection-end="291" vertical-scroll-proportion="-1.9901316">
+        <state line="24" column="32" selection-start="807" selection-end="807" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/view/Presentation.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="64" column="32" selection-start="1936" selection-end="1936" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/view/TransitionManager.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="60" column="35" selection-start="2183" selection-end="2183" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/view/Widget.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="91" column="29" selection-start="2956" selection-end="2956" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/IntegrationTest.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="71" selection-start="875" selection-end="875" vertical-scroll-proportion="8.354838">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ComponentRepositoryTest.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="0" selection-start="225" selection-end="318" vertical-scroll-proportion="-7.096774">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/IdTest.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="60" column="31" selection-start="2366" selection-end="2366" vertical-scroll-proportion="-7.967742">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HttpClientTest.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="27" selection-start="800" selection-end="800" vertical-scroll-proportion="-10.387096">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AcceptanceTest.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="17" selection-start="430" selection-end="430" vertical-scroll-proportion="-1.440208">
           <folding />
         </state>
       </provider>

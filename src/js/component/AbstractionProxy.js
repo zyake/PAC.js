@@ -13,22 +13,22 @@
 AbstractionProxy = {
 
     AS_JSON: function(xhr) {
-        Assert.notNull(xhr, "xhr");
+        Assert.notNull(this, xhr, "xhr");
         return JSON.parse(xhr.responseText);
      },
 
     AS_TEXT: function(xhr) {
-        Assert.notNull(xhr, "xhr");
+        Assert.notNull(this, xhr, "xhr");
         return xhr.responseText;
     },
 
     FOR_JSON:  function(obj, xhr) {
-        Assert.notNullAll([ [ obj,  "obj" ], [ xhr, "xhr" ] ]);
+        Assert.notNullAll(this, [ [ obj,  "obj" ], [ xhr, "xhr" ] ]);
         return JSON.stringify(obj);
     },
 
     FOR_TEXT: function(obj, xhr) {
-        Assert.notNullAll([ [ obj, "obj" ], [ xhr, "xhr" ] ]);
+        Assert.notNullAll(this, [ [ obj, "obj" ], [ xhr, "xhr" ] ]);
         return obj.toString();
     },
 
@@ -36,7 +36,7 @@ AbstractionProxy = {
     FOR_DEFAULT: this.FOR_JSON,
 
     create: function(id,  requestKey, responseKey, url) {
-        Assert.notNullAll([ [ id,  "id" ], [ requestKey,  "requestKey" ],
+        Assert.notNullAll(this, [ [ id,  "id" ], [ requestKey,  "requestKey" ],
             [ responseKey, "responseKey" ], [ url, "url" ] ]);
 
         var proxy = Object.create(this, {
@@ -54,7 +54,7 @@ AbstractionProxy = {
     },
 
     initialize: function(control) {
-        Assert.notNull(control, "control");
+        Assert.notNull(this, control, "control");
         this.control = control;
 
         var eventKey = this.requestKey.substring(1);
@@ -63,7 +63,7 @@ AbstractionProxy = {
     },
 
     fetch: function(args) {
-        Assert.notNull(args, "args");
+        Assert.notNull(this, args, "args");
         if ( this.isRequesting == true ) {
             return;
         }
@@ -81,12 +81,12 @@ AbstractionProxy = {
     },
 
     notify: function(event, args) {
-        Assert.notNullAll([ [ event, "event" ], [ args, "args" ] ]);
+        Assert.notNullAll(this, [ [ event, "event" ], [ args, "args" ] ]);
         this.fetch(args);
     },
 
     successCallback: function(xhr) {
-        Assert.notNull(xhr, "xhr");
+        Assert.notNull(this, xhr, "xhr");
         var responseData = this.resHandler(xhr);
         var eventKey = this.responseKey.substring(1);
         var on = Id.onAbstraction(this);
@@ -94,7 +94,11 @@ AbstractionProxy = {
     },
 
     failureCallback: function(xhr) {
-        Assert.notNull(xhr, "xhr");
+        Assert.notNull(this, xhr, "xhr");
         this.control.raiseEvent(this.id + ".error", this, xhr.responseText);
+    },
+
+    toString: function() {
+        return "id: " + this.id + ", url: " + this.url;
     }
 };

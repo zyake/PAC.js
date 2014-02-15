@@ -5,7 +5,7 @@
 Control = {
 
     create: function(id, widget, presentation, abstraction) {
-        Assert.notNullAll([ [ id, "id" ], [ widget, "widget" ], [ presentation, "presentation" ],
+        Assert.notNullAll(this, [ [ id, "id" ], [ widget, "widget" ], [ presentation, "presentation" ],
             [ abstraction, "abstraction" ] ]);
         var control = Object.create(this, {
             id: { value: id },
@@ -23,17 +23,21 @@ Control = {
     },
 
     raiseEvent: function(event, target, args) {
-        Assert.notNullAll([ [ event, "event" ], [ target, "target" ] ,[ args, "args" ] ]);
+        Assert.notNullAll(this, [ [ event, "event" ], [ target, "target" ] ,[ args, "args" ] ]);
         this.widget.raiseEvent(event, target, args);
     },
 
     addEventRef: function(id, eventRef) {
-        Assert.notNullAll([ [ id, "id" ], [ eventRef, "eventRef" ] ]);
+        Assert.notNullAll(this, [ [ id, "id" ], [ eventRef, "eventRef" ] ]);
         this.widget.addEventRef(id, eventRef);
     },
 
     removeEventRef: function(id, eventRef) {
-         Assert.notNullAll([ [ id, "id" ], [ eventRef, "eventRef" ] ]);
+         Assert.notNullAll(this, [ [ id, "id" ], [ eventRef, "eventRef" ] ]);
          this.widget.removeEventRef(id, eventRef);
+    },
+
+    toString: function() {
+        return "id: " + this.id;
     }
 };

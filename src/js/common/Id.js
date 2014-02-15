@@ -13,9 +13,11 @@
  * ${WIDGET_ID}.${CONTROL_ID}.[${PRESENTATION_ID} | ${ABSTRACTION_ID}].${ACTION_CODE}
  */
 Id = {
+
     idString: "",
+
     onAbstraction: function(target) {
-      Assert.notNull(target, "target");
+      Assert.notNull(this, target, "target");
 
       var id = Object.create(this, {
         target: { value: target },
@@ -41,7 +43,7 @@ Id = {
     },
 
     onPresentation: function(target) {
-      Assert.notNull(target, "target");
+      Assert.notNull(this, target, "target");
 
       var id = Object.create(this, {
         target: { value: target },
@@ -86,12 +88,12 @@ Id = {
     },
 
     checkAction: function(target, event) {
-        Assert.notNullAll([ [ target, "target" ], [ event, "event" ] ]);
+        Assert.notNullAll(this, [ [ target, "target" ], [ event, "event" ] ]);
         return target.endWith(event.idString);
     },
 
     on: function(idStr) {
-        Assert.notNull(idStr, "idStr");
+        Assert.notNull(this, idStr, "idStr");
 
         var id = Object.create(this, {
         target: { value: target },
@@ -99,5 +101,9 @@ Id = {
         id.idString = idStr;
 
         return id;
+    },
+
+    toString: function() {
+        return "idString: " + this.idString + ", target: " + this.target;
     }
 }

@@ -22,7 +22,7 @@
 <script>
 
     asyncTest("test-transition", function() {
-        var masterRepository = ComponentRepository.create();
+        var masterRepository = ComponentRepository.create("repository1");
 
         // define widgets
         masterRepository.addFactory("widget1", function(id, elem, repository) {

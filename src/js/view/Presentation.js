@@ -8,7 +8,7 @@
 Presentation = {
 
     create: function(elem, id) {
-      Assert.notNullAll([ [ elem, "elem" ], [ id, "id" ] ]);
+      Assert.notNullAll(this, [ [ elem, "elem" ], [ id, "id" ] ]);
 
       var presentation = Object.create(this, {
         elem: { value: elem },
@@ -19,55 +19,59 @@ Presentation = {
     },
 
     initialize: function(control) {
-        Assert.notNull(control, "control");
+        Assert.notNull(this, control, "control");
         this.control = control;
     },
 
      getById: function(id) {
-        Assert.notNull(id, "id");
+        Assert.notNull(this, id, "id");
         var elemById = this.elem.getElementById(id);
-        Assert.notNull(elemById, "elemById");
+        Assert.notNull(this, elemById, "elemById");
         return elemById;
      },
 
     query: function(query) {
-        Assert.notNull(query, "query");
+        Assert.notNull(this, query, "query");
         var queriedElem = this.elem.querySelector(query);
-        Assert.notNull(queriedElem, "queriedElem");
+        Assert.notNull(this, queriedElem, "queriedElem");
         return queriedElem;
     },
 
     queryAll: function(query) {
-        Assert.notNull(query, "query");
+        Assert.notNull(this, query, "query");
         var queriedElem = this.elem.querySelectorAll(query);
-        Assert.notNull(query, "query");
+        Assert.notNull(this, query, "query");
         return queriedElem;
     },
 
     forEachNode: function(nodeList, func) {
-        Assert.notNullAll([ [ nodeList, "nodeList" ], [ func, "func" ] ]);
+        Assert.notNullAll(this, [ [ nodeList, "nodeList" ], [ func, "func" ] ]);
         Array.prototype.slice.call(nodeList).forEach(func, this);
     },
 
     on: function(elem, event, callback) {
-        Assert.notNullAll([ [ elem, "elem" ], [ event, "event" ],
+        Assert.notNullAll(this, [ [ elem, "elem" ], [ event, "event" ],
          [ callback, "callback" ] ]);
         var me = this;
         elem.addEventListener(event, function(event) { return callback.call(me, event) });
     },
 
     raiseEvent: function(event, arg) {
-        Assert.notNullAll([ [ event, "event" ], [ arg, "arg" ] ]);
+        Assert.notNullAll(this, [ [ event, "event" ], [ arg, "arg" ] ]);
         this.control.raiseEvent(event, this, arg);
     },
 
     addEventRef: function(id, event) {
-        Assert.notNullAll([ [ id, "id" ], [ event, "event" ] ]);
+        Assert.notNullAll(this, [ [ id, "id" ], [ event, "event" ] ]);
         this.control.addEventRef(id, event);
     },
 
     doThrow: function(msg) {
-        Assert.notNull(msg, "msg");
+        Assert.notNull(this, msg, "msg");
         throw new Error(msg);
+    },
+
+    toString: function() {
+        return "id: " + this.id;
     }
 };

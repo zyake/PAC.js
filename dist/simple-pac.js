@@ -13,22 +13,22 @@
 AbstractionProxy = {
 
     AS_JSON: function(xhr) {
-        Assert.notNull(xhr, "xhr");
+        Assert.notNull(this, xhr, "xhr");
         return JSON.parse(xhr.responseText);
      },
 
     AS_TEXT: function(xhr) {
-        Assert.notNull(xhr, "xhr");
+        Assert.notNull(this, xhr, "xhr");
         return xhr.responseText;
     },
 
     FOR_JSON:  function(obj, xhr) {
-        Assert.notNullAll([ [ obj,  "obj" ], [ xhr, "xhr" ] ]);
+        Assert.notNullAll(this, [ [ obj,  "obj" ], [ xhr, "xhr" ] ]);
         return JSON.stringify(obj);
     },
 
     FOR_TEXT: function(obj, xhr) {
-        Assert.notNullAll([ [ obj, "obj" ], [ xhr, "xhr" ] ]);
+        Assert.notNullAll(this, [ [ obj, "obj" ], [ xhr, "xhr" ] ]);
         return obj.toString();
     },
 
@@ -36,7 +36,7 @@ AbstractionProxy = {
     FOR_DEFAULT: this.FOR_JSON,
 
     create: function(id,  requestKey, responseKey, url) {
-        Assert.notNullAll([ [ id,  "id" ], [ requestKey,  "requestKey" ],
+        Assert.notNullAll(this, [ [ id,  "id" ], [ requestKey,  "requestKey" ],
             [ responseKey, "responseKey" ], [ url, "url" ] ]);
 
         var proxy = Object.create(this, {
@@ -54,7 +54,7 @@ AbstractionProxy = {
     },
 
     initialize: function(control) {
-        Assert.notNull(control, "control");
+        Assert.notNull(this, control, "control");
         this.control = control;
 
         var eventKey = this.requestKey.substring(1);
@@ -63,7 +63,7 @@ AbstractionProxy = {
     },
 
     fetch: function(args) {
-        Assert.notNull(args, "args");
+        Assert.notNull(this, args, "args");
         if ( this.isRequesting == true ) {
             return;
         }
@@ -81,12 +81,12 @@ AbstractionProxy = {
     },
 
     notify: function(event, args) {
-        Assert.notNullAll([ [ event, "event" ], [ args, "args" ] ]);
+        Assert.notNullAll(this, [ [ event, "event" ], [ args, "args" ] ]);
         this.fetch(args);
     },
 
     successCallback: function(xhr) {
-        Assert.notNull(xhr, "xhr");
+        Assert.notNull(this, xhr, "xhr");
         var responseData = this.resHandler(xhr);
         var eventKey = this.responseKey.substring(1);
         var on = Id.onAbstraction(this);
@@ -94,8 +94,12 @@ AbstractionProxy = {
     },
 
     failureCallback: function(xhr) {
-        Assert.notNull(xhr, "xhr");
+        Assert.notNull(this, xhr, "xhr");
         this.control.raiseEvent(this.id + ".error", this, xhr.responseText);
+    },
+
+    toString: function() {
+        return "id: " + this.id + ", url: " + this.url;
     }
 };
 /**
@@ -109,7 +113,7 @@ AbstractionProxy = {
  * you can refer to them using a get method in the factory method context.
  *
  * - for example
- * var repository = ComponentRepository.create();
+ * var repository = ComponentRepository.create("repository1");
  * repository.defineFactories({
  *   "id": function() { return "ID-1" },
  *   "defaultName": function() { return this.get("id") + "-001" }
@@ -124,8 +128,9 @@ AbstractionProxy = {
  */
 ComponentRepository = {
 
-    create: function(parent /* can be null! */) {
+    create: function(id, parent /* can be null! */) {
         var repository = Object.create(this, {
+            id: { value: id },
             components: { value: {} },
             factories: { value: {} },
             events: { value: {} },
@@ -143,14 +148,14 @@ ComponentRepository = {
     },
 
     defineFactories: function(def) {
-        Assert.notNull(def, "def");
+        Assert.notNull(this, def, "def");
         for (id in def ) {
             this.addFactory(id, def[id]);
         }
     },
 
     addFactory: function(id, factory, eventRefs /* can be null! */) {
-        Assert.notNullAll([ [ id, "id" ], [ factory, "factory" ] ]);
+        Assert.notNullAll(this, [ [ id, "id" ], [ factory, "factory" ] ]);
         this.factories[id] != null && this.doThrow("duplicated id: id=" + id);
         this.factories[id] = factory;
         eventRefs && eventRefs.forEach(function(eventRef) {
@@ -162,18 +167,18 @@ ComponentRepository = {
     },
 
     addEventRef: function(id, eventRef) {
-        Assert.notNullAll([ [ id, "id" ], [ eventRef, "eventRef" ] ]);
+        Assert.notNullAll(this, [ [ id, "id" ], [ eventRef, "eventRef" ] ]);
         this.events[eventRef] || (this.events[eventRef] = []);
         this.events[eventRef].push(id);
     },
 
     removeEventRef: function(id, eventRef) {
-        Assert.notNullAll([ [ id, "id" ], [ eventRef, "eventRef" ] ]);
+        Assert.notNullAll(this, [ [ id, "id" ], [ eventRef, "eventRef" ] ]);
         delete this.events[eventRef][id];
     },
 
     raiseEvent: function(event, caller, args /* can be null! */) {
-        Assert.notNullAll([ [ event, "event" ], [ caller, "caller" ] ]);
+        Assert.notNullAll(this, [ [ event, "event" ], [ caller, "caller" ] ]);
         var noRefsFound = this.events[event] == null;
         if ( noRefsFound ) {
             return;
@@ -188,7 +193,7 @@ ComponentRepository = {
     },
 
     get: function(id, arg /* can be null! */) {
-            Assert.notNullAll([ [ id, "id" ] ]);
+            Assert.notNullAll(this, [ [ id, "id" ] ]);
         var recursiveRefFound = this.routeStack.indexOf(id) > -1;
         recursiveRefFound && this.doThrow("The recursive reference found: route=" + this.routeStack);
 
@@ -216,8 +221,12 @@ ComponentRepository = {
     },
 
     doThrow: function(msg) {
-        Assert.notNull(msg, "msg");
+        Assert.notNull(this, msg, "msg");
         throw new Error(msg);
+    },
+
+    toString: function() {
+        return "id: " + this.id;
     }
 };
 /**
@@ -226,7 +235,7 @@ ComponentRepository = {
 Control = {
 
     create: function(id, widget, presentation, abstraction) {
-        Assert.notNullAll([ [ id, "id" ], [ widget, "widget" ], [ presentation, "presentation" ],
+        Assert.notNullAll(this, [ [ id, "id" ], [ widget, "widget" ], [ presentation, "presentation" ],
             [ abstraction, "abstraction" ] ]);
         var control = Object.create(this, {
             id: { value: id },
@@ -244,18 +253,22 @@ Control = {
     },
 
     raiseEvent: function(event, target, args) {
-        Assert.notNullAll([ [ event, "event" ], [ target, "target" ] ,[ args, "args" ] ]);
+        Assert.notNullAll(this, [ [ event, "event" ], [ target, "target" ] ,[ args, "args" ] ]);
         this.widget.raiseEvent(event, target, args);
     },
 
     addEventRef: function(id, eventRef) {
-        Assert.notNullAll([ [ id, "id" ], [ eventRef, "eventRef" ] ]);
+        Assert.notNullAll(this, [ [ id, "id" ], [ eventRef, "eventRef" ] ]);
         this.widget.addEventRef(id, eventRef);
     },
 
     removeEventRef: function(id, eventRef) {
-         Assert.notNullAll([ [ id, "id" ], [ eventRef, "eventRef" ] ]);
+         Assert.notNullAll(this, [ [ id, "id" ], [ eventRef, "eventRef" ] ]);
          this.widget.removeEventRef(id, eventRef);
+    },
+
+    toString: function() {
+        return "id: " + this.id;
     }
 };
 /**
@@ -264,7 +277,7 @@ Control = {
  HttpClient = {
 
      send: function(url, loaded, data/* can be null! */, reqCallback /* can be null! */, method /* can be null! */) {
-         Assert.notNullAll([ [ url, "url" ], [ loaded, "loaded" ] ]);
+         Assert.notNullAll(this, [ [ url, "url" ], [ loaded, "loaded" ] ]);
          var method = method || "GET";
          var reqCallback = reqCallback || function() { return data; }
          var xhr = new XMLHttpRequest();
@@ -276,7 +289,7 @@ Control = {
       },
 
      isSuccess: function(xhr) {
-        Assert.notNull(xhr, "xhr");
+        Assert.notNull(this, xhr, "xhr");
          // Status Code = 0 is used for phantomjs testing.
          var isSuccess = xhr.status == 0 || xhr.status == 200;
          return isSuccess;
@@ -293,10 +306,11 @@ Control = {
  */
 Application = {
 
-   create: function(appElem, widgetDef) {
-        Assert.notNullAll([ [appElem, "appElem" ], [ widgetDef, "widgetDef" ] ]);
+   create: function(id, appElem, widgetDef) {
+        Assert.notNullAll(this, [ [ id, "id" ], [appElem, "appElem" ], [ widgetDef, "widgetDef" ] ]);
         var app = Object.create(this, {
-            centralRepository: { value: ComponentRepository.create() }
+            id: id,
+            centralRepository: { value: ComponentRepository.create("applicationRepository") }
         });
         app.initialize(appElem, widgetDef);
 
@@ -304,13 +318,13 @@ Application = {
    },
 
     initialize: function(appElem, widgetDef) {
-        Assert.notNullAll([ [appElem, "appElem" ], [ widgetDef, "widgetDef" ] ]);
+        Assert.notNullAll(this, [ [appElem, "appElem" ], [ widgetDef, "widgetDef" ] ]);
         this.centralRepository.defineFactories(widgetDef);
         this.transitionManager = TransitionManager.create(appElem, this.centralRepository);
     },
 
     start: function(initWidgetId) {
-        Assert.notNull(initWidgetId, "initWidgetId");
+        Assert.notNull(this, initWidgetId, "initWidgetId");
         var me = this;
         window.addEventListener("hashchange", function(event) {
             var hashIndex = event.newURL.lastIndexOf("#");
@@ -329,7 +343,7 @@ Application = {
 Presentation = {
 
     create: function(elem, id) {
-      Assert.notNullAll([ [ elem, "elem" ], [ id, "id" ] ]);
+      Assert.notNullAll(this, [ [ elem, "elem" ], [ id, "id" ] ]);
 
       var presentation = Object.create(this, {
         elem: { value: elem },
@@ -340,56 +354,60 @@ Presentation = {
     },
 
     initialize: function(control) {
-        Assert.notNull(control, "control");
+        Assert.notNull(this, control, "control");
         this.control = control;
     },
 
      getById: function(id) {
-        Assert.notNull(id, "id");
+        Assert.notNull(this, id, "id");
         var elemById = this.elem.getElementById(id);
-        Assert.notNull(elemById, "elemById");
+        Assert.notNull(this, elemById, "elemById");
         return elemById;
      },
 
     query: function(query) {
-        Assert.notNull(query, "query");
+        Assert.notNull(this, query, "query");
         var queriedElem = this.elem.querySelector(query);
-        Assert.notNull(queriedElem, "queriedElem");
+        Assert.notNull(this, queriedElem, "queriedElem");
         return queriedElem;
     },
 
     queryAll: function(query) {
-        Assert.notNull(query, "query");
+        Assert.notNull(this, query, "query");
         var queriedElem = this.elem.querySelectorAll(query);
-        Assert.notNull(query, "query");
+        Assert.notNull(this, query, "query");
         return queriedElem;
     },
 
     forEachNode: function(nodeList, func) {
-        Assert.notNullAll([ [ nodeList, "nodeList" ], [ func, "func" ] ]);
+        Assert.notNullAll(this, [ [ nodeList, "nodeList" ], [ func, "func" ] ]);
         Array.prototype.slice.call(nodeList).forEach(func, this);
     },
 
     on: function(elem, event, callback) {
-        Assert.notNullAll([ [ elem, "elem" ], [ event, "event" ],
+        Assert.notNullAll(this, [ [ elem, "elem" ], [ event, "event" ],
          [ callback, "callback" ] ]);
         var me = this;
         elem.addEventListener(event, function(event) { return callback.call(me, event) });
     },
 
     raiseEvent: function(event, arg) {
-        Assert.notNullAll([ [ event, "event" ], [ arg, "arg" ] ]);
+        Assert.notNullAll(this, [ [ event, "event" ], [ arg, "arg" ] ]);
         this.control.raiseEvent(event, this, arg);
     },
 
     addEventRef: function(id, event) {
-        Assert.notNullAll([ [ id, "id" ], [ event, "event" ] ]);
+        Assert.notNullAll(this, [ [ id, "id" ], [ event, "event" ] ]);
         this.control.addEventRef(id, event);
     },
 
     doThrow: function(msg) {
-        Assert.notNull(msg, "msg");
+        Assert.notNull(this, msg, "msg");
         throw new Error(msg);
+    },
+
+    toString: function() {
+        return "id: " + this.id;
     }
 };
 /**
@@ -401,7 +419,7 @@ Presentation = {
  TransitionManager = {
 
     create: function(containerElem, repository, errorHandler /* can be null! */) {
-        Assert.notNullAll([ [ containerElem, "containerElem" ], [ repository, "repository" ] ]);
+        Assert.notNullAll(this, [ [ containerElem, "containerElem" ], [ repository, "repository" ] ]);
         var manager = Object.create(this, {
             currentId: { value: null, writable: true },
             containerElem: { value: containerElem },
@@ -417,7 +435,7 @@ Presentation = {
     },
 
     transit: function(id) {
-        Assert.notNull(id, "id");
+        Assert.notNull(this, id, "id");
          if ( this.isTransiting ) {
              return;
          }
@@ -451,7 +469,7 @@ Presentation = {
       },
 
       doTransit: function(id, newElem) {
-           Assert.notNullAll([ [ id, "id" ], [ newElem, "newElem" ] ]);
+           Assert.notNullAll(this, [ [ id, "id" ], [ newElem, "newElem" ] ]);
            if ( this.currentId != null ) {
                var prevWidgetElem = this.idToElemMap[this.currentId];
                var prevWidget = this.repository.get(this.currentId, prevWidgetElem, this.repository);
@@ -461,6 +479,10 @@ Presentation = {
            this.idToElemMap[id].style.display = "block";
            var currentWidget = this.repository.get(id, newElem, this.repository);
            currentWidget.initialize();
+      },
+
+      toString: function() {
+        return "TransitionManager [ currentId: " + this.currentId + ", idToElemMap: " + this.idToElemMap + " ]";
       }
  };
 /**
@@ -483,14 +505,14 @@ Presentation = {
 Widget  = {
 
     create: function(id, elem, parentRepository /* can be null! */) {
-        Assert.notNullAll([ [ id, "id" ], [ elem ,"elem" ] ]);
+        Assert.notNullAll(this, [ [ id, "id" ], [ elem ,"elem" ] ]);
         var widget = Object.create(this, {
             id: { value: id },
             elem: { value: elem },
             controls: { value: [] },
             components: { value: [] },
             initialized: { value: false },
-            repository: { value: ComponentRepository.create(parentRepository) }
+            repository: { value: ComponentRepository.create(id + "Repository", parentRepository) }
         });
 
         return widget;
@@ -505,7 +527,7 @@ Widget  = {
     },
 
     defineComponents: function(def) {
-       Assert.notNull(def, "def");
+       Assert.notNull(this, def, "def");
        for ( id in def ) {
         this.components.push(id);
         this.repository.addFactory(id, def[id]);
@@ -515,13 +537,13 @@ Widget  = {
     },
 
     getComponent: function(id, args) {
-        Assert.notNullAll([ [ id, "id" ], [ args, "args" ] ]);
+        Assert.notNullAll(this, [ [ id, "id" ], [ args, "args" ] ]);
         this.components.indexOf(id) == -1 && this.doThrow(id + " is not component!");
         return this.repository.get(id, args);
     },
 
     defineControls: function(def) {
-        Assert.notNull(def, "def");
+        Assert.notNull(this, def, "def");
         for( id in def ) {
             this.controls.push(id);
             this.repository.addFactory(id, def[id]);
@@ -531,38 +553,45 @@ Widget  = {
     },
 
     getControl: function(id) {
-        Assert.notNull(id, "id");
+        Assert.notNull(this, id, "id");
         this.controls.indexOf(id) == -1 && this.doThrow(id + " is not control!");
         return this.repository.get(id, this);
     },
 
     raiseEvent: function(event, target, args) {
-        Assert.notNullAll([ [ event, "event" ], [ target, "target" ], [ args, "args" ] ]);
+        Assert.notNullAll(this, [ [ event, "event" ], [ target, "target" ], [ args, "args" ] ]);
         this.repository.raiseEvent(event, target, args);
     },
 
     addEventRef: function(id, eventRef) {
-        Assert.notNullAll([ [ id, "id" ], [ eventRef, "eventRef" ] ]);
+        Assert.notNullAll(this, [ [ id, "id" ], [ eventRef, "eventRef" ] ]);
         this.repository.addEventRef(id, eventRef);
     },
 
     removeEventRef: function(id, eventRef) {
-        Assert.notNullAll([ [ id, "id" ], [ eventRef, "eventRef" ] ]);
+        Assert.notNullAll(this, [ [ id, "id" ], [ eventRef, "eventRef" ] ]);
         this.repository.removeEventRef(id, eventRef);
     },
 
     doThrow: function(msg) {
-        Assert.notNull(msg, "msg");
+        Assert.notNull(this, msg, "msg");
         throw new Error(msg);
+    },
+
+    toString: function() {
+        return "id: " + this.id;
     }
 };Assert = {
 
-    notNull: function(elem, param) {
-        elem == null && this.doThrow("parameter \"" + param + "\" is null!");
+    notNull: function(obj, elem, param) {
+        elem == null && this.doThrow("parameter \"" + param + "\" is null!: " + obj);
     },
 
-    notNullAll: function(elemDef) {
-      elemDef.forEach(function(elem) { this.notNull(elem[0], elem[1]) }, this);
+    notNullAll: function(obj, elemDef) {
+      for ( i = 0 ; i < elemDef.length ; i ++ ) {
+        var elem = elemDef[i];
+        this.notNull(obj, elem[0], elem[1]);
+      }
     },
 
     doThrow: function(msg) {
@@ -584,9 +613,11 @@ Widget  = {
  * ${WIDGET_ID}.${CONTROL_ID}.[${PRESENTATION_ID} | ${ABSTRACTION_ID}].${ACTION_CODE}
  */
 Id = {
+
     idString: "",
+
     onAbstraction: function(target) {
-      Assert.notNull(target, "target");
+      Assert.notNull(this, target, "target");
 
       var id = Object.create(this, {
         target: { value: target },
@@ -612,7 +643,7 @@ Id = {
     },
 
     onPresentation: function(target) {
-      Assert.notNull(target, "target");
+      Assert.notNull(this, target, "target");
 
       var id = Object.create(this, {
         target: { value: target },
@@ -657,12 +688,12 @@ Id = {
     },
 
     checkAction: function(target, event) {
-        Assert.notNullAll([ [ target, "target" ], [ event, "event" ] ]);
+        Assert.notNullAll(this, [ [ target, "target" ], [ event, "event" ] ]);
         return target.endWith(event.idString);
     },
 
     on: function(idStr) {
-        Assert.notNull(idStr, "idStr");
+        Assert.notNull(this, idStr, "idStr");
 
         var id = Object.create(this, {
         target: { value: target },
@@ -670,5 +701,9 @@ Id = {
         id.idString = idStr;
 
         return id;
+    },
+
+    toString: function() {
+        return "idString: " + this.idString + ", target: " + this.target;
     }
 }

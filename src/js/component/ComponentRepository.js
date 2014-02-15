@@ -10,7 +10,7 @@
  * you can refer to them using a get method in the factory method context.
  *
  * - for example
- * var repository = ComponentRepository.create();
+ * var repository = ComponentRepository.create("repository1");
  * repository.defineFactories({
  *   "id": function() { return "ID-1" },
  *   "defaultName": function() { return this.get("id") + "-001" }
@@ -25,8 +25,9 @@
  */
 ComponentRepository = {
 
-    create: function(parent /* can be null! */) {
+    create: function(id, parent /* can be null! */) {
         var repository = Object.create(this, {
+            id: { value: id },
             components: { value: {} },
             factories: { value: {} },
             events: { value: {} },
@@ -44,14 +45,14 @@ ComponentRepository = {
     },
 
     defineFactories: function(def) {
-        Assert.notNull(def, "def");
+        Assert.notNull(this, def, "def");
         for (id in def ) {
             this.addFactory(id, def[id]);
         }
     },
 
     addFactory: function(id, factory, eventRefs /* can be null! */) {
-        Assert.notNullAll([ [ id, "id" ], [ factory, "factory" ] ]);
+        Assert.notNullAll(this, [ [ id, "id" ], [ factory, "factory" ] ]);
         this.factories[id] != null && this.doThrow("duplicated id: id=" + id);
         this.factories[id] = factory;
         eventRefs && eventRefs.forEach(function(eventRef) {
@@ -63,18 +64,18 @@ ComponentRepository = {
     },
 
     addEventRef: function(id, eventRef) {
-        Assert.notNullAll([ [ id, "id" ], [ eventRef, "eventRef" ] ]);
+        Assert.notNullAll(this, [ [ id, "id" ], [ eventRef, "eventRef" ] ]);
         this.events[eventRef] || (this.events[eventRef] = []);
         this.events[eventRef].push(id);
     },
 
     removeEventRef: function(id, eventRef) {
-        Assert.notNullAll([ [ id, "id" ], [ eventRef, "eventRef" ] ]);
+        Assert.notNullAll(this, [ [ id, "id" ], [ eventRef, "eventRef" ] ]);
         delete this.events[eventRef][id];
     },
 
     raiseEvent: function(event, caller, args /* can be null! */) {
-        Assert.notNullAll([ [ event, "event" ], [ caller, "caller" ] ]);
+        Assert.notNullAll(this, [ [ event, "event" ], [ caller, "caller" ] ]);
         var noRefsFound = this.events[event] == null;
         if ( noRefsFound ) {
             return;
@@ -89,7 +90,7 @@ ComponentRepository = {
     },
 
     get: function(id, arg /* can be null! */) {
-            Assert.notNullAll([ [ id, "id" ] ]);
+            Assert.notNullAll(this, [ [ id, "id" ] ]);
         var recursiveRefFound = this.routeStack.indexOf(id) > -1;
         recursiveRefFound && this.doThrow("The recursive reference found: route=" + this.routeStack);
 
@@ -117,7 +118,11 @@ ComponentRepository = {
     },
 
     doThrow: function(msg) {
-        Assert.notNull(msg, "msg");
+        Assert.notNull(this, msg, "msg");
         throw new Error(msg);
+    },
+
+    toString: function() {
+        return "id: " + this.id;
     }
 };
