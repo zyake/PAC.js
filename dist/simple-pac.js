@@ -47,8 +47,11 @@ AbstractionProxy = {
             httpClient: { value: window.HttpClient },
             isRequesting: { value: false },
             reqHandler: { value: this. FOR_DEFAULT, writable: true },
-            resHandler: { value: this.AS_DEFAULT, writable: true }
+            resHandler: { value: this.AS_DEFAULT, writable: true },
+            control: { value: null, writable: true }
         });
+
+        Object.seal(proxy);
 
         return proxy;
     },
@@ -138,6 +141,7 @@ ComponentRepository = {
             routeStack: { value: [] },
             parent: { value: parent }
         });
+        Object.seal(repository);
         repository.initialize();
 
         return repository;
@@ -243,6 +247,7 @@ Control = {
             presentation: { value: presentation },
             abstraction: { value: abstraction }
         });
+        Object.seal(control);
 
         return control;
     },
@@ -310,8 +315,10 @@ Application = {
         Assert.notNullAll(this, [ [ id, "id" ], [appElem, "appElem" ], [ widgetDef, "widgetDef" ] ]);
         var app = Object.create(this, {
             id: { value: id },
-            centralRepository: { value: ComponentRepository.create("applicationRepository") }
+            centralRepository: { value: ComponentRepository.create("applicationRepository") },
+            transitionManager: { value: null, writable: true }
         });
+        Object.seal(app);
         app.initialize(appElem, widgetDef);
 
         return app;
@@ -347,9 +354,10 @@ Presentation = {
 
       var presentation = Object.create(this, {
         elem: { value: elem },
-        id: { value: id }
+        id: { value: id },
+        control: { value: null, writable: true }
       });
-
+      Object.seal(presentation);
       return presentation;
     },
 
@@ -430,7 +438,7 @@ Presentation = {
             httpClient: { value: window.HttpClient, writable: true },
             errorHandler: { value: errorHandler || function() {} }
         });
-
+       Object.seal(manager);
        return manager;
     },
 
@@ -514,7 +522,7 @@ Widget  = {
             initialized: { value: false },
             repository: { value: ComponentRepository.create(id + "Repository", parentRepository) }
         });
-
+        Object.seal(widget);
         return widget;
     },
 

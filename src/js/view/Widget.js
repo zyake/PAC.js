@@ -28,7 +28,7 @@ Widget  = {
             initialized: { value: false },
             repository: { value: ComponentRepository.create(id + "Repository", parentRepository) }
         });
-
+        Object.seal(widget);
         return widget;
     },
 

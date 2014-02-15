@@ -12,9 +12,10 @@ Presentation = {
 
       var presentation = Object.create(this, {
         elem: { value: elem },
-        id: { value: id }
+        id: { value: id },
+        control: { value: null, writable: true }
       });
-
+      Object.seal(presentation);
       return presentation;
     },
 

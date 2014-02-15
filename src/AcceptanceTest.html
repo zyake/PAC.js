@@ -42,7 +42,7 @@
                 "view1": function(id, elem) {
                     return TestPresentation1.create(elem.querySelector(".control1"), id);} })
                 .defineControls({
-                "control1": function(id, widget) { return Control.create(widget, this.get("view1", widget.elem), this.get("model1")); } });
+                "control1": function(id, widget) { return Control.create("control1", widget, this.get("view1", widget.elem), this.get("model1")); } });
 
                 return widget1;
             },
@@ -55,7 +55,7 @@
                 "view2": function(id, elem) {
                 return TestPresentation2.create(elem.querySelector(".control2"), id);} })
                 .defineControls({
-                "control2": function(id, widget) { return Control.create("control1", widget, this.get("view2", widget.elem), this.get("model2")); } });
+                "control2": function(id, widget) { return Control.create("control2", widget, this.get("view2", widget.elem), this.get("model2")); } });
 
                 return widget2;
             },

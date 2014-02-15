@@ -47,8 +47,11 @@ AbstractionProxy = {
             httpClient: { value: window.HttpClient },
             isRequesting: { value: false },
             reqHandler: { value: this. FOR_DEFAULT, writable: true },
-            resHandler: { value: this.AS_DEFAULT, writable: true }
+            resHandler: { value: this.AS_DEFAULT, writable: true },
+            control: { value: null, writable: true }
         });
+
+        Object.seal(proxy);
 
         return proxy;
     },

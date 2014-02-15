@@ -35,6 +35,7 @@ ComponentRepository = {
             routeStack: { value: [] },
             parent: { value: parent }
         });
+        Object.seal(repository);
         repository.initialize();
 
         return repository;

@@ -14,8 +14,10 @@ Application = {
         Assert.notNullAll(this, [ [ id, "id" ], [appElem, "appElem" ], [ widgetDef, "widgetDef" ] ]);
         var app = Object.create(this, {
             id: { value: id },
-            centralRepository: { value: ComponentRepository.create("applicationRepository") }
+            centralRepository: { value: ComponentRepository.create("applicationRepository") },
+            transitionManager: { value: null, writable: true }
         });
+        Object.seal(app);
         app.initialize(appElem, widgetDef);
 
         return app;

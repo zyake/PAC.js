@@ -13,6 +13,7 @@ Control = {
             presentation: { value: presentation },
             abstraction: { value: abstraction }
         });
+        Object.seal(control);
 
         return control;
     },

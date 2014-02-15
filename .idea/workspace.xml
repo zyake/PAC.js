@@ -2,16 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="39257a0f-548a-4da6-87e0-5429559af94c" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/component/AbstractionProxy.js" afterPath="$PROJECT_DIR$/src/js/component/AbstractionProxy.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AcceptanceTest.html" afterPath="$PROJECT_DIR$/src/AcceptanceTest.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/view/Application.js" afterPath="$PROJECT_DIR$/src/js/view/Application.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/common/Assert.js" afterPath="$PROJECT_DIR$/src/js/common/Assert.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/component/ComponentRepository.js" afterPath="$PROJECT_DIR$/src/js/component/ComponentRepository.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/component/Control.js" afterPath="$PROJECT_DIR$/src/js/component/Control.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/view/Presentation.js" afterPath="$PROJECT_DIR$/src/js/view/Presentation.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/view/TransitionManager.js" afterPath="$PROJECT_DIR$/src/js/view/TransitionManager.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/view/Widget.js" afterPath="$PROJECT_DIR$/src/js/view/Widget.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/simple-pac.js" afterPath="$PROJECT_DIR$/dist/simple-pac.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="my_lib_js.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="39257a0f-548a-4da6-87e0-5429559af94c" time="1392460164381" ignored="false" />
-    <file path="/TransitionManager.js" changelist="39257a0f-548a-4da6-87e0-5429559af94c" time="1392468926170" ignored="false" />
+    <file path="/TransitionManager.js" changelist="39257a0f-548a-4da6-87e0-5429559af94c" time="1392472317331" ignored="false" />
     <file path="/HttpClient.js" changelist="39257a0f-548a-4da6-87e0-5429559af94c" time="1392469094532" ignored="false" />
     <file path="/HttpClientTest.html" changelist="39257a0f-548a-4da6-87e0-5429559af94c" time="1390584321132" ignored="false" />
     <file path="/Test.txt" changelist="39257a0f-548a-4da6-87e0-5429559af94c" time="1390486880625" ignored="false" />
@@ -19,41 +24,47 @@
     <file path="/build.properties" changelist="39257a0f-548a-4da6-87e0-5429559af94c" time="1390576130885" ignored="false" />
     <file path="/HttpClientTest.js" changelist="39257a0f-548a-4da6-87e0-5429559af94c" time="1390574980373" ignored="false" />
     <file path="/ComponentRepositoryTest.html" changelist="39257a0f-548a-4da6-87e0-5429559af94c" time="1392469247262" ignored="false" />
-    <file path="/ComponentRepository.js" changelist="39257a0f-548a-4da6-87e0-5429559af94c" time="1392468645482" ignored="false" />
+    <file path="/ComponentRepository.js" changelist="39257a0f-548a-4da6-87e0-5429559af94c" time="1392472264471" ignored="false" />
     <file path="/QUnitCommon.js" changelist="39257a0f-548a-4da6-87e0-5429559af94c" time="1391225924563" ignored="false" />
     <file path="/TransitionManagerTest.html" changelist="39257a0f-548a-4da6-87e0-5429559af94c" time="1391264413099" ignored="false" />
     <file path="/form.html" changelist="39257a0f-548a-4da6-87e0-5429559af94c" time="1390645891587" ignored="false" />
     <file path="/search.html" changelist="39257a0f-548a-4da6-87e0-5429559af94c" time="1391956586769" ignored="false" />
-    <file path="/Widget.js" changelist="39257a0f-548a-4da6-87e0-5429559af94c" time="1392468957333" ignored="false" />
-    <file path="/Control.js" changelist="39257a0f-548a-4da6-87e0-5429559af94c" time="1392468752476" ignored="false" />
+    <file path="/Widget.js" changelist="39257a0f-548a-4da6-87e0-5429559af94c" time="1392472327392" ignored="false" />
+    <file path="/Control.js" changelist="39257a0f-548a-4da6-87e0-5429559af94c" time="1392472277684" ignored="false" />
     <file path="/a.dummy" changelist="39257a0f-548a-4da6-87e0-5429559af94c" time="1392469412053" ignored="false" />
-    <file path="/Presentation.js" changelist="39257a0f-548a-4da6-87e0-5429559af94c" time="1392470553935" ignored="false" />
+    <file path="/Presentation.js" changelist="39257a0f-548a-4da6-87e0-5429559af94c" time="1392472640642" ignored="false" />
     <file path="/Abstraction.js" changelist="39257a0f-548a-4da6-87e0-5429559af94c" time="1391001974410" ignored="false" />
-    <file path="/AbstractionProxy.js" changelist="39257a0f-548a-4da6-87e0-5429559af94c" time="1392468289006" ignored="false" />
+    <file path="/AbstractionProxy.js" changelist="39257a0f-548a-4da6-87e0-5429559af94c" time="1392472245784" ignored="false" />
     <file path="/IntegrationTest.html" changelist="39257a0f-548a-4da6-87e0-5429559af94c" time="1392129734602" ignored="false" />
     <file path="/widget1.html" changelist="39257a0f-548a-4da6-87e0-5429559af94c" time="1391003301939" ignored="false" />
     <file path="/InpageNavigator.js" changelist="39257a0f-548a-4da6-87e0-5429559af94c" time="1391091022829" ignored="false" />
     <file path="/Applcation.js" changelist="39257a0f-548a-4da6-87e0-5429559af94c" time="1391246994975" ignored="false" />
     <file path="/contents.json" changelist="39257a0f-548a-4da6-87e0-5429559af94c" time="1391233908726" ignored="false" />
     <file path="$PROJECT_DIR$/../solr_ui/src/main/webapp/js/configure/SolrUiApplication.js" changelist="39257a0f-548a-4da6-87e0-5429559af94c" time="1391951068494" ignored="false" />
-    <file path="/AcceptanceTest.html" changelist="39257a0f-548a-4da6-87e0-5429559af94c" time="1392468838387" ignored="false" />
-    <file path="/Application.js" changelist="39257a0f-548a-4da6-87e0-5429559af94c" time="1392470297161" ignored="false" />
+    <file path="/AcceptanceTest.html" changelist="39257a0f-548a-4da6-87e0-5429559af94c" time="1392473009623" ignored="false" />
+    <file path="/Application.js" changelist="39257a0f-548a-4da6-87e0-5429559af94c" time="1392472758731" ignored="false" />
     <file path="/Id.js" changelist="39257a0f-548a-4da6-87e0-5429559af94c" time="1392467362053" ignored="false" />
-    <file path="/IdTest.html" changelist="39257a0f-548a-4da6-87e0-5429559af94c" time="1391939068704" ignored="false" />
+    <file path="/IdTest.html" changelist="39257a0f-548a-4da6-87e0-5429559af94c" time="1392471854968" ignored="false" />
     <file path="$PROJECT_DIR$/../solr_ui/src/main/webapp/js/external/simple-pac.js" changelist="39257a0f-548a-4da6-87e0-5429559af94c" time="1391962379957" ignored="false" />
-    <file path="$PROJECT_DIR$/../solr_ui/src/main/webapp/js/widget/SearchWidgetFactory.js" changelist="39257a0f-548a-4da6-87e0-5429559af94c" time="1392467004660" ignored="false" />
+    <file path="$PROJECT_DIR$/../solr_ui/src/main/webapp/js/widget/SearchWidgetFactory.js" changelist="39257a0f-548a-4da6-87e0-5429559af94c" time="1392472224216" ignored="false" />
     <file path="/SearchWidgetFactory.js" changelist="39257a0f-548a-4da6-87e0-5429559af94c" time="1391962014180" ignored="false" />
     <file path="/index.html" changelist="39257a0f-548a-4da6-87e0-5429559af94c" time="1392470237414" ignored="false" />
     <file path="$PROJECT_DIR$/../solr_ui/src/main/webapp/index.html" changelist="39257a0f-548a-4da6-87e0-5429559af94c" time="1392470238440" ignored="false" />
-    <file path="$PROJECT_DIR$/../solr_ui/src/main/webapp/js/presentation/SearchBox.js" changelist="39257a0f-548a-4da6-87e0-5429559af94c" time="1391950389484" ignored="false" />
-    <file path="$PROJECT_DIR$/../solr_ui/src/main/webapp/js/presentation/FacetView.js" changelist="39257a0f-548a-4da6-87e0-5429559af94c" time="1392131088314" ignored="false" />
+    <file path="$PROJECT_DIR$/../solr_ui/src/main/webapp/js/presentation/SearchBox.js" changelist="39257a0f-548a-4da6-87e0-5429559af94c" time="1392472151233" ignored="false" />
+    <file path="$PROJECT_DIR$/../solr_ui/src/main/webapp/js/presentation/FacetView.js" changelist="39257a0f-548a-4da6-87e0-5429559af94c" time="1392471928523" ignored="false" />
     <file path="$PROJECT_DIR$/../solr_ui/src/main/webapp/template/search.html" changelist="39257a0f-548a-4da6-87e0-5429559af94c" time="1391956586769" ignored="false" />
-    <file path="/FacetView.js" changelist="39257a0f-548a-4da6-87e0-5429559af94c" time="1392131087591" ignored="false" />
+    <file path="/FacetView.js" changelist="39257a0f-548a-4da6-87e0-5429559af94c" time="1392471908316" ignored="false" />
     <file path="$PROJECT_DIR$/../solr_ui/src/main/webapp/js/model/FacetManager.js" changelist="39257a0f-548a-4da6-87e0-5429559af94c" time="1392131247222" ignored="false" />
     <file path="/FacetManager.js" changelist="39257a0f-548a-4da6-87e0-5429559af94c" time="1392131233115" ignored="false" />
     <file path="/Assert.js" changelist="39257a0f-548a-4da6-87e0-5429559af94c" time="1392470487042" ignored="false" />
-    <file path="$PROJECT_DIR$/../solr_ui/src/main/webapp/js/presentation/CompositePresentation.js" changelist="39257a0f-548a-4da6-87e0-5429559af94c" time="1392466983832" ignored="false" />
+    <file path="$PROJECT_DIR$/../solr_ui/src/main/webapp/js/presentation/CompositePresentation.js" changelist="39257a0f-548a-4da6-87e0-5429559af94c" time="1392471413281" ignored="false" />
     <file path="/AssertTest.html" changelist="39257a0f-548a-4da6-87e0-5429559af94c" time="1392469618887" ignored="false" />
+    <file path="/SearchBox.js" changelist="39257a0f-548a-4da6-87e0-5429559af94c" time="1392472141041" ignored="false" />
+    <file path="/CompositePresentation.js" changelist="39257a0f-548a-4da6-87e0-5429559af94c" time="1392471412009" ignored="false" />
+    <file path="$PROJECT_DIR$/../solr_ui/src/main/webapp/js/model/StreamContentModel.js" changelist="39257a0f-548a-4da6-87e0-5429559af94c" time="1392472051127" ignored="false" />
+    <file path="/StreamContentModel.js" changelist="39257a0f-548a-4da6-87e0-5429559af94c" time="1392472040411" ignored="false" />
+    <file path="$PROJECT_DIR$/../solr_ui/src/main/webapp/js/presentation/StreamContentView.js" changelist="39257a0f-548a-4da6-87e0-5429559af94c" time="1392472200215" ignored="false" />
+    <file path="/StreamContentView.js" changelist="39257a0f-548a-4da6-87e0-5429559af94c" time="1392472198285" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,28 +130,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+      <file leaf-file-name="TransitionManager.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/js/view/TransitionManager.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="21" column="28" selection-start="929" selection-end="929" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AbstractionProxy.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/js/component/AbstractionProxy.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="50" column="52" selection-start="1661" selection-end="1661" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="IntegrationTest.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/IntegrationTest.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="71" selection-start="875" selection-end="875" vertical-scroll-proportion="8.354838">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Widget.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/js/view/Widget.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="91" column="29" selection-start="2956" selection-end="2956" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AcceptanceTest.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AcceptanceTest.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="70" column="7" selection-start="2794" selection-end="2794" vertical-scroll-proportion="-14.354838">
+            <state line="33" column="18" selection-start="1258" selection-end="1258" vertical-scroll-proportion="-10.806452">
               <folding />
             </state>
           </provider>
@@ -149,25 +160,43 @@
       <file leaf-file-name="Application.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/js/view/Application.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="28" selection-start="558" selection-end="558" vertical-scroll-proportion="0.0">
+            <state line="23" column="5" selection-start="827" selection-end="827" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="build.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/build.xml">
+      <file leaf-file-name="Id.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/js/common/Id.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="52" column="33" selection-start="1846" selection-end="1846" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ComponentRepositoryTest.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ComponentRepositoryTest.html">
+      <file leaf-file-name="Control.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/js/component/Control.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="0" selection-start="225" selection-end="318" vertical-scroll-proportion="-7.096774">
+            <state line="14" column="11" selection-start="545" selection-end="545" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AcceptanceTest.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/AcceptanceTest.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="57" column="82" selection-start="2513" selection-end="2513" vertical-scroll-proportion="1.2899729">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Widget.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/js/view/Widget.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="31" column="22" selection-start="1138" selection-end="1138" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -176,34 +205,16 @@
       <file leaf-file-name="IdTest.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/IdTest.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="60" column="31" selection-start="2366" selection-end="2366" vertical-scroll-proportion="-7.967742">
+            <state line="69" column="7" selection-start="2630" selection-end="2630" vertical-scroll-proportion="-15.064516">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Presentation.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Presentation.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/js/view/Presentation.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="24" selection-start="775" selection-end="775" vertical-scroll-proportion="1.595">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Assert.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/js/common/Assert.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="123" selection-start="182" selection-end="182" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HttpClientTest.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/HttpClientTest.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="27" selection-start="800" selection-end="800" vertical-scroll-proportion="-10.387096">
+            <state line="37" column="27" selection-start="1103" selection-end="1103" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -227,22 +238,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/TransitionManagerTest.html" />
         <option value="$PROJECT_DIR$/src/js/common/Id.js" />
-        <option value="$PROJECT_DIR$/src/js/component/AbstractionProxy.js" />
         <option value="$PROJECT_DIR$/src/IntegrationTest.html" />
-        <option value="$PROJECT_DIR$/src/js/component/ComponentRepository.js" />
-        <option value="$PROJECT_DIR$/src/js/component/Control.js" />
-        <option value="$PROJECT_DIR$/src/AcceptanceTest.html" />
         <option value="$PROJECT_DIR$/src/js/net/HttpClient.js" />
         <option value="$PROJECT_DIR$/src/ComponentRepositoryTest.html" />
-        <option value="$PROJECT_DIR$/src/js/view/TransitionManager.js" />
-        <option value="$PROJECT_DIR$/src/js/view/Widget.js" />
         <option value="$PROJECT_DIR$/src/AssertTest.html" />
         <option value="$PROJECT_DIR$/dist/simple-pac.js" />
-        <option value="$PROJECT_DIR$/src/js/view/Application.js" />
         <option value="$PROJECT_DIR$/src/js/common/Assert.js" />
+        <option value="$PROJECT_DIR$/src/IdTest.html" />
+        <option value="$PROJECT_DIR$/src/js/component/ComponentRepository.js" />
+        <option value="$PROJECT_DIR$/src/js/component/Control.js" />
+        <option value="$PROJECT_DIR$/src/js/view/TransitionManager.js" />
+        <option value="$PROJECT_DIR$/src/js/view/Widget.js" />
         <option value="$PROJECT_DIR$/src/js/view/Presentation.js" />
+        <option value="$PROJECT_DIR$/src/js/component/AbstractionProxy.js" />
+        <option value="$PROJECT_DIR$/src/js/view/Application.js" />
+        <option value="$PROJECT_DIR$/src/AcceptanceTest.html" />
       </list>
     </option>
   </component>
@@ -660,7 +671,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-4" y="-4" width="1374" height="776" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Statistic" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -760,65 +771,9 @@
     </buildFile>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/js/component/AbstractionProxy.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="101" column="55" selection-start="3165" selection-end="3165" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/component/ComponentRepository.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="109" column="86" selection-start="4057" selection-end="4057" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/component/Control.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="32" selection-start="1324" selection-end="1324" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/net/HttpClient.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="33" selection-start="205" selection-end="205" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/view/TransitionManager.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="60" column="35" selection-start="2183" selection-end="2183" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/view/Widget.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="91" column="29" selection-start="2956" selection-end="2956" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/IntegrationTest.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="71" selection-start="875" selection-end="875" vertical-scroll-proportion="8.354838">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ComponentRepositoryTest.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="10" column="0" selection-start="225" selection-end="318" vertical-scroll-proportion="-7.096774">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/IdTest.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="60" column="31" selection-start="2366" selection-end="2366" vertical-scroll-proportion="-7.967742">
           <folding />
         </state>
       </provider>
@@ -830,23 +785,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AcceptanceTest.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="70" column="7" selection-start="2794" selection-end="2794" vertical-scroll-proportion="-14.354838">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/build.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/view/Application.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="28" selection-start="558" selection-end="558" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -858,9 +799,86 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/component/ComponentRepository.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="32" selection-start="1339" selection-end="1339" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/net/HttpClient.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="33" selection-start="205" selection-end="205" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/view/Widget.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="22" selection-start="1138" selection-end="1138" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/common/Id.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="52" column="33" selection-start="1846" selection-end="1846" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/IdTest.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="69" column="7" selection-start="2630" selection-end="2630" vertical-scroll-proportion="-15.064516">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/view/TransitionManager.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="28" selection-start="929" selection-end="929" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/IntegrationTest.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="18" selection-start="1258" selection-end="1258" vertical-scroll-proportion="-10.806452">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/view/Application.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="5" selection-start="827" selection-end="827" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/component/Control.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="11" selection-start="545" selection-end="545" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/component/AbstractionProxy.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="50" column="52" selection-start="1661" selection-end="1661" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/js/view/Presentation.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="24" selection-start="775" selection-end="775" vertical-scroll-proportion="1.595">
+        <state line="37" column="27" selection-start="1103" selection-end="1103" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AcceptanceTest.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="57" column="82" selection-start="2513" selection-end="2513" vertical-scroll-proportion="1.2899729">
           <folding />
         </state>
       </provider>

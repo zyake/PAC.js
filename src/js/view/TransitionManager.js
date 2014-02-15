@@ -19,7 +19,7 @@
             httpClient: { value: window.HttpClient, writable: true },
             errorHandler: { value: errorHandler || function() {} }
         });
-
+       Object.seal(manager);
        return manager;
     },
 
