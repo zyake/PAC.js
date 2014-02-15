@@ -12,26 +12,33 @@
  */
 AbstractionProxy = {
 
-    AS_DEFAULT: this.AS_JSON,
-    FOR_DEFAULT: this.FOR_JSON,
-
     AS_JSON: function(xhr) {
+        Assert.notNull(xhr, "xhr");
         return JSON.parse(xhr.responseText);
      },
 
     AS_TEXT: function(xhr) {
+        Assert.notNull(xhr, "xhr");
         return xhr.responseText;
     },
 
     FOR_JSON:  function(obj, xhr) {
+        Assert.notNullAll([ [ obj,  "obj" ], [ xhr, "xhr" ] ]);
         return JSON.stringify(obj);
     },
 
     FOR_TEXT: function(obj, xhr) {
+        Assert.notNullAll([ [ obj, "obj" ], [ xhr, "xhr" ] ]);
         return obj.toString();
     },
 
+    AS_DEFAULT: this.AS_JSON,
+    FOR_DEFAULT: this.FOR_JSON,
+
     create: function(id,  requestKey, responseKey, url) {
+        Assert.notNullAll([ [ id,  "id" ], [ requestKey,  "requestKey" ],
+            [ responseKey, "responseKey" ], [ url, "url" ] ]);
+
         var proxy = Object.create(this, {
             id: { value: id },
             requestKey: { value: requestKey },
@@ -39,25 +46,31 @@ AbstractionProxy = {
             url: { value: url },
             httpClient: { value: window.HttpClient },
             isRequesting: { value: false },
-            reqHandler: { value: this. FOR_DEFAULT },
-            resHandler: { value: this.AS_DEFAULT }
+            reqHandler: { value: this. FOR_DEFAULT, writable: true },
+            resHandler: { value: this.AS_DEFAULT, writable: true }
         });
 
         return proxy;
     },
 
     initialize: function(control) {
+        Assert.notNull(control, "control");
         this.control = control;
-        this.control.addEventRef(this.id, this.requestKey);
+
+        var eventKey = this.requestKey.substring(1);
+        var on = Id.onPresentation(this);
+        this.control.addEventRef(this.id, on[eventKey]());
     },
 
     fetch: function(args) {
+        Assert.notNull(args, "args");
         if ( this.isRequesting == true ) {
             return;
         }
         this.isRequesting = true;
         var me = this;
-        this.httpClient.send(this.url, function(xhr) {
+        this.httpClient.send(this.url, function(event) {
+            var xhr = event.target;
             me.isRequesting = false;
             if ( me.httpClient.isSuccess(xhr) ) {
                 me.successCallback(xhr);
@@ -68,15 +81,20 @@ AbstractionProxy = {
     },
 
     notify: function(event, args) {
+        Assert.notNullAll([ [ event, "event" ], [ args, "args" ] ]);
         this.fetch(args);
     },
 
     successCallback: function(xhr) {
+        Assert.notNull(xhr, "xhr");
         var responseData = this.resHandler(xhr);
-        this.control.raiseEvent(this.responseKey, this, responseData);
+        var eventKey = this.responseKey.substring(1);
+        var on = Id.onAbstraction(this);
+        this.control.raiseEvent(on[eventKey](), this, responseData);
     },
 
     failureCallback: function(xhr) {
+        Assert.notNull(xhr, "xhr");
         this.control.raiseEvent(this.id + ".error", this, xhr.responseText);
     }
 };

@@ -25,7 +25,7 @@
  */
 ComponentRepository = {
 
-    create: function(parent) {
+    create: function(parent /* can be null! */) {
         var repository = Object.create(this, {
             components: { value: {} },
             factories: { value: {} },
@@ -44,12 +44,14 @@ ComponentRepository = {
     },
 
     defineFactories: function(def) {
+        Assert.notNull(def, "def");
         for (id in def ) {
             this.addFactory(id, def[id]);
         }
     },
 
-    addFactory: function(id, factory, eventRefs) {
+    addFactory: function(id, factory, eventRefs /* can be null! */) {
+        Assert.notNullAll([ [ id, "id" ], [ factory, "factory" ] ]);
         this.factories[id] != null && this.doThrow("duplicated id: id=" + id);
         this.factories[id] = factory;
         eventRefs && eventRefs.forEach(function(eventRef) {
@@ -61,15 +63,18 @@ ComponentRepository = {
     },
 
     addEventRef: function(id, eventRef) {
+        Assert.notNullAll([ [ id, "id" ], [ eventRef, "eventRef" ] ]);
         this.events[eventRef] || (this.events[eventRef] = []);
         this.events[eventRef].push(id);
     },
 
     removeEventRef: function(id, eventRef) {
+        Assert.notNullAll([ [ id, "id" ], [ eventRef, "eventRef" ] ]);
         delete this.events[eventRef][id];
     },
 
-    raiseEvent: function(event, caller, args) {
+    raiseEvent: function(event, caller, args /* can be null! */) {
+        Assert.notNullAll([ [ event, "event" ], [ caller, "caller" ] ]);
         var noRefsFound = this.events[event] == null;
         if ( noRefsFound ) {
             return;
@@ -83,7 +88,8 @@ ComponentRepository = {
         this.children.forEach(function(child) { child != caller && child.raiseEvent(event, this, args); }, this);
     },
 
-    get: function(id, arg) {
+    get: function(id, arg /* can be null! */) {
+            Assert.notNullAll([ [ id, "id" ] ]);
         var recursiveRefFound = this.routeStack.indexOf(id) > -1;
         recursiveRefFound && this.doThrow("The recursive reference found: route=" + this.routeStack);
 
@@ -111,6 +117,7 @@ ComponentRepository = {
     },
 
     doThrow: function(msg) {
+        Assert.notNull(msg, "msg");
         throw new Error(msg);
     }
 };

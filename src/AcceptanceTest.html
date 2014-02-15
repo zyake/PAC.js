@@ -13,6 +13,8 @@
 <script src="js/view/TransitionManager.js"></script>
 <script src="js/view/Widget.js"></script>
 <script src="js/view/Application.js"></script>
+<script src="js/common/Id.js"></script>
+<script src="js/common/Assert.js"></script>
 <script>
 
     var app;
@@ -36,7 +38,7 @@
                 widget1
                 .defineComponents({
                 "model1": function() {
-                return AbstractionProxy.create("model1", "view.url", "view.contents","contents"); },
+                return AbstractionProxy.create("model1", Id.start(), Id.load(),"contents"); },
                 "view1": function(id, elem) {
                     return TestPresentation1.create(elem.querySelector(".control1"), id);} })
                 .defineControls({
@@ -49,11 +51,11 @@
                 widget2
                 .defineComponents({
                 "model2": function() {
-                return AbstractionProxy.create("model2", "view.url2", "view.contents2","contents"); },
+                return AbstractionProxy.create("model2", Id.start(), Id.load(),"contents"); },
                 "view2": function(id, elem) {
                 return TestPresentation2.create(elem.querySelector(".control2"), id);} })
                 .defineControls({
-                "control2": function(id, widget) { return Control.create(widget, this.get("view2", widget.elem), this.get("model2")); } });
+                "control2": function(id, widget) { return Control.create("control1", widget, this.get("view2", widget.elem), this.get("model2")); } });
 
                 return widget2;
             },

@@ -18,7 +18,8 @@
  */
 Widget  = {
 
-    create: function(id, elem, parentRepository) {
+    create: function(id, elem, parentRepository /* can be null! */) {
+        Assert.notNullAll([ [ id, "id" ], [ elem ,"elem" ] ]);
         var widget = Object.create(this, {
             id: { value: id },
             elem: { value: elem },
@@ -40,6 +41,7 @@ Widget  = {
     },
 
     defineComponents: function(def) {
+       Assert.notNull(def, "def");
        for ( id in def ) {
         this.components.push(id);
         this.repository.addFactory(id, def[id]);
@@ -49,11 +51,13 @@ Widget  = {
     },
 
     getComponent: function(id, args) {
+        Assert.notNullAll([ [ id, "id" ], [ args, "args" ] ]);
         this.components.indexOf(id) == -1 && this.doThrow(id + " is not component!");
         return this.repository.get(id, args);
     },
 
     defineControls: function(def) {
+        Assert.notNull(def, "def");
         for( id in def ) {
             this.controls.push(id);
             this.repository.addFactory(id, def[id]);
@@ -63,23 +67,28 @@ Widget  = {
     },
 
     getControl: function(id) {
+        Assert.notNull(id, "id");
         this.controls.indexOf(id) == -1 && this.doThrow(id + " is not control!");
         return this.repository.get(id, this);
     },
 
-    raiseEvent: function(event, args) {
-        this.repository.raiseEvent(event, args);
+    raiseEvent: function(event, target, args) {
+        Assert.notNullAll([ [ event, "event" ], [ target, "target" ], [ args, "args" ] ]);
+        this.repository.raiseEvent(event, target, args);
     },
 
     addEventRef: function(id, eventRef) {
+        Assert.notNullAll([ [ id, "id" ], [ eventRef, "eventRef" ] ]);
         this.repository.addEventRef(id, eventRef);
     },
 
     removeEventRef: function(id, eventRef) {
+        Assert.notNullAll([ [ id, "id" ], [ eventRef, "eventRef" ] ]);
         this.repository.removeEventRef(id, eventRef);
     },
 
     doThrow: function(msg) {
+        Assert.notNull(msg, "msg");
         throw new Error(msg);
     }
 };

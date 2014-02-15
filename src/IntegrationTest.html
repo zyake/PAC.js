@@ -17,6 +17,8 @@
 <script src="js/view/Presentation.js"></script>
 <script src="js/view/TransitionManager.js"></script>
 <script src="js/view/Widget.js"></script>
+<script src="js/common/Id.js"></script>
+<script src="js/common/Assert.js"></script>
 <script>
 
     asyncTest("test-transition", function() {
@@ -28,11 +30,11 @@
             widget1
             .defineComponents({
                 "model1": function() {
-                        return AbstractionProxy.create("model1", "view.url", "view.contents" , "contents");
+                        return AbstractionProxy.create("model1", Id.start(), Id.load(), "contents");
                 },
                 "view1": function(id, elem) { return Presentation.create(elem.querySelector(".control1"), id);} })
             .defineControls({
-                "control1": function(id, widget) { return Control.create(widget, this.get("view1", widget.elem), this.get("model1")); } });
+                "control1": function(id, widget) { return Control.create("control1", widget, this.get("view1", widget.elem), this.get("model1")); } });
 
             return widget1;
         });

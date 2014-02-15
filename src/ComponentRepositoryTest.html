@@ -11,6 +11,7 @@
 <script src="js/external/qunit-1.13.0.js"></script>
 <script src="js/QUnitCommon.js"></script>
 <script src="js/component/ComponentRepository.js"></script>
+<script src="js/common/Assert.js"></script>
 <script>
     test("get success", function() {
         var repository = ComponentRepository.create();
@@ -92,7 +93,7 @@
 
     test("notify with no references", function() {
         var target = ComponentRepository.create();
-        target.raiseEvent("event");
+        target.raiseEvent("event", target);
         ok(true);
     });
 
@@ -101,7 +102,7 @@
         target.addFactory("id", function(id) {
                 return { notify: function(event, args) { equal(event, "event"); } }
         }, ["event"]);
-        target.raiseEvent("event");
+        target.raiseEvent("event", target);
     });
 </script>
 </body>

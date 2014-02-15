@@ -15,6 +15,8 @@
 Id = {
     idString: "",
     onAbstraction: function(target) {
+      Assert.notNull(target, "target");
+
       var id = Object.create(this, {
         target: { value: target },
         idString: { value: "", writable: true, configurable: true } });
@@ -39,6 +41,8 @@ Id = {
     },
 
     onPresentation: function(target) {
+      Assert.notNull(target, "target");
+
       var id = Object.create(this, {
         target: { value: target },
         idString: { value: "", writable: true, configurable: true } });
@@ -77,11 +81,23 @@ Id = {
         return this.idString + ".change";
     },
 
+    failure: function() {
+        return this.idString + ".failure";
+    },
+
     checkAction: function(target, event) {
+        Assert.notNullAll([ [ target, "target" ], [ event, "event" ] ]);
         return target.endWith(event.idString);
     },
 
-    on: function(func) {
-        return this.idString + "." + func.name;
+    on: function(idStr) {
+        Assert.notNull(idStr, "idStr");
+
+        var id = Object.create(this, {
+        target: { value: target },
+        idString: { value: "", writable: true, configurable: true } });
+        id.idString = idStr;
+
+        return id;
     }
 }
