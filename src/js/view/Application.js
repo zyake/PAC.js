@@ -13,7 +13,7 @@ Application = {
    create: function(id, appElem, widgetDef) {
         Assert.notNullAll(this, [ [ id, "id" ], [appElem, "appElem" ], [ widgetDef, "widgetDef" ] ]);
         var app = Object.create(this, {
-            id: id,
+            id: { value: id },
             centralRepository: { value: ComponentRepository.create("applicationRepository") }
         });
         app.initialize(appElem, widgetDef);

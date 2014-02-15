@@ -309,7 +309,7 @@ Application = {
    create: function(id, appElem, widgetDef) {
         Assert.notNullAll(this, [ [ id, "id" ], [appElem, "appElem" ], [ widgetDef, "widgetDef" ] ]);
         var app = Object.create(this, {
-            id: id,
+            id: { value: id },
             centralRepository: { value: ComponentRepository.create("applicationRepository") }
         });
         app.initialize(appElem, widgetDef);
@@ -361,21 +361,21 @@ Presentation = {
      getById: function(id) {
         Assert.notNull(this, id, "id");
         var elemById = this.elem.getElementById(id);
-        Assert.notNull(this, elemById, "elemById");
+        Assert.notNull(this, elemById, "elemById" ,"id=" + id);
         return elemById;
      },
 
     query: function(query) {
         Assert.notNull(this, query, "query");
         var queriedElem = this.elem.querySelector(query);
-        Assert.notNull(this, queriedElem, "queriedElem");
+        Assert.notNull(this, queriedElem, "queriedElem", "query=" + query);
         return queriedElem;
     },
 
     queryAll: function(query) {
         Assert.notNull(this, query, "query");
         var queriedElem = this.elem.querySelectorAll(query);
-        Assert.notNull(this, query, "query");
+        Assert.notNull(this, queriedElem, "queriedElem", "query=" + query);
         return queriedElem;
     },
 
@@ -583,14 +583,14 @@ Widget  = {
     }
 };Assert = {
 
-    notNull: function(obj, elem, param) {
-        elem == null && this.doThrow("parameter \"" + param + "\" is null!: " + obj);
+    notNull: function(obj, elem, param, msg) {
+        elem == null && this.doThrow("parameter \"" + param + "\" is null!: message=[ " + msg + " ], target=[ " + obj + " ]");
     },
 
     notNullAll: function(obj, elemDef) {
       for ( i = 0 ; i < elemDef.length ; i ++ ) {
         var elem = elemDef[i];
-        this.notNull(obj, elem[0], elem[1]);
+        this.notNull(obj, elem[0], elem[1], elem[2]);
       }
     },
 

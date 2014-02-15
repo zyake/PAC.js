@@ -26,21 +26,21 @@ Presentation = {
      getById: function(id) {
         Assert.notNull(this, id, "id");
         var elemById = this.elem.getElementById(id);
-        Assert.notNull(this, elemById, "elemById");
+        Assert.notNull(this, elemById, "elemById" ,"id=" + id);
         return elemById;
      },
 
     query: function(query) {
         Assert.notNull(this, query, "query");
         var queriedElem = this.elem.querySelector(query);
-        Assert.notNull(this, queriedElem, "queriedElem");
+        Assert.notNull(this, queriedElem, "queriedElem", "query=" + query);
         return queriedElem;
     },
 
     queryAll: function(query) {
         Assert.notNull(this, query, "query");
         var queriedElem = this.elem.querySelectorAll(query);
-        Assert.notNull(this, query, "query");
+        Assert.notNull(this, queriedElem, "queriedElem", "query=" + query);
         return queriedElem;
     },
 
