@@ -14,9 +14,9 @@
 <script src="js/component/AbstractionProxy.js"></script>
 <script src="js/component/Control.js"></script>
 <script src="js/net/HttpClient.js"></script>
-<script src="js/view/Presentation.js"></script>
-<script src="js/view/TransitionManager.js"></script>
-<script src="js/view/Widget.js"></script>
+<script src="js/view/2_Presentation.js"></script>
+<script src="js/view/4_TransitionManager.js"></script>
+<script src="js/view/5_Widget.js"></script>
 <script src="js/common/Id.js"></script>
 <script src="js/common/Assert.js"></script>
 <script>
@@ -30,7 +30,9 @@
             widget1
             .defineComponents({
                 "model1": function() {
-                        return AbstractionProxy.create("model1", Id.start(), Id.load(), "contents");
+                        var reqResMap = {};
+                        reqResMap[Id.start()] = Id.load();
+                        return AbstractionProxy.create("model1", reqResMap, "contents");
                 },
                 "view1": function(id, elem) { return Presentation.create(elem.querySelector(".control1"), id);} })
             .defineControls({

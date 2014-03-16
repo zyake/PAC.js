@@ -9,10 +9,10 @@
 <script src="js/component/AbstractionProxy.js"></script>
 <script src="js/component/Control.js"></script>
 <script src="js/net/HttpClient.js"></script>
-<script src="js/view/Presentation.js"></script>
-<script src="js/view/TransitionManager.js"></script>
-<script src="js/view/Widget.js"></script>
-<script src="js/view/Application.js"></script>
+<script src="js/view/2_Presentation.js"></script>
+<script src="js/view/4_TransitionManager.js"></script>
+<script src="js/view/5_Widget.js"></script>
+<script src="js/view/1_Application.js"></script>
 <script src="js/common/Id.js"></script>
 <script src="js/common/Assert.js"></script>
 <script>
@@ -37,8 +37,10 @@
                 var widget1 = Widget.create(id, elem, repository);
                 widget1
                 .defineComponents({
-                "model1": function() {
-                return AbstractionProxy.create("model1", Id.start(), Id.load(),"contents"); },
+                "model1": function(id) {
+                    return AbstractionProxy.create(id, {
+                        Id.on("view1").start: Id.on(id).load()
+                    },"contents"); },
                 "view1": function(id, elem) {
                     return TestPresentation1.create(elem.querySelector(".control1"), id);} })
                 .defineControls({
@@ -50,8 +52,10 @@
                 var widget2 = Widget.create(id, elem, repository);
                 widget2
                 .defineComponents({
-                "model2": function() {
-                return AbstractionProxy.create("model2", Id.start(), Id.load(),"contents"); },
+                "model2": function(id) {
+                return AbstractionProxy.create(id, {
+                    Id.on("view2").start: Id.on(id).load()
+                },"contents"); },
                 "view2": function(id, elem) {
                 return TestPresentation2.create(elem.querySelector(".control2"), id);} })
                 .defineControls({

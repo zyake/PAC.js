@@ -96,11 +96,20 @@ Id = {
         Assert.notNull(this, idStr, "idStr");
 
         var id = Object.create(this, {
-        target: { value: target },
         idString: { value: "", writable: true, configurable: true } });
         id.idString = idStr;
 
         return id;
+    },
+
+    getAction: function(event) {
+        var separatorIndex = event.lastIndexOf(".");
+        if ( separatorIndex < 0 ) {
+            throw new Error("separator couldn't find!: event=" + event);
+        }
+        var action = event.substring(separatorIndex);
+
+        return action;
     },
 
     toString: function() {
