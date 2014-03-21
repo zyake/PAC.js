@@ -1,13 +1,13 @@
 
 /**
- * A proxy of a abstraction.
+ * A proxy of an abstraction.
  *
- * It is a proxy for a abstraction that resides in a application server.
- * Using json interface, the proxy don't have to realize
+ * It is a proxy for an abstraction that resides in anapplication server.
+ * Using json interface, the proxy doesn't have to realize
  * the actual implementation of the abstraction.
  *
- * If a AbstractionProxy was received a request event,
- * it sends the event as json to a abstraction that
+ * If an AbstractionProxy was received a request event,
+ * it sends the event as json to an abstraction that
  * resides in a server.
  */
 AbstractionProxy = {

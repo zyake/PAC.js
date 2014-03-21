@@ -30,7 +30,7 @@
              return;
          }
          if ( this.idToElemMap[id] != null ) {
-             this.doTransit(id);
+             this.doTransit(id, {});
              return;
          }
 

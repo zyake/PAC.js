@@ -2,16 +2,16 @@
 /**
  * A widget to manage underlying controls.
  *
- * A widget is a unit of reusable component,
+ * A widget is an unit of reusable component,
  * which manages all of components
  * that make up of a widget.
  *
  * Components are classified in the following two categories:
  * - Component: general purpose component
- * - Control: a central control point of a UI component
+ * - Control: a central control point of an UI component
  *
  * All of components that reside in a widget communicate
- * each other using widget event mechanism.
+ * with each other using widget event mechanism.
  * Because a widget has a hierarchy repository structure,
  * the event that was raised by a component may be
  * propagated to parent repositories and other widgets.

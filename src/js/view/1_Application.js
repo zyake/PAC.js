@@ -1,9 +1,9 @@
 
 /**
- *  A abstraction of a whole application
+ *  An abstraction of a whole application
  *
  * It can accommodate all widgets that consist of a SPA(Single Page  Application).
- * By starting a "Application" instance, Each widget can be accessed by a hash URL.
+ * By starting an "Application" instance, Each widget can be accessed by a hash URL.
  * - for example
  * http://apphost/webapp#widget1 -> widget1
  * http://apphost/webapp#widget2 -> widget2

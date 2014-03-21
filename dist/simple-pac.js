@@ -1,13 +1,13 @@
 
 /**
- * A proxy of a abstraction.
+ * A proxy of an abstraction.
  *
- * It is a proxy for a abstraction that resides in a application server.
- * Using json interface, the proxy don't have to realize
+ * It is a proxy for an abstraction that resides in anapplication server.
+ * Using json interface, the proxy doesn't have to realize
  * the actual implementation of the abstraction.
  *
- * If a AbstractionProxy was received a request event,
- * it sends the event as json to a abstraction that
+ * If an AbstractionProxy was received a request event,
+ * it sends the event as json to an abstraction that
  * resides in a server.
  */
 AbstractionProxy = {
@@ -107,7 +107,7 @@ AbstractionProxy = {
 /**
  *  A central repository to manage components.
  *
- * 	A component can be registered as a factory basis, and
+ * 	A component can be registered as factory basis, and
  *	the component will be instantiated when it retrieved at first time.
  *	The component instance will be cached in the repository.
  *
@@ -125,8 +125,8 @@ AbstractionProxy = {
  * alert(repository.get("defaultName"));
  *
  * The central repository also supports hierarchical event propagating mechanism,
- * which can be used to notify a event data to parent repositories that
- * can manage a whole application configuration.
+ * which can be used to notify an event data to parent repositories that
+ * can manage the whole application configuration.
  */
 ComponentRepository = {
 
@@ -302,10 +302,10 @@ Control = {
      }
  };
 /**
- *  A abstraction of a whole application
+ *  An abstraction of a whole application
  *
  * It can accommodate all widgets that consist of a SPA(Single Page  Application).
- * By starting a "Application" instance, Each widget can be accessed by a hash URL.
+ * By starting an "Application" instance, Each widget can be accessed by a hash URL.
  * - for example
  * http://apphost/webapp#widget1 -> widget1
  * http://apphost/webapp#widget2 -> widget2
@@ -483,7 +483,7 @@ CompositePresentation = Object.create(Presentation, {
              return;
          }
          if ( this.idToElemMap[id] != null ) {
-             this.doTransit(id);
+             this.doTransit(id, {});
              return;
          }
 
@@ -531,16 +531,16 @@ CompositePresentation = Object.create(Presentation, {
 /**
  * A widget to manage underlying controls.
  *
- * A widget is a unit of reusable component,
+ * A widget is an unit of reusable component,
  * which manages all of components
  * that make up of a widget.
  *
  * Components are classified in the following two categories:
  * - Component: general purpose component
- * - Control: a central control point of a UI component
+ * - Control: a central control point of an UI component
  *
  * All of components that reside in a widget communicate
- * each other using widget event mechanism.
+ * with each other using widget event mechanism.
  * Because a widget has a hierarchy repository structure,
  * the event that was raised by a component may be
  * propagated to parent repositories and other widgets.
@@ -752,7 +752,7 @@ Id = {
             throw new Error("separator couldn't find!: event=" + event);
         }
         var action = event.substring(separatorIndex);
-        
+
         return action;
     },
 

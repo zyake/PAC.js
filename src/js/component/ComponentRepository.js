@@ -2,7 +2,7 @@
 /**
  *  A central repository to manage components.
  *
- * 	A component can be registered as a factory basis, and
+ * 	A component can be registered as factory basis, and
  *	the component will be instantiated when it retrieved at first time.
  *	The component instance will be cached in the repository.
  *
@@ -20,8 +20,8 @@
  * alert(repository.get("defaultName"));
  *
  * The central repository also supports hierarchical event propagating mechanism,
- * which can be used to notify a event data to parent repositories that
- * can manage a whole application configuration.
+ * which can be used to notify an event data to parent repositories that
+ * can manage the whole application configuration.
  */
 ComponentRepository = {
 
