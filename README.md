@@ -43,11 +43,15 @@ The key concepts of the simple-pac are following.
 
 ### Basic behavior
 
+![basic behavior](doc/img/basic_behavior.png)
 
+### Component definition
+
+![component definition](doc/img/component_definition.png)
 
 ### Structure
 
-![overview](doc/img/simple-pac_overview.png)
+![overview](doc/img/overview.png)
 
 ## Code examples
 
