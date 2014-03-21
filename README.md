@@ -1,13 +1,13 @@
 # simple-pac
 
-simple-pac is a framework that is based on the PAC architecture pattern.
+simple-pac is a javascript framework that is based on the PAC architecture pattern.
 
 ## Motivation
 
 In traditional MVC frameworks, there are no abstraction of widgets and hierarchical structures.
 MVC applications tend to be complex and be difficult to reuse components.
 On the other hand, the PAC pattern resolves these problems more gracefully,
-so I decided to develop a PAC based framework.
+so I decided to develop own PAC based framework.
 
 ## What's the "PAC architecture pattern"?
 
@@ -34,12 +34,18 @@ http://en.wikipedia.org/wiki/Presentation%E2%80%93abstraction%E2%80%93control
 ## The key concepts of "simple-pac"
 
 The key concepts of the simple-pac are following.
-* PAC pattern based hierarchal structure
+* PAC pattern based hierarchical structure
 * Very simple, template based transition mechanism
 * DI container like component management facility
 * Proxying application abstractions that reside on application servers
 
 ## Overview
+
+### Basic behavior
+
+
+
+### Structure
 
 ![overview](doc/img/simple-pac_overview.png)
 
