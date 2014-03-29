@@ -22,6 +22,13 @@ Control = {
     initialize: function() {
         this.abstraction.initialize(this);
         this.presentation.initialize(this);
+        this.doInitialize();
+    },
+
+    /**
+     * For internal usage.
+     */
+    doInitialize: function() {
     },
 
     raiseEvent: function(event, target, args) {

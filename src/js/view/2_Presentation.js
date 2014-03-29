@@ -23,6 +23,13 @@ Presentation = {
     initialize: function(control) {
         Assert.notNull(this, control, "control");
         this.control = control;
+        this.doInitialize();
+    },
+
+    /**
+     * For internal usage.
+     */
+    doInitialize: function() {
     },
 
      getById: function(id) {

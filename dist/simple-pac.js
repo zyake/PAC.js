@@ -60,6 +60,13 @@ AbstractionProxy = {
         for ( key  in this.reqResMap ) {
             this.control.addEventRef(this.id, on[key.substring(1)]());
         }
+        this.doInitialize();
+    },
+
+    /**
+     * For internal usage.
+     */
+    doInitialize: function() {
     },
 
     fetch: function(eventKey, args) {
@@ -232,7 +239,36 @@ ComponentRepository = {
     toString: function() {
         return "id: " + this.id;
     }
-};
+};/**
+ * A composition of models.
+ *
+ * It propagates events into child models.
+ */
+CompositeModel = Object.create(AbstractionProxy, {
+
+    fields: { value: { models: { value: null, writable: true } } },
+
+    create: { value: function(id, models) {
+        var model = AbstractionProxy.create.call(this, id, {}, "");
+        model.models = models;
+
+        return model;
+    }},
+
+    doInitialize: { value: function() {
+        for ( key in this.models ) {
+            var model = this.models[key];
+            model.initialize(this.control);
+        }
+    }},
+
+    notify: { value: function(event, arg) {
+        for ( key in this.models ) {
+            var model = this.models[key];
+            model.notify(event, arg);
+        }
+    }}
+});
 /**
  * A control to mediate exchanging data among Presentation, Abstraction, and Widgets.
  */
@@ -256,6 +292,13 @@ Control = {
     initialize: function() {
         this.abstraction.initialize(this);
         this.presentation.initialize(this);
+        this.doInitialize();
+    },
+
+    /**
+     * For internal usage.
+     */
+    doInitialize: function() {
     },
 
     raiseEvent: function(event, target, args) {
@@ -371,6 +414,13 @@ Presentation = {
     initialize: function(control) {
         Assert.notNull(this, control, "control");
         this.control = control;
+        this.doInitialize();
+    },
+
+    /**
+     * For internal usage.
+     */
+    doInitialize: function() {
     },
 
      getById: function(id) {
@@ -441,11 +491,10 @@ CompositePresentation = Object.create(Presentation, {
         return presentation;
     }},
 
-    initialize: { value: function(control) {
-        Presentation.initialize.call(this, control);
+    doInitialize: { value: function() {
         for ( key in this.views ) {
             var view = this.views[key];
-            view.initialize(control);
+            view.initialize(this.control);
         }
     }},
 
@@ -572,6 +621,13 @@ Widget  = {
         }
         this.initialized = true;
         this.controls.forEach(function(controlId) { this.repository.get(controlId, this).initialize(); }, this);
+        this.doInitialize();
+    },
+
+    /**
+     * For internal usage.
+     */
+    doInitialize: function() {
     },
 
     defineComponents: function(def) {

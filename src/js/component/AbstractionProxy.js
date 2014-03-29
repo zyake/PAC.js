@@ -60,6 +60,13 @@ AbstractionProxy = {
         for ( key  in this.reqResMap ) {
             this.control.addEventRef(this.id, on[key.substring(1)]());
         }
+        this.doInitialize();
+    },
+
+    /**
+     * For internal usage.
+     */
+    doInitialize: function() {
     },
 
     fetch: function(eventKey, args) {

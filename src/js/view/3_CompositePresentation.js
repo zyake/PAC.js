@@ -15,11 +15,10 @@ CompositePresentation = Object.create(Presentation, {
         return presentation;
     }},
 
-    initialize: { value: function(control) {
-        Presentation.initialize.call(this, control);
+    doInitialize: { value: function() {
         for ( key in this.views ) {
             var view = this.views[key];
-            view.initialize(control);
+            view.initialize(this.control);
         }
     }},
 

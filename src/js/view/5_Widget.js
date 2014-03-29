@@ -39,6 +39,13 @@ Widget  = {
         }
         this.initialized = true;
         this.controls.forEach(function(controlId) { this.repository.get(controlId, this).initialize(); }, this);
+        this.doInitialize();
+    },
+
+    /**
+     * For internal usage.
+     */
+    doInitialize: function() {
     },
 
     defineComponents: function(def) {
