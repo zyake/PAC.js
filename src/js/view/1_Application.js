@@ -38,6 +38,10 @@ Application = {
             var newWidgetId = event.newURL.substring(hashIndex + 1);
              me.transitionManager.transit(newWidgetId);
         });
+        var hasHash = location.hash != "";
+        if ( hasHash ) {
+            initWidgetId = location.hash.substring(1);
+        }
         this.transitionManager.transit(initWidgetId);
     }
 };
