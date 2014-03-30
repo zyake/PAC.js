@@ -67,6 +67,18 @@ Id = {
       return id;
     },
 
+    onThis: function(target) {
+        Assert.notNull(this, target, "target");
+
+        if ( Presentation.isPrototypeOf(target) ) {
+            return Id.onPresentation(target);
+        } else if ( AbstractionProxy.isPrototypeOf(target) ) {
+            return Id.onAbstraction(target);
+        } else {
+            throw new Error("invalid target:" + target);
+        }
+    },
+
     load: function() {
         return this.idString + ".load";
     },

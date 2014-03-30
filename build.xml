@@ -18,14 +18,12 @@
      <run-ut name="TransitionManagerTest"/>
      <run-ut name="IntegrationTest"/>
      <run-ut name="IdTest"/>
+     <run-ut name="EventBuilderTest"/>
  </target>
 
  <target name="concat-js">
      <concat destfile="dist/simple-pac.js" append="false">
        <fileset dir="src/js/component">
-           <include name="*.js"/>
-       </fileset>
-       <fileset dir="src/js/net">
            <include name="*.js"/>
        </fileset>
        <fileset dir="src/js/view">

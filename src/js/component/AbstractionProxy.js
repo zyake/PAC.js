@@ -45,8 +45,10 @@ AbstractionProxy = {
           reqHandler: { value: this. FOR_JSON, writable: true },
           resHandler: { value: this.AS_JSON, writable: true },
           control: { value: null, writable: true },
-          method: { value: "GET" , writable: true }
+          method: { value: "GET" , writable: true },
+          eventBuilder: { value: null, writable: true }
         });
+        proxy.eventBuilder = EventBuilder.create(proxy);
         Object.defineProperties(proxy, this.fields || {});
         Object.seal(proxy);
 
@@ -58,7 +60,7 @@ AbstractionProxy = {
         this.control = control;
         var on = Id.onPresentation(this);
         for ( key  in this.reqResMap ) {
-            this.control.addEventRef(this.id, on[key.substring(1)]());
+            this.event().ref().onPresentation()[key.substring(1)]();
         }
         this.doInitialize();
     },
@@ -67,6 +69,10 @@ AbstractionProxy = {
      * For internal usage.
      */
     doInitialize: function() {
+    },
+
+    event: function() {
+        return this.eventBuilder;
     },
 
     fetch: function(eventKey, args) {
@@ -98,13 +104,13 @@ AbstractionProxy = {
         var responseData = this.resHandler(xhr);
         var resKey = this.reqResMap[Id.getAction(event)].substring(1);
         var on = Id.onAbstraction(this);
-        this.control.raiseEvent(on[resKey](), this, responseData);
+        this.event().raise()[resKey](responseData);
     },
 
     failureCallback: function(event, xhr) {
         Assert.notNull(this, event, "event");
         Assert.notNull(this, xhr, "xhr");
-        this.control.raiseEvent(this.id + ".error", this, xhr.responseText);
+        this.event().raise().failure(xhr.responseText);
     },
 
     toString: function() {

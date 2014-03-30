@@ -13,10 +13,13 @@ Presentation = {
       var presentation = Object.create(this, {
         elem: { value: elem },
         id: { value: id },
-        control: { value: null, writable: true }
+        control: { value: null, writable: true },
+        eventBuilder: { value: null, writable: true }
       });
+      presentation.eventBuilder = EventBuilder.create(presentation);;
       Object.defineProperties(presentation, this.fields || {});
       Object.seal(presentation);
+
       return presentation;
     },
 
@@ -65,14 +68,16 @@ Presentation = {
         elem.addEventListener(event, function(event) { return callback.call(me, event) });
     },
 
-    raiseEvent: function(event, arg) {
-        Assert.notNullAll(this, [ [ event, "event" ], [ arg, "arg" ] ]);
-        this.control.raiseEvent(event, this, arg);
+    event: function() {
+        return this.eventBuilder;
     },
 
-    addEventRef: function(id, event) {
-        Assert.notNullAll(this, [ [ id, "id" ], [ event, "event" ] ]);
-        this.control.addEventRef(id, event);
+    doQueries: function(queryMap) {
+        Assert.notNullAll(this, [ [ queryMap, "queryMap" ] ]);
+      for ( key in queryMap ) {
+          var query = queryMap[key];
+          this[key] = this.query(query);
+      }
     },
 
     doThrow: function(msg) {

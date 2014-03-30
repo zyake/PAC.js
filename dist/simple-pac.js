@@ -45,8 +45,10 @@ AbstractionProxy = {
           reqHandler: { value: this. FOR_JSON, writable: true },
           resHandler: { value: this.AS_JSON, writable: true },
           control: { value: null, writable: true },
-          method: { value: "GET" , writable: true }
+          method: { value: "GET" , writable: true },
+          eventBuilder: { value: null, writable: true }
         });
+        proxy.eventBuilder = EventBuilder.create(proxy);
         Object.defineProperties(proxy, this.fields || {});
         Object.seal(proxy);
 
@@ -58,7 +60,7 @@ AbstractionProxy = {
         this.control = control;
         var on = Id.onPresentation(this);
         for ( key  in this.reqResMap ) {
-            this.control.addEventRef(this.id, on[key.substring(1)]());
+            this.event().ref().onPresentation()[key.substring(1)]();
         }
         this.doInitialize();
     },
@@ -67,6 +69,10 @@ AbstractionProxy = {
      * For internal usage.
      */
     doInitialize: function() {
+    },
+
+    event: function() {
+        return this.eventBuilder;
     },
 
     fetch: function(eventKey, args) {
@@ -98,13 +104,13 @@ AbstractionProxy = {
         var responseData = this.resHandler(xhr);
         var resKey = this.reqResMap[Id.getAction(event)].substring(1);
         var on = Id.onAbstraction(this);
-        this.control.raiseEvent(on[resKey](), this, responseData);
+        this.event().raise()[resKey](responseData);
     },
 
     failureCallback: function(event, xhr) {
         Assert.notNull(this, event, "event");
         Assert.notNull(this, xhr, "xhr");
-        this.control.raiseEvent(this.id + ".error", this, xhr.responseText);
+        this.event().raise().failure(xhr.statusText);
     },
 
     toString: function() {
@@ -321,30 +327,6 @@ Control = {
     }
 };
 /**
- * VERY simple http client.
- */
- HttpClient = {
-
-     send: function(url, loaded, data/* can be null! */, reqCallback /* can be null! */, method /* can be null! */) {
-         Assert.notNullAll(this, [ [ url, "url" ], [ loaded, "loaded" ] ]);
-         var method = method || "GET";
-         var reqCallback = reqCallback || function() { return data; }
-         var xhr = new XMLHttpRequest();
-         xhr.addEventListener("load", loaded);
-         xhr.open(method, url, true);
-         xhr.send(reqCallback(data, xhr));
-
-         return xhr;
-      },
-
-     isSuccess: function(xhr) {
-        Assert.notNull(this, xhr, "xhr");
-         // Status Code = 0 is used for phantomjs testing.
-         var isSuccess = xhr.status == 0 || xhr.status == 200;
-         return isSuccess;
-     }
- };
-/**
  *  An abstraction of a whole application
  *
  * It can accommodate all widgets that consist of a SPA(Single Page  Application).
@@ -404,10 +386,13 @@ Presentation = {
       var presentation = Object.create(this, {
         elem: { value: elem },
         id: { value: id },
-        control: { value: null, writable: true }
+        control: { value: null, writable: true },
+        eventBuilder: { value: null, writable: true }
       });
+      presentation.eventBuilder = EventBuilder.create(presentation);;
       Object.defineProperties(presentation, this.fields || {});
       Object.seal(presentation);
+
       return presentation;
     },
 
@@ -456,14 +441,16 @@ Presentation = {
         elem.addEventListener(event, function(event) { return callback.call(me, event) });
     },
 
-    raiseEvent: function(event, arg) {
-        Assert.notNullAll(this, [ [ event, "event" ], [ arg, "arg" ] ]);
-        this.control.raiseEvent(event, this, arg);
+    event: function() {
+        return this.eventBuilder;
     },
 
-    addEventRef: function(id, event) {
-        Assert.notNullAll(this, [ [ id, "id" ], [ event, "event" ] ]);
-        this.control.addEventRef(id, event);
+    doQueries: function(queryMap) {
+        Assert.notNullAll(this, [ [ queryMap, "queryMap" ] ]);
+      for ( key in queryMap ) {
+          var query = queryMap[key];
+          this[key] = this.query(query);
+      }
     },
 
     doThrow: function(msg) {
@@ -702,7 +689,162 @@ Widget  = {
         throw new Error(msg);
     }
 };
+
 /**
+ * A event builder class that can define view and model events by fluent interface.
+ *
+ * - for example
+ *
+ * EventBuilder.create(target)
+ *  .ref().onAbstraction().load()
+ *  .ref().onAbstraction().start()
+ *  .raise().start({});
+ */
+EventBuilder = {
+
+    REF_INVOKER: {
+
+        target: null,
+        id: null,
+        builder: null,
+
+        load: function() {
+          this.target.control.addEventRef(this.target.id, this.id.load());
+          return this.builder;
+        },
+
+        start: function() {
+            this.target.control.addEventRef(this.target.id, this.id.start());
+            return this.builder;
+        },
+
+        change: function() {
+            this.target.control.addEventRef(this.target.id, this.id.change());
+            return this.builder;
+        },
+
+        failed: function() {
+            this.target.control.addEventRef(this.target.id, this.id.failed());
+            return this.builder;
+        },
+
+        failure: function() {
+            this.target.control.addEventRef(this.target.id, this.id.failure());
+            return this.builder;
+        }
+    },
+
+    RAISE_INVOKER: {
+
+        target: null,
+        id: null,
+        builder: null,
+
+        load: function(args) {
+            Assert.notNullAll(this, [[ args, "args"]]);
+            this.target.control.raiseEvent(this.id.load(), this.target, args);
+            return this.builder;
+        },
+
+        start: function(args) {
+            Assert.notNullAll(this, [[ args, "args"]]);
+            this.target.control.raiseEvent(this.id.start(), this.target, args);
+            return this.builder;
+        },
+
+        change: function(args) {
+            Assert.notNullAll(this, [[ args, "args"]]);
+            this.target.control.raiseEvent(this.id.change(), this.target,  args);
+            return this.builder;
+        },
+
+        failed: function(args) {
+            Assert.notNullAll(this, [[ args, "args"]]);
+            this.target.control.raiseEvent(this.id.failed(), this.target, args);
+            return this.builder;
+        },
+
+        failure: function(args) {
+            Assert.notNullAll(this, [[ args, "args"]]);
+            this.target.control.raiseEvent(this.id.failure(), this.target, args);
+            return this.builder;
+        }
+    },
+
+    create: function(target) {
+        Assert.notNullAll(this, [[ target, "target"]]);
+       Assert.notNull(this, target, "target");
+
+        var builder = Object.create(this, {target: { value: target }});
+        Object.seal(builder);
+
+        return builder;
+    },
+
+    ref: function() {
+        var me = this;
+        var ref = {
+
+            target: this.target,
+
+            onAbstraction: function() {
+               return Object.create(EventBuilder.REF_INVOKER,
+                   { target: { value: this.target }, builder: { value: me },
+                       id: { value: Id.onAbstraction(this.target) } });
+            },
+
+            onPresentation: function() {
+                return Object.create(EventBuilder.REF_INVOKER,
+                    { target: { value: this.target }, builder: { value: me },
+                        id: { value: Id.onPresentation(this.target) } });
+            },
+
+            on: function(event) {
+                Assert.notNullAll(this, [[ event, "event"]]);
+                return Object.create(EventBuilder.REF_INVOKER,
+                    { target: { value: this.target }, builder: { value: me },
+                        id: { value: Id.on(event) } });
+            }
+        };
+
+        return ref;
+    },
+
+    raise: function() {
+        var me = this;
+        var raise = Object.create(EventBuilder.RAISE_INVOKER, {
+            target: { value: this.target }, builder: { value: me },
+            id: { value: Id.onThis(this.target) }
+        });
+        Object.seal(raise);
+
+        return raise;
+    }
+};
+/**
+ * VERY simple http client.
+ */
+ HttpClient = {
+
+     send: function(url, loaded, data/* can be null! */, reqCallback /* can be null! */, method /* can be null! */) {
+         Assert.notNullAll(this, [ [ url, "url" ], [ loaded, "loaded" ] ]);
+         var method = method || "GET";
+         var reqCallback = reqCallback || function() { return data; }
+         var xhr = new XMLHttpRequest();
+         xhr.addEventListener("load", loaded);
+         xhr.open(method, url, true);
+         xhr.send(reqCallback(data, xhr));
+
+         return xhr;
+      },
+
+     isSuccess: function(xhr) {
+        Assert.notNull(this, xhr, "xhr");
+         // Status Code = 0 is used for phantomjs testing.
+         var isSuccess = xhr.status == 0 || xhr.status == 200;
+         return isSuccess;
+     }
+ };/**
  * A builder object to create event id.
  *
  * You can build event id that refers to other components in the same control.
@@ -769,6 +911,18 @@ Id = {
         throw new Error("invalid target:" + target);
       }
       return id;
+    },
+
+    onThis: function(target) {
+        Assert.notNull(this, target, "target");
+
+        if ( Presentation.isPrototypeOf(target) ) {
+            return Id.onPresentation(target);
+        } else if ( AbstractionProxy.isPrototypeOf(target) ) {
+            return Id.onAbstraction(target);
+        } else {
+            throw new Error("invalid target:" + target);
+        }
     },
 
     load: function() {
