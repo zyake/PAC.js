@@ -75,6 +75,10 @@ AbstractionProxy = {
         return this.eventBuilder;
     },
 
+    notify: function(event, arg) {
+      this.event().handle(event, arg);
+    },
+
     fetch: function(eventKey, args) {
         Assert.notNull(this, args, "args");
         if ( this.isRequesting == true ) {

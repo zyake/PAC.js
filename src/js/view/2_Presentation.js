@@ -72,6 +72,10 @@ Presentation = {
         return this.eventBuilder;
     },
 
+    notify: function(event, arg) {
+        this.event().handle(event, arg);
+    },
+
     doQueries: function(queryMap) {
         Assert.notNullAll(this, [ [ queryMap, "queryMap" ] ]);
       for ( key in queryMap ) {

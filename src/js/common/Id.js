@@ -99,6 +99,10 @@ Id = {
         return this.idString + ".failure";
     },
 
+    other: function() {
+        return this.idString + ".other";
+    },
+
     checkAction: function(target, event) {
         Assert.notNullAll(this, [ [ target, "target" ], [ event, "event" ] ]);
         return target.endWith(event.idString);

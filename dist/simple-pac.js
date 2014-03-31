@@ -75,6 +75,10 @@ AbstractionProxy = {
         return this.eventBuilder;
     },
 
+    notify: function(event, arg) {
+      this.event().handle(event, arg);
+    },
+
     fetch: function(eventKey, args) {
         Assert.notNull(this, args, "args");
         if ( this.isRequesting == true ) {
@@ -110,7 +114,7 @@ AbstractionProxy = {
     failureCallback: function(event, xhr) {
         Assert.notNull(this, event, "event");
         Assert.notNull(this, xhr, "xhr");
-        this.event().raise().failure(xhr.statusText);
+        this.event().raise().failure(xhr.responseText);
     },
 
     toString: function() {
@@ -445,6 +449,10 @@ Presentation = {
         return this.eventBuilder;
     },
 
+    notify: function(event, arg) {
+        this.event().handle(event, arg);
+    },
+
     doQueries: function(queryMap) {
         Assert.notNullAll(this, [ [ queryMap, "queryMap" ] ]);
       for ( key in queryMap ) {
@@ -696,8 +704,8 @@ Widget  = {
  * - for example
  *
  * EventBuilder.create(target)
- *  .ref().onAbstraction().load()
- *  .ref().onAbstraction().start()
+ *  .ref().onAbstraction().load(this.load)
+ *  .ref().onAbstraction().start(this.start)
  *  .raise().start({});
  */
 EventBuilder = {
@@ -708,28 +716,39 @@ EventBuilder = {
         id: null,
         builder: null,
 
-        load: function() {
+        load: function(handler) {
           this.target.control.addEventRef(this.target.id, this.id.load());
+          this.builder.eventMap[this.id.load()] = handler;
           return this.builder;
         },
 
-        start: function() {
+        start: function(handler) {
             this.target.control.addEventRef(this.target.id, this.id.start());
+            this.builder.eventMap[this.id.start()] = handler;
             return this.builder;
         },
 
-        change: function() {
+        change: function(handler) {
             this.target.control.addEventRef(this.target.id, this.id.change());
+            this.builder.eventMap[this.id.change()] = handler;
             return this.builder;
         },
 
-        failed: function() {
+        failed: function(handler) {
             this.target.control.addEventRef(this.target.id, this.id.failed());
+            this.builder.eventMap[this.id.failed()] = handler;
             return this.builder;
         },
 
-        failure: function() {
+        failure: function(handler) {
             this.target.control.addEventRef(this.target.id, this.id.failure());
+            this.builder.eventMap[this.id.failure()] = handler;
+            return this.builder;
+        },
+
+        other: function(handler) {
+            this.target.control.addEventRef(this.target.id, this.id.other());
+            this.builder.eventMap[this.id.other()] = handler;
             return this.builder;
         }
     },
@@ -768,6 +787,12 @@ EventBuilder = {
             Assert.notNullAll(this, [[ args, "args"]]);
             this.target.control.raiseEvent(this.id.failure(), this.target, args);
             return this.builder;
+        },
+
+        other: function(args) {
+            Assert.notNullAll(this, [[ args, "args"]]);
+            this.target.control.raiseEvent(this.id.other(), this.target, args);
+            return this.builder;
         }
     },
 
@@ -775,7 +800,8 @@ EventBuilder = {
         Assert.notNullAll(this, [[ target, "target"]]);
        Assert.notNull(this, target, "target");
 
-        var builder = Object.create(this, {target: { value: target }});
+        var builder = Object.create(this,
+            { target: { value: target }, eventMap: { value: [] } });
         Object.seal(builder);
 
         return builder;
@@ -819,6 +845,14 @@ EventBuilder = {
         Object.seal(raise);
 
         return raise;
+    },
+
+    handle: function(id, arg) {
+        if ( this.eventMap[id] != null ) {
+            this.eventMap[id].call(this.target, arg, id);
+        } else {
+            this.eventMap[Id.other()] && this.eventMap[Id.other()].call(this.target, arg, id);
+        }
     }
 };
 /**
@@ -943,6 +977,10 @@ Id = {
 
     failure: function() {
         return this.idString + ".failure";
+    },
+
+    other: function() {
+        return this.idString + ".other";
     },
 
     checkAction: function(target, event) {
