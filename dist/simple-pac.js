@@ -124,9 +124,9 @@ AbstractionProxy = {
 /**
  *  A central repository to manage components.
  *
- * 	A component can be registered as factory basis, and
- *	the component will be instantiated when it retrieved at first time.
- *	The component instance will be cached in the repository.
+ *  A component can be registered as factory basis, and
+ *  the component will be instantiated when it retrieved at first time.
+ *  The component instance will be cached in the repository.
  *
  * If you want to refer to other repository managed components,
  * you can refer to them using a get method in the factory method context.
@@ -249,7 +249,8 @@ ComponentRepository = {
     toString: function() {
         return "id: " + this.id;
     }
-};/**
+};
+/**
  * A composition of models.
  *
  * It propagates events into child models.
@@ -680,7 +681,11 @@ Widget  = {
     toString: function() {
         return "id: " + this.id;
     }
-};Assert = {
+};
+/**
+ * An Assert class to validate arguments
+ */
+Assert = {
 
     notNull: function(obj, elem, param, msg) {
         elem == null && this.doThrow("parameter \"" + param + "\" is null!: message=[ " + msg + " ], target=[ " + obj + " ]");
@@ -878,7 +883,8 @@ EventBuilder = {
          var isSuccess = xhr.status == 0 || xhr.status == 200;
          return isSuccess;
      }
- };/**
+ };
+/**
  * A builder object to create event id.
  *
  * You can build event id that refers to other components in the same control.

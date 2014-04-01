@@ -1,3 +1,7 @@
+
+/**
+ * An Assert class to validate arguments
+ */
 Assert = {
 
     notNull: function(obj, elem, param, msg) {

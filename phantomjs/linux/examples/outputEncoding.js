@@ -1,5 +1,5 @@
 function helloWorld() {
-	console.log(phantom.outputEncoding + ": こんにちは、世界！");
+    console.log(phantom.outputEncoding + ": こんにちは、世界！");
 }
 
 console.log("Using default encoding...");

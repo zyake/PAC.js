@@ -29,7 +29,7 @@ function createHAR(address, title, startTime, resources)
         // they aren't included in specification
         if (request.url.match(/(^data:image\/.*)/i)) {
             return;
-	}
+    }
 
         entries.push({
             startedDateTime: request.time.toISOString(),
