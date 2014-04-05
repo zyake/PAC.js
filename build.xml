@@ -22,7 +22,7 @@
  </target>
 
  <target name="concat-js">
-     <concat destfile="dist/simple-pac.js" append="false">
+     <concat destfile="dist/pac.js" append="false">
        <fileset dir="src/js/component">
            <include name="*.js"/>
        </fileset>

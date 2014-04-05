@@ -15,6 +15,7 @@
 <script src="js/component/Control.js"></script>
 <script src="js/common/HttpClient.js"></script>
 <script src="js/common/EventBuilder.js"></script>
+<script src="js/common/Maps.js"></script>
 <script src="js/view/2_Presentation.js"></script>
 <script src="js/view/4_TransitionManager.js"></script>
 <script src="js/view/5_Widget.js"></script>
@@ -23,28 +24,36 @@
 <script>
 
     asyncTest("test-transition", function() {
-        var masterRepository = ComponentRepository.create("repository1");
+        var masterRepository = ComponentRepository.create({ id: "repository1" });
 
         // define widgets
-        masterRepository.addFactory("widget1", function(id, elem, repository) {
-            var widget1 = Widget.create(id, elem, repository);
+
+        masterRepository.addDefinition("widget1", { target: function(arg) {
+            var widget1 = Widget.create(arg);
             widget1
             .defineComponents({
-                "model1": function() {
-                        var reqResMap = {};
-                        reqResMap[Id.start()] = Id.load();
-                        return AbstractionProxy.create("model1", reqResMap, "contents");
+                model1: {
+                    target: AbstractionProxy,
+                    arg: { reqResMap: Maps.putAll(Id.START, Id.LOAD), url: "contents" }
                 },
-                "view1": function(id, elem) { return Presentation.create(elem.querySelector(".control1"), id);} })
+               view1: {
+                    target: Presentation,
+                   arg: { rootQuery: ".control1" }
+               }
+             })
             .defineControls({
-                "control1": function(id, widget) { return Control.create("control1", widget, this.get("view1", widget.elem), this.get("model1")); } });
+                control1: {
+                    target: Control,
+                    ref: { presentation: "view1", abstraction: "model1" }
+                }
+            });
 
             return widget1;
-        });
+        } });
 
-        var transitionManager = TransitionManager.create(
-            document.querySelector("#test-transition"),
-            masterRepository);
+        var transitionManager = TransitionManager.create({
+            containerElem: document.querySelector("#test-transition"),
+            repository: masterRepository});
 
         transitionManager.transit("widget1");
         setTimeout(function() {

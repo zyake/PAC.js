@@ -1,9 +1,8 @@
-
 /**
  * A builder object to create event id.
  *
  * You can build event id that refers to other components in the same control.
-  * Using the id object, you can remove string id literal from your code.
+ * Using the id object, you can remove string id literal from your code.
  *
  * - for example
  * this.referEvent(this.id, Id.onAbstraction(this).load());
@@ -15,60 +14,70 @@
  */
 Id = {
 
-    idString: "",
+    idString : "",
 
-    onAbstraction: function(target) {
-      Assert.notNull(this, target, "target");
+    LOAD: ".load",
 
-      var id = Object.create(this, {
-        target: { value: target },
-        idString: { value: "", writable: true, configurable: true } });
+    START: ".start",
 
-      if ( Presentation.isPrototypeOf(target) ) {
-        id.idString = target.control.widget.id;
-        id.idString += "." + target.control.id;
-        id.idString += "." + target.control.abstraction.id;
-      } else if ( AbstractionProxy.isPrototypeOf(target) ) {
-        id.idString += target.control.widget.id;
-        id.idString += ("." + target.control.id);
-        id.idString += ("." + target.control.abstraction.id);
-      } else if ( Control.isPrototypeOf(target) ) {
-        id.idString = target.widget.id;
-        id.idString += ("." + target.id);
-        id.idString += ("." + target.abstraction.id);
-      } else {
-        throw new Error("invalid target:" + target);
-      }
+    CHANGE: ".change",
 
-      return id;
+    FAILURE: ".failure",
+
+    OTHER: ".other",
+
+    onAbstraction : function (target) {
+        Assert.notNull(this, target, "target");
+
+        var id = Object.create(this, {
+            target : { value : target },
+            idString : { value : "", writable : true, configurable : true } });
+
+        if ( Presentation.isPrototypeOf(target) ) {
+            id.idString = target.control.widget.id;
+            id.idString += "." + target.control.id;
+            id.idString += "." + target.control.abstraction.id;
+        } else if ( AbstractionProxy.isPrototypeOf(target) ) {
+            id.idString += target.control.widget.id;
+            id.idString += ("." + target.control.id);
+            id.idString += ("." + target.control.abstraction.id);
+        } else if ( Control.isPrototypeOf(target) ) {
+            id.idString = target.widget.id;
+            id.idString += ("." + target.id);
+            id.idString += ("." + target.abstraction.id);
+        } else {
+            throw new Error("invalid target:" + target);
+        }
+
+        return id;
     },
 
-    onPresentation: function(target) {
-      Assert.notNull(this, target, "target");
+    onPresentation : function (target) {
+        Assert.notNull(this, target, "target");
 
-      var id = Object.create(this, {
-        target: { value: target },
-        idString: { value: "", writable: true, configurable: true } });
-        
-      if ( Presentation.isPrototypeOf(target) ) {
-        id.idString = target.control.widget.id;
-        id.idString += ("." + target.control.id);
-        id.idString += ("." + target.control.presentation.id);
-      } else if ( AbstractionProxy.isPrototypeOf(target) ) {
-        id.idString = target.control.widget.id;
-        id.idString += ("." + target.control.id);
-        id.idString += ("." + target.control.presentation.id);
-      } else if ( Control.isPrototypeOf(target) ) {
-        id.idString = target.widget.id;
-        id.idString += ("." + target.id);
-        id.idString += ("." + target.presentation.id);
-      } else {
-        throw new Error("invalid target:" + target);
-      }
-      return id;
+        var id = Object.create(this, {
+            target : { value : target },
+            idString : { value : "", writable : true, configurable : true } });
+
+        if ( Presentation.isPrototypeOf(target) ) {
+            id.idString = target.control.widget.id;
+            id.idString += ("." + target.control.id);
+            id.idString += ("." + target.control.presentation.id);
+        } else if ( AbstractionProxy.isPrototypeOf(target) ) {
+            id.idString = target.control.widget.id;
+            id.idString += ("." + target.control.id);
+            id.idString += ("." + target.control.presentation.id);
+        } else if ( Control.isPrototypeOf(target) ) {
+            id.idString = target.widget.id;
+            id.idString += ("." + target.id);
+            id.idString += ("." + target.presentation.id);
+        } else {
+            throw new Error("invalid target:" + target);
+        }
+        return id;
     },
 
-    onThis: function(target) {
+    onThis : function (target) {
         Assert.notNull(this, target, "target");
 
         if ( Presentation.isPrototypeOf(target) ) {
@@ -80,56 +89,53 @@ Id = {
         }
     },
 
-    load: function() {
-        return this.idString + ".load";
+    load : function () {
+        return this.idString + this.LOAD;
     },
 
-    failed: function() {
-        return this.idString + ".failed";
+    start : function () {
+        return this.idString + this.START;
     },
 
-    start: function() {
-        return this.idString + ".start";
+    change : function () {
+        return this.idString + this.CHANGE;
     },
 
-    change: function() {
-        return this.idString + ".change";
+    failure : function () {
+        return this.idString + this.FAILURE;
     },
 
-    failure: function() {
-        return this.idString + ".failure";
+    other : function () {
+        return this.idString + this.OTHER;
     },
 
-    other: function() {
-        return this.idString + ".other";
-    },
-
-    checkAction: function(target, event) {
-        Assert.notNullAll(this, [ [ target, "target" ], [ event, "event" ] ]);
+    checkAction : function (target, event) {
+        Assert.notNullAll(this, [
+            [ target, "target" ],
+            [ event, "event" ]
+        ]);
         return target.endWith(event.idString);
     },
 
-    on: function(idStr) {
+    on : function (idStr) {
         Assert.notNull(this, idStr, "idStr");
 
         var id = Object.create(this, {
-        idString: { value: "", writable: true, configurable: true } });
+            idString : { value : "", writable : true, configurable : true } });
         id.idString = idStr;
 
         return id;
     },
 
-    getAction: function(event) {
+    getAction : function (event) {
         var separatorIndex = event.lastIndexOf(".");
         if ( separatorIndex < 0 ) {
             throw new Error("separator couldn't find!: event=" + event);
         }
-        var action = event.substring(separatorIndex);
-
-        return action;
+        return event.substring(separatorIndex);
     },
 
-    toString: function() {
+    toString : function () {
         return "idString: " + this.idString + ", target: " + this.target;
     }
 }

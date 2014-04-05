@@ -1,6 +1,6 @@
-# simple-pac
+# PAC.js
 
-simple-pac is a javascript framework that is based on the PAC architecture pattern.
+PAC.js is a javascript framework that is based on the PAC architecture pattern.
 
 ## Motivation
 
@@ -31,9 +31,9 @@ http://en.wikipedia.org/wiki/Presentation%E2%80%93abstraction%E2%80%93control
 >which can give the user experience of very short program start times,
 >as the user interface (presentation) can be shown before the abstraction has fully initialized.
 
-## The key concepts of "simple-pac"
+## The key concepts of "PAC.js"
 
-The key concepts of the simple-pac are following.
+The key concepts of the PAC.js are following.
 * PAC pattern based hierarchical structure
 * Very simple, template based transition mechanism
 * DI container like component management facility
@@ -53,63 +53,169 @@ The key concepts of the simple-pac are following.
 
 ![overview](doc/img/overview.png)
 
+### Proxying server side models
+
+![traditional](doc/img/traditional.png)
+
+![new](doc/img/new.png)
+
+![our approach](doc/img/PAC_js_approach.png)
+
 ## Code examples
 
-```javascript:SettingsWidgetFactory
-/**
- * define a widget factory.
- * It contains some controls.
- */
-SettingsWidgetFactory = function(id, elem, repository) {
-    var SETTINGS_URL = "/solr_ui/apps/settings";
-    var widget = Widget.create(id, elem, repository)
-    .defineComponents({
-        settingsForm: function(id, elem) { return SettingsForm.create(elem.querySelector(".settingsForm"), id); },
-        settingsRetrieveModel: function(id) {
-            var reqResMap = {};
-            reqResMap[Id.start()] = Id.load();
-            var model =  AbstractionProxy.create(id, reqResMap, SETTINGS_URL);
-            model.resHandler = AbstractionProxy.AS_TEXT;
+### Implements own presentations.
 
-            return model;
-        },
+```javascript:SearchBox
 
-        settingsUpdateModel: function(id) {
-            var reqResMap = {};
-            reqResMap[Id.load()] = Id.load();
-            var model =  AbstractionProxy.create(id, reqResMap, SETTINGS_URL);
-            model.resHandler = AbstractionProxy.AS_TEXT;
-            model.method = "POST";
+SearchBox = Object.create(Presentation, {
 
-            return model;
-        },
+    fields: { value: {
+        searchBoxEl: { value: null, writable: true },
+        inputBox: { value: null, writable: true },
+        resultSummary: { value: null, writable: true },
+        submitButton: { value: null, writable: true },
+        loadingImg: { value: null, writable: true }
+    }},
 
-        compositeModel: function(id) {
-            return CompositeModel.create(id, [this.get("settingsRetrieveModel"), this.get("settingsUpdateModel")]);
+    initialize: { value: function(control) {
+        Presentation.initialize.call(this, control);
+        this.searchBoxEl = this.elem;
+        this.doQueries({
+            inputBox: ".input",
+            resultSummary: ".resultSummary",
+            submitButton: ".submit",
+            loadingImg: ".loadingImg"});
+
+        this.on(this.submitButton, "click", this.submit);
+        this.on(this.inputBox, "keypress", function(event) {
+            if ( event.keyIdentifier === "Enter" ) {
+                this.submit();
+            }
+        })
+        this.event()
+            .ref().onAbstraction().load(this.renderSuccess)
+            .ref().onAbstraction().failure(this.renderFailure);
+    }},
+
+    submit: { value: function() {
+        if ( this.submitting ) {
+            return;
         }
-    })
-    .defineControls({
-        settingsControl: function(id, widget) {
-            var settingsForm = this.get("settingsForm", widget.elem);
-            var model = this.get("compositeModel");
+        this.disableSubmitting();
+        this.event().raise().start({ phrase: this.inputBox.value, initialized: true });
+    }},
 
-            return Control.create(id, widget, settingsForm, model);
-        },
-    });
+    renderSuccess: { value: function(result) {
+        this.enableSubmitting();
+        var contentCount = result.contentCount;
+        var contentFound = result.contentFound;
+        var searchTime = result.searchTime;
+        this.resultSummary.innerHTML = "Your search request has been completed.(matched count=" + contentFound +
+        ", retrieved count=" + contentCount + ", search time=" + searchTime + "ms)";
+    }},
 
-    return widget;
+    renderFailure: { value: function(result) {
+        this.enableSubmitting();
+        this.resultSummary.innerHTML =
+            "Your search request has been failed. A error may be occurred in the server side." +
+            "(" + result.message + ")";
+    }},
+
+    enableSubmitting: { value: function() {
+        this.submitting = false;
+        this.submitButton.style.disable = false;
+        this.inputBox.style.disable= false;
+        this.loadingImg.style.display = "none";
+    }},
+
+    disableSubmitting: { value: function() {
+        this.submitting = true;
+        this.submitButton.style.disable = true;
+        this.inputBox.style.disable= true;
+        this.loadingImg.style.display = "inline";
+        this.resultSummary.innerHTML= "now searching...";
+    }}
+ });
+```
+
+### Implements own abstractions(optional)
+
+### Defines widgets
+```javascript:SearchBoxWidgetFactory.js
+
+SearchWidgetFactory = function (arg) {
+
+    var SEARCH_URL = "/solr_ui/apps/search";
+    var FACET_URL = "/solr_ui/apps/facets";
+    var widget = Widget.create(arg);
+    return widget
+        .defineComponents({
+            searchBox : {
+                target : SearchBox,
+                arg : { rootQuery : ".searchBox" }
+            },
+            streamContentView : {
+                target : StreamContentView,
+                arg : { rootQuery : ".right" }
+            },
+            compositeView : {
+                target : CompositePresentation,
+                ref : { views : [ "searchBox", "streamContentView" ] }
+            },
+            searchBoxModel : {
+                target : StreamContentModel,
+                arg : {
+                    reqResMap : Maps.putAll(Id.START, Id.LOAD),
+                    resHandler : function (xhr) {
+                        return {
+                            searchPhrase : xhr.getResponseHeader("Search-Phrase"),
+                            searchInitialized : xhr.getResponseHeader("Search-Initialized") === "false" ? false : true,
+                            contentCount : xhr.getResponseHeader("Content-Count"),
+                            contentFound : xhr.getResponseHeader("Content-Found"),
+                            searchTime : xhr.getResponseHeader("Search-Time"),
+                            responseBody : xhr.responseText
+                        }
+                    },
+                    url : SEARCH_URL
+                },
+                ref : { facetManager : "facetManager" }
+            },
+            facetView : {
+                target : FacetView,
+                arg : { rootQuery : ".facetView" }
+            },
+            facetModel : {
+                target : FacetManager,
+                arg : {
+                    reqResMap : Maps.putAll(Id.START, Id.LOAD, Id.CHANGE, Id.OTHER),
+                    resHandler : AbstractionProxy.AS_TEXT,
+                    url : FACET_URL
+                }
+            }
+        })
+        .defineControls({
+            searchControl : {
+                target : Control,
+                ref : { presentation : "compositeView", abstraction : "searchBoxModel" }
+            },
+            facetControl : {
+                target : Control,
+                ref : { presentation : "facetView", abstraction : "facetModel" }
+            }
+        });
 }
 ```
 
+### Defines an applications.
 ```javascript:index.js
+
       /**
        * Construct and start your application!
        */
       $(function() {
         var application = Application.create("application",
             document.querySelector("#appContainer"), {
-            search: SearchWidgetFactory,
-            settings: SettingsWidgetFactory
+            search: SearchWidgetFactory
         });
 
         application.start("search");

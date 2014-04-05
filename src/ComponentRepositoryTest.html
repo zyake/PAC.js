@@ -14,16 +14,16 @@
 <script src="js/common/Assert.js"></script>
 <script>
     test("get success", function() {
-        var repository = ComponentRepository.create("repository1");
-        repository.addFactory("id", function(id){ return "hoge!" });
+        var repository = ComponentRepository.create({ id: "repository1" });
+        repository.addDefinition("id", { target: { create: function() { return "hoge!" } } });
 
         var result = repository.get("id");
         equal("hoge!", result);
     });
 
     test("get multiply", function() {
-        var repository = ComponentRepository.create("repository1");
-        repository.addFactory("id", function(id){ return "hoge!" });
+        var repository = ComponentRepository.create({ id: "repository1" });
+        repository.addDefinition("id", { target: { create: function() { return "hoge!" } } });
 
         var result1 = repository.get("id");
         var result2 = repository.get("id");
@@ -31,20 +31,20 @@
     });
 
     test("get with arguments success", function() {
-        var repository = ComponentRepository.create("repository1");
-        repository.addFactory("id", function(id, args) { return args; });
+        var repository = ComponentRepository.create({ id: "repository1" });
+        repository.addDefinition("id", { target: { create: function(args) { return args; } } });
 
         var args = new Array("test1", "test2");
         var result = repository.get("id", args);
-        ok(args == result, "args hasn't matched");
+        deepEqual({ 0: "test1", 1: "test2", id: "id" }, result, "args hasn't matched");
     });
 
     test("get a component when there is a parent", function() {
-        var parent = ComponentRepository.create("repository1");
-        parent.addFactory("id", function(id) { return "parent" });
+        var parent = ComponentRepository.create({ id: "repository1" });
+        parent.addDefinition("id", { target: { create: function() { return "parent" } } });
 
-        var child = ComponentRepository.create("repository2");
-        child.addFactory("id", function(id){ return "child"; });
+        var child = ComponentRepository.create({ id: "repository2" });
+        child.addDefinition("id", { target: { create: function() { return "child"; } } });
 
         var result = child.get("id");
         equal("child", result);
@@ -52,10 +52,10 @@
 
     test("get a component when there is a parent and there no factory on the child",
         function() {
-        var parent = ComponentRepository.create("repository1");
-        parent.addFactory("id", function(id) { return "parent" });
+        var parent = ComponentRepository.create({ id: "repository1" });
+        parent.addDefinition("id", { target: { create: function() { return "parent" } } });
 
-        var child = ComponentRepository.create("repository2", parent);
+        var child = ComponentRepository.create({ id: "repository2", parent: parent });
 
         var result = child.get("id");
         equal("parent", result);
@@ -63,8 +63,8 @@
 
     test("get a component when both of them have no factories",
         function() {
-        var parent = ComponentRepository.create("repository1");
-        var child = ComponentRepository.create("repository2", parent);
+        var parent = ComponentRepository.create({ id: "repository1" });
+        var child = ComponentRepository.create({ id: "repository2", parent: parent});
 
         try {
             var result = child.get("id");
@@ -76,11 +76,11 @@
     });
 
     test("get with a recursive reference", function() {
-        var target = ComponentRepository.create("repository1");
+        var target = ComponentRepository.create({ id: "repository1" });
         try {
-            target.addFactory("id", function(id) {
+            target.addDefinition("id", { target: { create: function() {
                 return this.get("id");
-            });
+            }}});
             target.get("id");
         } catch(e) {
             console.log(e);
@@ -92,18 +92,11 @@
     });
 
     test("notify with no references", function() {
-        var target = ComponentRepository.create("repository1");
+        var target = ComponentRepository.create({ id: "repository1" });
         target.raiseEvent("event", target);
         ok(true);
     });
 
-    test("notify with references", function() {
-        var target = ComponentRepository.create("repository1");
-        target.addFactory("id", function(id) {
-                return { notify: function(event, args) { equal(event, "event"); } }
-        }, ["event"]);
-        target.raiseEvent("event", target);
-    });
 </script>
 </body>
 </html>

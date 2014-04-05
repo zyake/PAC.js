@@ -1,4 +1,3 @@
-
 /**
  * A widget to manage underlying controls.
  *
@@ -16,91 +15,109 @@
  * the event that was raised by a component may be
  * propagated to parent repositories and other widgets.
  */
-Widget  = {
+Widget = {
 
-    create: function(id, elem, parentRepository /* can be null! */) {
-        Assert.notNullAll(this, [ [ id, "id" ], [ elem ,"elem" ] ]);
+    create : function (arg) {
+        Assert.notNullAll(this, [
+            [ arg.id, "arg.id" ],
+            [ arg.elem , "arg.elem" ]
+        ]);
         var widget = Object.create(this, {
-            id: { value: id },
-            elem: { value: elem },
-            controls: { value: [] },
-            components: { value: [] },
-            initialized: { value: false },
-            repository: { value: ComponentRepository.create(id + "Repository", parentRepository) }
+            id : { value : arg.id },
+            elem : { value : arg.elem },
+            controls : { value : [] },
+            components : { value : [] },
+            initialized : { value : false },
+            repository : { value :
+                ComponentRepository.create({
+                    id: arg.id + "Repository",
+                    parent: arg.parentRepository })
+            }
         });
         Object.defineProperties(widget, this.fields || {});
         Object.seal(widget);
         return widget;
     },
 
-    initialize: function() {
+    initialize : function () {
         if ( this.initialized ) {
             return;
         }
+        var me = this;
         this.initialized = true;
-        this.controls.forEach(function(controlId) { this.repository.get(controlId, this).initialize(); }, this);
+        this.controls.forEach(function (controlId) {
+            this.repository.get(controlId, this).initialize();
+        }, this);
         this.doInitialize();
     },
 
     /**
      * For internal usage.
      */
-    doInitialize: function() {
+    doInitialize : function () {
     },
 
-    defineComponents: function(def) {
-       Assert.notNull(this, def, "def");
-       for ( id in def ) {
-        this.components.push(id);
-        this.repository.addFactory(id, def[id]);
+    defineComponents : function (def) {
+        Assert.notNull(this, def, "def");
+        for ( var id in def ) {
+            this.components.push(id);
+            this.repository.addDefinition(id, def[id]);
         }
 
         return this;
     },
 
-    getComponent: function(id, args) {
-        Assert.notNullAll(this, [ [ id, "id" ], [ args, "args" ] ]);
+    getComponent : function (id, args) {
+        Assert.notNullAll(this, [
+            [ id, "id" ],
+            [ args, "args" ]
+        ]);
         this.components.indexOf(id) == -1 && this.doThrow(id + " is not component!");
         return this.repository.get(id, args);
     },
 
-    defineControls: function(def) {
+    defineControls : function (def) {
         Assert.notNull(this, def, "def");
-        for( id in def ) {
+        for ( var id in def ) {
             this.controls.push(id);
-            this.repository.addFactory(id, def[id]);
+            var componentDef = def[id];
+            componentDef.arg == null && (componentDef.arg = {});
+            componentDef.arg.widget = this;
+            this.repository.addDefinition(id, componentDef);
         }
 
         return this;
     },
 
-    getControl: function(id) {
+    getControl : function (id) {
         Assert.notNull(this, id, "id");
         this.controls.indexOf(id) == -1 && this.doThrow(id + " is not control!");
         return this.repository.get(id, this);
     },
 
-    raiseEvent: function(event, target, args) {
-        Assert.notNullAll(this, [ [ event, "event" ], [ target, "target" ], [ args, "args" ] ]);
+    raiseEvent : function (event, target, args) {
+        Assert.notNullAll(this, [
+            [ event, "event" ],
+            [ target, "target" ],
+            [ args, "args" ]
+        ]);
         this.repository.raiseEvent(event, target, args);
     },
 
-    addEventRef: function(id, eventRef) {
-        Assert.notNullAll(this, [ [ id, "id" ], [ eventRef, "eventRef" ] ]);
+    addEventRef : function (id, eventRef) {
+        Assert.notNullAll(this, [
+            [ id, "id" ],
+            [ eventRef, "eventRef" ]
+        ]);
         this.repository.addEventRef(id, eventRef);
     },
 
-    removeEventRef: function(id, eventRef) {
-        Assert.notNullAll(this, [ [ id, "id" ], [ eventRef, "eventRef" ] ]);
-        this.repository.removeEventRef(id, eventRef);
-    },
-
-    doThrow: function(msg) {
+    doThrow : function (msg) {
         Assert.notNull(this, msg, "msg");
         throw new Error(msg);
     },
 
-    toString: function() {
+    toString : function () {
         return "id: " + this.id;
     }
 };

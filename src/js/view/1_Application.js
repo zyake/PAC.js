@@ -1,4 +1,3 @@
-
 /**
  *  An abstraction of a whole application
  *
@@ -10,33 +9,40 @@
  */
 Application = {
 
-   create: function(id, appElem, widgetDef) {
-        Assert.notNullAll(this, [ [ id, "id" ], [appElem, "appElem" ], [ widgetDef, "widgetDef" ] ]);
+    create : function (arg) {
+        Assert.notNullAll(this, [
+            [ arg.id, "arg.id" ],
+            [ arg.appElem, "arg.appElem" ],
+            [ arg.widgetDef, "arg.widgetDef" ]
+        ]);
         var app = Object.create(this, {
-            id: { value: id },
-            centralRepository: { value: ComponentRepository.create("applicationRepository") },
-            transitionManager: { value: null, writable: true }
+            id : { value : arg.id },
+            centralRepository : { value : ComponentRepository.create("applicationRepository") },
+            transitionManager : { value : null, writable : true }
         });
         Object.defineProperties(app, this.fields || {});
         Object.seal(app);
-        app.initialize(appElem, widgetDef);
+        app.initialize(arg.appElem, arg.widgetDef);
 
         return app;
-   },
+    },
 
-    initialize: function(appElem, widgetDef) {
-        Assert.notNullAll(this, [ [appElem, "appElem" ], [ widgetDef, "widgetDef" ] ]);
+    initialize : function (appElem, widgetDef) {
+        Assert.notNullAll(this, [
+            [appElem, "appElem" ],
+            [ widgetDef, "widgetDef" ]
+        ]);
         this.centralRepository.defineFactories(widgetDef);
         this.transitionManager = TransitionManager.create(appElem, this.centralRepository);
     },
 
-    start: function(initWidgetId) {
+    start : function (initWidgetId) {
         Assert.notNull(this, initWidgetId, "initWidgetId");
         var me = this;
-        window.addEventListener("hashchange", function(event) {
+        window.addEventListener("hashchange", function (event) {
             var hashIndex = event.newURL.lastIndexOf("#");
             var newWidgetId = event.newURL.substring(hashIndex + 1);
-             me.transitionManager.transit(newWidgetId);
+            me.transitionManager.transit(newWidgetId);
         });
         var hasHash = location.hash != "";
         if ( hasHash ) {

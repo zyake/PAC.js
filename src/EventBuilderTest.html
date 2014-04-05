@@ -21,7 +21,7 @@
         var myAbstraction = Object.create(AbstractionProxy, {
             fields: { value: { capture: { value: null, writable: true } } }
         });
-        var target = myAbstraction.create("test1", {}, "URL");
+        var target = myAbstraction.create({ id: "test1", reqResMap: {}, url: "URL" });
         target.control = { id: "control1", widget: { id: "widget1" }, abstraction: { id: "abstraction1"},
             raiseEvent: function() { this.capture = arguments } };
 
@@ -39,7 +39,7 @@
         var myPresentation = Object.create(Presentation, {
             fields: { value: { capture: { value: null, writable: true } } }
         });
-        var target = myPresentation.create({}, "presentation1");
+        var target = myPresentation.create({ rootQuery: {}, id: "presentation1" });
         target.control = { id: "control1", widget: { id: "widget1" }, presentation: { id: "presentation1"},
             raiseEvent: function() { this.capture = arguments; }};
 
@@ -57,7 +57,7 @@
         var myPresentation = Object.create(Presentation, {
             fields: { value: { capture: { value: null, writable: true } } }
         });
-        var target = myPresentation.create({}, "presentation1");
+        var target = myPresentation.create({ rootQuery: {}, id: "presentation1" });
         target.control = { id: "control1", widget: { id: "widget1" },
             presentation: { id: "presentation1"}, abstraction: { id: "abstraction1" },
             addEventRef: function() { this.capture = arguments; }};
@@ -66,8 +66,8 @@
         var args = {};
         builder.ref().onAbstraction().load();
 
-        equal("presentation1", target.control.capture[0]);
-        equal("widget1.control1.abstraction1.load", target.control.capture[1]);
+        equal("widget1.control1.abstraction1.load", target.control.capture[0]);
+        equal(target, target.control.capture[1]);
     });
 </script>
 </body>

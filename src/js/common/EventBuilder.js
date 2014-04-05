@@ -1,4 +1,3 @@
-
 /**
  * A event builder class that can define view and model events by fluent interface.
  *
@@ -11,144 +10,144 @@
  */
 EventBuilder = {
 
-    REF_INVOKER: {
+    REF_INVOKER : {
 
-        target: null,
-        id: null,
-        builder: null,
+        target : null,
+        id : null,
+        builder : null,
 
-        load: function(handler) {
-          this.target.control.addEventRef(this.target.id, this.id.load());
-          this.builder.eventMap[this.id.load()] = handler;
-          return this.builder;
+        load : function (handler) {
+            this.target.control.addEventRef(this.id.load(), this.target);
+            this.builder.eventMap[this.id.load()] = handler;
+            return this.builder;
         },
 
-        start: function(handler) {
-            this.target.control.addEventRef(this.target.id, this.id.start());
+        start : function (handler) {
+            this.target.control.addEventRef(this.id.start(), this.target);
             this.builder.eventMap[this.id.start()] = handler;
             return this.builder;
         },
 
-        change: function(handler) {
-            this.target.control.addEventRef(this.target.id, this.id.change());
+        change : function (handler) {
+            this.target.control.addEventRef(this.id.change(), this.target);
             this.builder.eventMap[this.id.change()] = handler;
             return this.builder;
         },
 
-        failed: function(handler) {
-            this.target.control.addEventRef(this.target.id, this.id.failed());
-            this.builder.eventMap[this.id.failed()] = handler;
-            return this.builder;
-        },
-
-        failure: function(handler) {
-            this.target.control.addEventRef(this.target.id, this.id.failure());
+        failure : function (handler) {
+            this.target.control.addEventRef( this.id.failure(), this.target.id);
             this.builder.eventMap[this.id.failure()] = handler;
             return this.builder;
         },
 
-        other: function(handler) {
-            this.target.control.addEventRef(this.target.id, this.id.other());
+        other : function (handler) {
+            this.target.control.addEventRef(this.id.other(), this.target.id);
             this.builder.eventMap[this.id.other()] = handler;
             return this.builder;
         }
     },
 
-    RAISE_INVOKER: {
+    RAISE_INVOKER : {
 
-        target: null,
-        id: null,
-        builder: null,
+        target : null,
+        id : null,
+        builder : null,
 
-        load: function(args) {
-            Assert.notNullAll(this, [[ args, "args"]]);
+        load : function (args) {
+            Assert.notNullAll(this, [
+                [ args, "args"]
+            ]);
             this.target.control.raiseEvent(this.id.load(), this.target, args);
             return this.builder;
         },
 
-        start: function(args) {
-            Assert.notNullAll(this, [[ args, "args"]]);
+        start : function (args) {
+            Assert.notNullAll(this, [
+                [ args, "args"]
+            ]);
             this.target.control.raiseEvent(this.id.start(), this.target, args);
             return this.builder;
         },
 
-        change: function(args) {
-            Assert.notNullAll(this, [[ args, "args"]]);
-            this.target.control.raiseEvent(this.id.change(), this.target,  args);
+        change : function (args) {
+            Assert.notNullAll(this, [
+                [ args, "args"]
+            ]);
+            this.target.control.raiseEvent(this.id.change(), this.target, args);
             return this.builder;
         },
 
-        failed: function(args) {
-            Assert.notNullAll(this, [[ args, "args"]]);
-            this.target.control.raiseEvent(this.id.failed(), this.target, args);
-            return this.builder;
-        },
-
-        failure: function(args) {
-            Assert.notNullAll(this, [[ args, "args"]]);
+        failure : function (args) {
+            Assert.notNullAll(this, [
+                [ args, "args"]
+            ]);
             this.target.control.raiseEvent(this.id.failure(), this.target, args);
             return this.builder;
         },
 
-        other: function(args) {
-            Assert.notNullAll(this, [[ args, "args"]]);
+        other : function (args) {
+            Assert.notNullAll(this, [
+                [ args, "args"]
+            ]);
             this.target.control.raiseEvent(this.id.other(), this.target, args);
             return this.builder;
         }
     },
 
-    create: function(target) {
-        Assert.notNullAll(this, [[ target, "target"]]);
-       Assert.notNull(this, target, "target");
+    create : function (target) {
+        Assert.notNullAll(this, [
+            [ target, "target"]
+        ]);
+        Assert.notNull(this, target, "target");
 
         var builder = Object.create(this,
-            { target: { value: target }, eventMap: { value: [] } });
+            { target : { value : target }, eventMap : { value : [] } });
         Object.seal(builder);
 
         return builder;
     },
 
-    ref: function() {
+    ref : function () {
         var me = this;
-        var ref = {
+        return {
 
-            target: this.target,
+            target : this.target,
 
-            onAbstraction: function() {
-               return Object.create(EventBuilder.REF_INVOKER,
-                   { target: { value: this.target }, builder: { value: me },
-                       id: { value: Id.onAbstraction(this.target) } });
+            onAbstraction : function () {
+                return Object.create(EventBuilder.REF_INVOKER,
+                    { target : { value : this.target }, builder : { value : me },
+                        id : { value : Id.onAbstraction(this.target) } });
             },
 
-            onPresentation: function() {
+            onPresentation : function () {
                 return Object.create(EventBuilder.REF_INVOKER,
-                    { target: { value: this.target }, builder: { value: me },
-                        id: { value: Id.onPresentation(this.target) } });
+                    { target : { value : this.target }, builder : { value : me },
+                        id : { value : Id.onPresentation(this.target) } });
             },
 
-            on: function(event) {
-                Assert.notNullAll(this, [[ event, "event"]]);
+            on : function (event) {
+                Assert.notNullAll(this, [
+                    [ event, "event"]
+                ]);
                 return Object.create(EventBuilder.REF_INVOKER,
-                    { target: { value: this.target }, builder: { value: me },
-                        id: { value: Id.on(event) } });
+                    { target : { value : this.target }, builder : { value : me },
+                        id : { value : Id.on(event) } });
             }
         };
-
-        return ref;
     },
 
-    raise: function() {
+    raise : function () {
         var me = this;
         var raise = Object.create(EventBuilder.RAISE_INVOKER, {
-            target: { value: this.target }, builder: { value: me },
-            id: { value: Id.onThis(this.target) }
+            target : { value : this.target }, builder : { value : me },
+            id : { value : Id.onThis(this.target) }
         });
         Object.seal(raise);
 
         return raise;
     },
 
-    handle: function(id, arg) {
+    handle : function (id, arg) {
         if ( this.eventMap[id] != null ) {
             this.eventMap[id].call(this.target, arg, id);
         } else {
