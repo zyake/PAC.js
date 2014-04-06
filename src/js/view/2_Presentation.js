@@ -87,6 +87,11 @@ Presentation = {
         });
     },
 
+    onQuery: function(query, event, callback) {
+        var elem = this.query(query);
+        this.on(elem, event, callback);
+    },
+
     event : function () {
         return this.eventBuilder;
     },
