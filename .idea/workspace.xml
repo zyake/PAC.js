@@ -1,16 +1,222 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/js/common/Id.js" line="18" mnemonic="2" />
+    <bookmark url="file://$PROJECT_DIR$/src/js/common/Id.js" line="19" mnemonic="2" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="39257a0f-548a-4da6-87e0-5429559af94c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/img/PAC_js_approach.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/img/new.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/img/traditional.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/js/common/Maps.js" />
-      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\dist\simple-pac.js" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/img/component_definition.png" afterPath="$PROJECT_DIR$/doc/img/component_definition.png" />
+    <list default="true" id="39257a0f-548a-4da6-87e0-5429559af94c" name="Default" comment="- Refine component definition.">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/yuicompressor-2.4.8.jar" />
+      <change type="DELETED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\src\AcceptanceTest.html" afterPath="" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\linux\ChangeLog" afterPath="$PROJECT_DIR$/lib/phantomjs/linux/ChangeLog" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\linux\LICENSE.BSD" afterPath="$PROJECT_DIR$/lib/phantomjs/linux/LICENSE.BSD" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\linux\README.md" afterPath="$PROJECT_DIR$/lib/phantomjs/linux/README.md" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\linux\examples\arguments.coffee" afterPath="$PROJECT_DIR$/lib/phantomjs/linux/examples/arguments.coffee" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\linux\examples\arguments.js" afterPath="$PROJECT_DIR$/lib/phantomjs/linux/examples/arguments.js" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\linux\examples\child_process-examples.coffee" afterPath="$PROJECT_DIR$/lib/phantomjs/linux/examples/child_process-examples.coffee" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\linux\examples\child_process-examples.js" afterPath="$PROJECT_DIR$/lib/phantomjs/linux/examples/child_process-examples.js" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\linux\examples\colorwheel.coffee" afterPath="$PROJECT_DIR$/lib/phantomjs/linux/examples/colorwheel.coffee" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\linux\examples\colorwheel.js" afterPath="$PROJECT_DIR$/lib/phantomjs/linux/examples/colorwheel.js" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\linux\examples\countdown.coffee" afterPath="$PROJECT_DIR$/lib/phantomjs/linux/examples/countdown.coffee" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\linux\examples\countdown.js" afterPath="$PROJECT_DIR$/lib/phantomjs/linux/examples/countdown.js" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\linux\examples\detectsniff.coffee" afterPath="$PROJECT_DIR$/lib/phantomjs/linux/examples/detectsniff.coffee" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\linux\examples\detectsniff.js" afterPath="$PROJECT_DIR$/lib/phantomjs/linux/examples/detectsniff.js" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\linux\examples\direction.coffee" afterPath="$PROJECT_DIR$/lib/phantomjs/linux/examples/direction.coffee" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\linux\examples\direction.js" afterPath="$PROJECT_DIR$/lib/phantomjs/linux/examples/direction.js" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\linux\examples\echoToFile.coffee" afterPath="$PROJECT_DIR$/lib/phantomjs/linux/examples/echoToFile.coffee" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\linux\examples\echoToFile.js" afterPath="$PROJECT_DIR$/lib/phantomjs/linux/examples/echoToFile.js" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\linux\examples\features.coffee" afterPath="$PROJECT_DIR$/lib/phantomjs/linux/examples/features.coffee" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\linux\examples\features.js" afterPath="$PROJECT_DIR$/lib/phantomjs/linux/examples/features.js" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\linux\examples\fibo.coffee" afterPath="$PROJECT_DIR$/lib/phantomjs/linux/examples/fibo.coffee" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\linux\examples\fibo.js" afterPath="$PROJECT_DIR$/lib/phantomjs/linux/examples/fibo.js" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\linux\examples\follow.coffee" afterPath="$PROJECT_DIR$/lib/phantomjs/linux/examples/follow.coffee" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\linux\examples\follow.js" afterPath="$PROJECT_DIR$/lib/phantomjs/linux/examples/follow.js" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\linux\examples\hello.coffee" afterPath="$PROJECT_DIR$/lib/phantomjs/linux/examples/hello.coffee" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\linux\examples\hello.js" afterPath="$PROJECT_DIR$/lib/phantomjs/linux/examples/hello.js" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\linux\examples\imagebin.coffee" afterPath="$PROJECT_DIR$/lib/phantomjs/linux/examples/imagebin.coffee" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\linux\examples\imagebin.js" afterPath="$PROJECT_DIR$/lib/phantomjs/linux/examples/imagebin.js" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\linux\examples\injectme.coffee" afterPath="$PROJECT_DIR$/lib/phantomjs/linux/examples/injectme.coffee" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\linux\examples\injectme.js" afterPath="$PROJECT_DIR$/lib/phantomjs/linux/examples/injectme.js" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\linux\examples\ipgeocode.coffee" afterPath="$PROJECT_DIR$/lib/phantomjs/linux/examples/ipgeocode.coffee" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\linux\examples\ipgeocode.js" afterPath="$PROJECT_DIR$/lib/phantomjs/linux/examples/ipgeocode.js" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\linux\examples\loadspeed.coffee" afterPath="$PROJECT_DIR$/lib/phantomjs/linux/examples/loadspeed.coffee" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\linux\examples\loadspeed.js" afterPath="$PROJECT_DIR$/lib/phantomjs/linux/examples/loadspeed.js" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\linux\examples\loadurlwithoutcss.coffee" afterPath="$PROJECT_DIR$/lib/phantomjs/linux/examples/loadurlwithoutcss.coffee" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\linux\examples\loadurlwithoutcss.js" afterPath="$PROJECT_DIR$/lib/phantomjs/linux/examples/loadurlwithoutcss.js" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\linux\examples\modernizr.js" afterPath="$PROJECT_DIR$/lib/phantomjs/linux/examples/modernizr.js" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\linux\examples\module.coffee" afterPath="$PROJECT_DIR$/lib/phantomjs/linux/examples/module.coffee" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\linux\examples\module.js" afterPath="$PROJECT_DIR$/lib/phantomjs/linux/examples/module.js" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\linux\examples\movies.coffee" afterPath="$PROJECT_DIR$/lib/phantomjs/linux/examples/movies.coffee" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\linux\examples\movies.js" afterPath="$PROJECT_DIR$/lib/phantomjs/linux/examples/movies.js" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\linux\examples\netlog.coffee" afterPath="$PROJECT_DIR$/lib/phantomjs/linux/examples/netlog.coffee" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\linux\examples\netlog.js" afterPath="$PROJECT_DIR$/lib/phantomjs/linux/examples/netlog.js" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\linux\examples\netsniff.coffee" afterPath="$PROJECT_DIR$/lib/phantomjs/linux/examples/netsniff.coffee" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\linux\examples\netsniff.js" afterPath="$PROJECT_DIR$/lib/phantomjs/linux/examples/netsniff.js" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\linux\examples\outputEncoding.coffee" afterPath="$PROJECT_DIR$/lib/phantomjs/linux/examples/outputEncoding.coffee" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\linux\examples\outputEncoding.js" afterPath="$PROJECT_DIR$/lib/phantomjs/linux/examples/outputEncoding.js" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\linux\examples\page_events.coffee" afterPath="$PROJECT_DIR$/lib/phantomjs/linux/examples/page_events.coffee" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\linux\examples\page_events.js" afterPath="$PROJECT_DIR$/lib/phantomjs/linux/examples/page_events.js" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\linux\examples\pagecallback.coffee" afterPath="$PROJECT_DIR$/lib/phantomjs/linux/examples/pagecallback.coffee" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\linux\examples\pagecallback.js" afterPath="$PROJECT_DIR$/lib/phantomjs/linux/examples/pagecallback.js" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\linux\examples\phantomwebintro.coffee" afterPath="$PROJECT_DIR$/lib/phantomjs/linux/examples/phantomwebintro.coffee" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\linux\examples\phantomwebintro.js" afterPath="$PROJECT_DIR$/lib/phantomjs/linux/examples/phantomwebintro.js" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\linux\examples\pizza.coffee" afterPath="$PROJECT_DIR$/lib/phantomjs/linux/examples/pizza.coffee" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\linux\examples\pizza.js" afterPath="$PROJECT_DIR$/lib/phantomjs/linux/examples/pizza.js" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\linux\examples\post.coffee" afterPath="$PROJECT_DIR$/lib/phantomjs/linux/examples/post.coffee" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\linux\examples\post.js" afterPath="$PROJECT_DIR$/lib/phantomjs/linux/examples/post.js" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\linux\examples\postserver.coffee" afterPath="$PROJECT_DIR$/lib/phantomjs/linux/examples/postserver.coffee" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\linux\examples\postserver.js" afterPath="$PROJECT_DIR$/lib/phantomjs/linux/examples/postserver.js" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\linux\examples\printenv.coffee" afterPath="$PROJECT_DIR$/lib/phantomjs/linux/examples/printenv.coffee" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\linux\examples\printenv.js" afterPath="$PROJECT_DIR$/lib/phantomjs/linux/examples/printenv.js" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\linux\examples\printheaderfooter.coffee" afterPath="$PROJECT_DIR$/lib/phantomjs/linux/examples/printheaderfooter.coffee" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\linux\examples\printheaderfooter.js" afterPath="$PROJECT_DIR$/lib/phantomjs/linux/examples/printheaderfooter.js" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\linux\examples\printmargins.coffee" afterPath="$PROJECT_DIR$/lib/phantomjs/linux/examples/printmargins.coffee" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\linux\examples\printmargins.js" afterPath="$PROJECT_DIR$/lib/phantomjs/linux/examples/printmargins.js" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\linux\examples\rasterize.coffee" afterPath="$PROJECT_DIR$/lib/phantomjs/linux/examples/rasterize.coffee" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\linux\examples\rasterize.js" afterPath="$PROJECT_DIR$/lib/phantomjs/linux/examples/rasterize.js" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\linux\examples\render_multi_url.coffee" afterPath="$PROJECT_DIR$/lib/phantomjs/linux/examples/render_multi_url.coffee" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\linux\examples\render_multi_url.js" afterPath="$PROJECT_DIR$/lib/phantomjs/linux/examples/render_multi_url.js" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\linux\examples\run-jasmine.coffee" afterPath="$PROJECT_DIR$/lib/phantomjs/linux/examples/run-jasmine.coffee" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\linux\examples\run-jasmine.js" afterPath="$PROJECT_DIR$/lib/phantomjs/linux/examples/run-jasmine.js" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\linux\examples\run-qunit.coffee" afterPath="$PROJECT_DIR$/lib/phantomjs/linux/examples/run-qunit.coffee" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\linux\examples\run-qunit.js" afterPath="$PROJECT_DIR$/lib/phantomjs/linux/examples/run-qunit.js" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\linux\examples\scandir.coffee" afterPath="$PROJECT_DIR$/lib/phantomjs/linux/examples/scandir.coffee" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\linux\examples\scandir.js" afterPath="$PROJECT_DIR$/lib/phantomjs/linux/examples/scandir.js" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\linux\examples\seasonfood.coffee" afterPath="$PROJECT_DIR$/lib/phantomjs/linux/examples/seasonfood.coffee" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\linux\examples\seasonfood.js" afterPath="$PROJECT_DIR$/lib/phantomjs/linux/examples/seasonfood.js" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\linux\examples\server.coffee" afterPath="$PROJECT_DIR$/lib/phantomjs/linux/examples/server.coffee" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\linux\examples\server.js" afterPath="$PROJECT_DIR$/lib/phantomjs/linux/examples/server.js" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\linux\examples\serverkeepalive.coffee" afterPath="$PROJECT_DIR$/lib/phantomjs/linux/examples/serverkeepalive.coffee" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\linux\examples\serverkeepalive.js" afterPath="$PROJECT_DIR$/lib/phantomjs/linux/examples/serverkeepalive.js" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\linux\examples\simpleserver.coffee" afterPath="$PROJECT_DIR$/lib/phantomjs/linux/examples/simpleserver.coffee" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\linux\examples\simpleserver.js" afterPath="$PROJECT_DIR$/lib/phantomjs/linux/examples/simpleserver.js" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\linux\examples\sleepsort.coffee" afterPath="$PROJECT_DIR$/lib/phantomjs/linux/examples/sleepsort.coffee" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\linux\examples\sleepsort.js" afterPath="$PROJECT_DIR$/lib/phantomjs/linux/examples/sleepsort.js" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\linux\examples\stdin-stdout-stderr.coffee" afterPath="$PROJECT_DIR$/lib/phantomjs/linux/examples/stdin-stdout-stderr.coffee" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\linux\examples\stdin-stdout-stderr.js" afterPath="$PROJECT_DIR$/lib/phantomjs/linux/examples/stdin-stdout-stderr.js" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\linux\examples\technews.coffee" afterPath="$PROJECT_DIR$/lib/phantomjs/linux/examples/technews.coffee" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\linux\examples\technews.js" afterPath="$PROJECT_DIR$/lib/phantomjs/linux/examples/technews.js" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\linux\examples\tweets.coffee" afterPath="$PROJECT_DIR$/lib/phantomjs/linux/examples/tweets.coffee" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\linux\examples\tweets.js" afterPath="$PROJECT_DIR$/lib/phantomjs/linux/examples/tweets.js" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\linux\examples\universe.js" afterPath="$PROJECT_DIR$/lib/phantomjs/linux/examples/universe.js" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\linux\examples\unrandomize.coffee" afterPath="$PROJECT_DIR$/lib/phantomjs/linux/examples/unrandomize.coffee" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\linux\examples\unrandomize.js" afterPath="$PROJECT_DIR$/lib/phantomjs/linux/examples/unrandomize.js" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\linux\examples\useragent.coffee" afterPath="$PROJECT_DIR$/lib/phantomjs/linux/examples/useragent.coffee" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\linux\examples\useragent.js" afterPath="$PROJECT_DIR$/lib/phantomjs/linux/examples/useragent.js" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\linux\examples\version.coffee" afterPath="$PROJECT_DIR$/lib/phantomjs/linux/examples/version.coffee" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\linux\examples\version.js" afterPath="$PROJECT_DIR$/lib/phantomjs/linux/examples/version.js" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\linux\examples\waitfor.coffee" afterPath="$PROJECT_DIR$/lib/phantomjs/linux/examples/waitfor.coffee" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\linux\examples\waitfor.js" afterPath="$PROJECT_DIR$/lib/phantomjs/linux/examples/waitfor.js" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\linux\examples\walk_through_frames.coffee" afterPath="$PROJECT_DIR$/lib/phantomjs/linux/examples/walk_through_frames.coffee" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\linux\examples\walk_through_frames.js" afterPath="$PROJECT_DIR$/lib/phantomjs/linux/examples/walk_through_frames.js" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\linux\examples\weather.coffee" afterPath="$PROJECT_DIR$/lib/phantomjs/linux/examples/weather.coffee" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\linux\examples\weather.js" afterPath="$PROJECT_DIR$/lib/phantomjs/linux/examples/weather.js" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\linux\phantomjs" afterPath="$PROJECT_DIR$/lib/phantomjs/linux/phantomjs" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\linux\third-party.txt" afterPath="$PROJECT_DIR$/lib/phantomjs/linux/third-party.txt" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\windows\ChangeLog" afterPath="$PROJECT_DIR$/lib/phantomjs/windows/ChangeLog" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\windows\LICENSE.BSD" afterPath="$PROJECT_DIR$/lib/phantomjs/windows/LICENSE.BSD" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\windows\README.md" afterPath="$PROJECT_DIR$/lib/phantomjs/windows/README.md" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\windows\examples\arguments.coffee" afterPath="$PROJECT_DIR$/lib/phantomjs/windows/examples/arguments.coffee" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\windows\examples\arguments.js" afterPath="$PROJECT_DIR$/lib/phantomjs/windows/examples/arguments.js" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\windows\examples\child_process-examples.coffee" afterPath="$PROJECT_DIR$/lib/phantomjs/windows/examples/child_process-examples.coffee" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\windows\examples\child_process-examples.js" afterPath="$PROJECT_DIR$/lib/phantomjs/windows/examples/child_process-examples.js" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\windows\examples\colorwheel.coffee" afterPath="$PROJECT_DIR$/lib/phantomjs/windows/examples/colorwheel.coffee" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\windows\examples\colorwheel.js" afterPath="$PROJECT_DIR$/lib/phantomjs/windows/examples/colorwheel.js" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\windows\examples\countdown.coffee" afterPath="$PROJECT_DIR$/lib/phantomjs/windows/examples/countdown.coffee" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\windows\examples\countdown.js" afterPath="$PROJECT_DIR$/lib/phantomjs/windows/examples/countdown.js" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\windows\examples\detectsniff.coffee" afterPath="$PROJECT_DIR$/lib/phantomjs/windows/examples/detectsniff.coffee" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\windows\examples\detectsniff.js" afterPath="$PROJECT_DIR$/lib/phantomjs/windows/examples/detectsniff.js" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\windows\examples\direction.coffee" afterPath="$PROJECT_DIR$/lib/phantomjs/windows/examples/direction.coffee" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\windows\examples\direction.js" afterPath="$PROJECT_DIR$/lib/phantomjs/windows/examples/direction.js" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\windows\examples\echoToFile.coffee" afterPath="$PROJECT_DIR$/lib/phantomjs/windows/examples/echoToFile.coffee" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\windows\examples\echoToFile.js" afterPath="$PROJECT_DIR$/lib/phantomjs/windows/examples/echoToFile.js" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\windows\examples\features.coffee" afterPath="$PROJECT_DIR$/lib/phantomjs/windows/examples/features.coffee" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\windows\examples\features.js" afterPath="$PROJECT_DIR$/lib/phantomjs/windows/examples/features.js" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\windows\examples\fibo.coffee" afterPath="$PROJECT_DIR$/lib/phantomjs/windows/examples/fibo.coffee" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\windows\examples\fibo.js" afterPath="$PROJECT_DIR$/lib/phantomjs/windows/examples/fibo.js" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\windows\examples\follow.coffee" afterPath="$PROJECT_DIR$/lib/phantomjs/windows/examples/follow.coffee" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\windows\examples\follow.js" afterPath="$PROJECT_DIR$/lib/phantomjs/windows/examples/follow.js" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\windows\examples\hello.coffee" afterPath="$PROJECT_DIR$/lib/phantomjs/windows/examples/hello.coffee" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\windows\examples\hello.js" afterPath="$PROJECT_DIR$/lib/phantomjs/windows/examples/hello.js" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\windows\examples\imagebin.coffee" afterPath="$PROJECT_DIR$/lib/phantomjs/windows/examples/imagebin.coffee" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\windows\examples\imagebin.js" afterPath="$PROJECT_DIR$/lib/phantomjs/windows/examples/imagebin.js" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\windows\examples\injectme.coffee" afterPath="$PROJECT_DIR$/lib/phantomjs/windows/examples/injectme.coffee" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\windows\examples\injectme.js" afterPath="$PROJECT_DIR$/lib/phantomjs/windows/examples/injectme.js" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\windows\examples\ipgeocode.coffee" afterPath="$PROJECT_DIR$/lib/phantomjs/windows/examples/ipgeocode.coffee" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\windows\examples\ipgeocode.js" afterPath="$PROJECT_DIR$/lib/phantomjs/windows/examples/ipgeocode.js" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\windows\examples\loadspeed.coffee" afterPath="$PROJECT_DIR$/lib/phantomjs/windows/examples/loadspeed.coffee" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\windows\examples\loadspeed.js" afterPath="$PROJECT_DIR$/lib/phantomjs/windows/examples/loadspeed.js" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\windows\examples\loadurlwithoutcss.coffee" afterPath="$PROJECT_DIR$/lib/phantomjs/windows/examples/loadurlwithoutcss.coffee" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\windows\examples\loadurlwithoutcss.js" afterPath="$PROJECT_DIR$/lib/phantomjs/windows/examples/loadurlwithoutcss.js" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\windows\examples\modernizr.js" afterPath="$PROJECT_DIR$/lib/phantomjs/windows/examples/modernizr.js" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\windows\examples\module.coffee" afterPath="$PROJECT_DIR$/lib/phantomjs/windows/examples/module.coffee" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\windows\examples\module.js" afterPath="$PROJECT_DIR$/lib/phantomjs/windows/examples/module.js" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\windows\examples\movies.coffee" afterPath="$PROJECT_DIR$/lib/phantomjs/windows/examples/movies.coffee" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\windows\examples\movies.js" afterPath="$PROJECT_DIR$/lib/phantomjs/windows/examples/movies.js" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\windows\examples\netlog.coffee" afterPath="$PROJECT_DIR$/lib/phantomjs/windows/examples/netlog.coffee" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\windows\examples\netlog.js" afterPath="$PROJECT_DIR$/lib/phantomjs/windows/examples/netlog.js" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\windows\examples\netsniff.coffee" afterPath="$PROJECT_DIR$/lib/phantomjs/windows/examples/netsniff.coffee" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\windows\examples\netsniff.js" afterPath="$PROJECT_DIR$/lib/phantomjs/windows/examples/netsniff.js" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\windows\examples\outputEncoding.coffee" afterPath="$PROJECT_DIR$/lib/phantomjs/windows/examples/outputEncoding.coffee" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\windows\examples\outputEncoding.js" afterPath="$PROJECT_DIR$/lib/phantomjs/windows/examples/outputEncoding.js" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\windows\examples\page_events.coffee" afterPath="$PROJECT_DIR$/lib/phantomjs/windows/examples/page_events.coffee" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\windows\examples\page_events.js" afterPath="$PROJECT_DIR$/lib/phantomjs/windows/examples/page_events.js" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\windows\examples\pagecallback.coffee" afterPath="$PROJECT_DIR$/lib/phantomjs/windows/examples/pagecallback.coffee" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\windows\examples\pagecallback.js" afterPath="$PROJECT_DIR$/lib/phantomjs/windows/examples/pagecallback.js" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\windows\examples\phantomwebintro.coffee" afterPath="$PROJECT_DIR$/lib/phantomjs/windows/examples/phantomwebintro.coffee" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\windows\examples\phantomwebintro.js" afterPath="$PROJECT_DIR$/lib/phantomjs/windows/examples/phantomwebintro.js" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\windows\examples\pizza.coffee" afterPath="$PROJECT_DIR$/lib/phantomjs/windows/examples/pizza.coffee" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\windows\examples\pizza.js" afterPath="$PROJECT_DIR$/lib/phantomjs/windows/examples/pizza.js" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\windows\examples\post.coffee" afterPath="$PROJECT_DIR$/lib/phantomjs/windows/examples/post.coffee" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\windows\examples\post.js" afterPath="$PROJECT_DIR$/lib/phantomjs/windows/examples/post.js" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\windows\examples\postserver.coffee" afterPath="$PROJECT_DIR$/lib/phantomjs/windows/examples/postserver.coffee" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\windows\examples\postserver.js" afterPath="$PROJECT_DIR$/lib/phantomjs/windows/examples/postserver.js" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\windows\examples\printenv.coffee" afterPath="$PROJECT_DIR$/lib/phantomjs/windows/examples/printenv.coffee" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\windows\examples\printenv.js" afterPath="$PROJECT_DIR$/lib/phantomjs/windows/examples/printenv.js" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\windows\examples\printheaderfooter.coffee" afterPath="$PROJECT_DIR$/lib/phantomjs/windows/examples/printheaderfooter.coffee" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\windows\examples\printheaderfooter.js" afterPath="$PROJECT_DIR$/lib/phantomjs/windows/examples/printheaderfooter.js" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\windows\examples\printmargins.coffee" afterPath="$PROJECT_DIR$/lib/phantomjs/windows/examples/printmargins.coffee" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\windows\examples\printmargins.js" afterPath="$PROJECT_DIR$/lib/phantomjs/windows/examples/printmargins.js" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\windows\examples\rasterize.coffee" afterPath="$PROJECT_DIR$/lib/phantomjs/windows/examples/rasterize.coffee" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\windows\examples\rasterize.js" afterPath="$PROJECT_DIR$/lib/phantomjs/windows/examples/rasterize.js" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\windows\examples\render_multi_url.coffee" afterPath="$PROJECT_DIR$/lib/phantomjs/windows/examples/render_multi_url.coffee" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\windows\examples\render_multi_url.js" afterPath="$PROJECT_DIR$/lib/phantomjs/windows/examples/render_multi_url.js" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\windows\examples\run-jasmine.coffee" afterPath="$PROJECT_DIR$/lib/phantomjs/windows/examples/run-jasmine.coffee" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\windows\examples\run-jasmine.js" afterPath="$PROJECT_DIR$/lib/phantomjs/windows/examples/run-jasmine.js" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\windows\examples\run-qunit.coffee" afterPath="$PROJECT_DIR$/lib/phantomjs/windows/examples/run-qunit.coffee" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\windows\examples\run-qunit.js" afterPath="$PROJECT_DIR$/lib/phantomjs/windows/examples/run-qunit.js" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\windows\examples\scandir.coffee" afterPath="$PROJECT_DIR$/lib/phantomjs/windows/examples/scandir.coffee" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\windows\examples\scandir.js" afterPath="$PROJECT_DIR$/lib/phantomjs/windows/examples/scandir.js" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\windows\examples\seasonfood.coffee" afterPath="$PROJECT_DIR$/lib/phantomjs/windows/examples/seasonfood.coffee" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\windows\examples\seasonfood.js" afterPath="$PROJECT_DIR$/lib/phantomjs/windows/examples/seasonfood.js" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\windows\examples\server.coffee" afterPath="$PROJECT_DIR$/lib/phantomjs/windows/examples/server.coffee" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\windows\examples\server.js" afterPath="$PROJECT_DIR$/lib/phantomjs/windows/examples/server.js" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\windows\examples\serverkeepalive.coffee" afterPath="$PROJECT_DIR$/lib/phantomjs/windows/examples/serverkeepalive.coffee" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\windows\examples\serverkeepalive.js" afterPath="$PROJECT_DIR$/lib/phantomjs/windows/examples/serverkeepalive.js" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\windows\examples\simpleserver.coffee" afterPath="$PROJECT_DIR$/lib/phantomjs/windows/examples/simpleserver.coffee" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\windows\examples\simpleserver.js" afterPath="$PROJECT_DIR$/lib/phantomjs/windows/examples/simpleserver.js" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\windows\examples\sleepsort.coffee" afterPath="$PROJECT_DIR$/lib/phantomjs/windows/examples/sleepsort.coffee" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\windows\examples\sleepsort.js" afterPath="$PROJECT_DIR$/lib/phantomjs/windows/examples/sleepsort.js" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\windows\examples\stdin-stdout-stderr.coffee" afterPath="$PROJECT_DIR$/lib/phantomjs/windows/examples/stdin-stdout-stderr.coffee" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\windows\examples\stdin-stdout-stderr.js" afterPath="$PROJECT_DIR$/lib/phantomjs/windows/examples/stdin-stdout-stderr.js" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\windows\examples\technews.coffee" afterPath="$PROJECT_DIR$/lib/phantomjs/windows/examples/technews.coffee" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\windows\examples\technews.js" afterPath="$PROJECT_DIR$/lib/phantomjs/windows/examples/technews.js" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\windows\examples\tweets.coffee" afterPath="$PROJECT_DIR$/lib/phantomjs/windows/examples/tweets.coffee" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\windows\examples\tweets.js" afterPath="$PROJECT_DIR$/lib/phantomjs/windows/examples/tweets.js" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\windows\examples\universe.js" afterPath="$PROJECT_DIR$/lib/phantomjs/windows/examples/universe.js" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\windows\examples\unrandomize.coffee" afterPath="$PROJECT_DIR$/lib/phantomjs/windows/examples/unrandomize.coffee" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\windows\examples\unrandomize.js" afterPath="$PROJECT_DIR$/lib/phantomjs/windows/examples/unrandomize.js" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\windows\examples\useragent.coffee" afterPath="$PROJECT_DIR$/lib/phantomjs/windows/examples/useragent.coffee" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\windows\examples\useragent.js" afterPath="$PROJECT_DIR$/lib/phantomjs/windows/examples/useragent.js" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\windows\examples\version.coffee" afterPath="$PROJECT_DIR$/lib/phantomjs/windows/examples/version.coffee" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\windows\examples\version.js" afterPath="$PROJECT_DIR$/lib/phantomjs/windows/examples/version.js" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\windows\examples\waitfor.coffee" afterPath="$PROJECT_DIR$/lib/phantomjs/windows/examples/waitfor.coffee" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\windows\examples\waitfor.js" afterPath="$PROJECT_DIR$/lib/phantomjs/windows/examples/waitfor.js" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\windows\examples\walk_through_frames.coffee" afterPath="$PROJECT_DIR$/lib/phantomjs/windows/examples/walk_through_frames.coffee" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\windows\examples\walk_through_frames.js" afterPath="$PROJECT_DIR$/lib/phantomjs/windows/examples/walk_through_frames.js" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\windows\examples\weather.coffee" afterPath="$PROJECT_DIR$/lib/phantomjs/windows/examples/weather.coffee" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\windows\examples\weather.js" afterPath="$PROJECT_DIR$/lib/phantomjs/windows/examples/weather.js" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\windows\phantomjs.exe" afterPath="$PROJECT_DIR$/lib/phantomjs/windows/phantomjs.exe" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\phantomjs\windows\third-party.txt" afterPath="$PROJECT_DIR$/lib/phantomjs/windows/third-party.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/view/1_Application.js" afterPath="$PROJECT_DIR$/src/js/view/1_Application.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/view/2_Presentation.js" afterPath="$PROJECT_DIR$/src/js/view/2_Presentation.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/view/3_CompositePresentation.js" afterPath="$PROJECT_DIR$/src/js/view/3_CompositePresentation.js" />
@@ -19,18 +225,14 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/component/AbstractionProxy.js" afterPath="$PROJECT_DIR$/src/js/component/AbstractionProxy.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/common/Assert.js" afterPath="$PROJECT_DIR$/src/js/common/Assert.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/component/ComponentRepository.js" afterPath="$PROJECT_DIR$/src/js/component/ComponentRepository.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ComponentRepositoryTest.html" afterPath="$PROJECT_DIR$/src/ComponentRepositoryTest.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/component/CompositeModel.js" afterPath="$PROJECT_DIR$/src/js/component/CompositeModel.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/component/Control.js" afterPath="$PROJECT_DIR$/src/js/component/Control.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/common/EventBuilder.js" afterPath="$PROJECT_DIR$/src/js/common/EventBuilder.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/EventBuilderTest.html" afterPath="$PROJECT_DIR$/src/EventBuilderTest.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/common/HttpClient.js" afterPath="$PROJECT_DIR$/src/js/common/HttpClient.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/common/Id.js" afterPath="$PROJECT_DIR$/src/js/common/Id.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/IntegrationTest.html" afterPath="$PROJECT_DIR$/src/IntegrationTest.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/TransitionManagerTest.html" afterPath="$PROJECT_DIR$/src/TransitionManagerTest.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.properties" afterPath="$PROJECT_DIR$/build.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.xml" afterPath="$PROJECT_DIR$/build.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="my_lib_js.iws" />
@@ -100,54 +302,51 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ComponentRepository.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/js/component/ComponentRepository.js">
+      <file leaf-file-name="AbstractionProxy.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/js/component/AbstractionProxy.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1043" max-vertical-offset="3456">
-              <caret line="136" column="17" selection-start-line="136" selection-start-column="17" selection-end-line="136" selection-end-column="17" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="486" max-vertical-offset="2574">
+              <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="5_Widget.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/js/view/5_Widget.js">
+      <file leaf-file-name="Control.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/js/component/Control.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="342" max-vertical-offset="2304">
-              <caret line="19" column="29" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="342" max-vertical-offset="1404">
+              <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="22" selection-end-column="9" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-16.392857" vertical-offset="639" max-vertical-offset="4176">
-              <caret line="61" column="0" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-          <provider selected="true" editor-type-id="MarkdownPreviewEditor">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="build.properties" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/build.properties">
+      <file leaf-file-name="CompositeModel.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/js/component/CompositeModel.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="126">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="720">
+              <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="build.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/build.xml">
+      <file leaf-file-name="3_CompositePresentation.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/js/view/3_CompositePresentation.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="990">
-              <caret line="21" column="10" selection-start-line="21" selection-start-column="10" selection-end-line="21" selection-end-column="10" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="122" max-vertical-offset="774">
+              <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ComponentRepositoryTest.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/ComponentRepositoryTest.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-1.016" vertical-offset="1301" max-vertical-offset="1926">
+              <caret line="37" column="8" selection-start-line="37" selection-start-column="8" selection-end-line="37" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -180,25 +379,28 @@
         <option value="$PROJECT_DIR$/src/IdTest.html" />
         <option value="$PROJECT_DIR$/src/js/component/ComplexComponentRepository.js" />
         <option value="$PROJECT_DIR$/dist/simple-pac.js" />
-        <option value="$PROJECT_DIR$/src/js/view/1_Application.js" />
         <option value="$PROJECT_DIR$/src/ComponentRepositoryTest.html" />
-        <option value="$PROJECT_DIR$/src/js/view/4_TransitionManager.js" />
-        <option value="$PROJECT_DIR$/src/EventBuilderTest.html" />
-        <option value="$PROJECT_DIR$/src/js/component/Control.js" />
-        <option value="$PROJECT_DIR$/src/js/common/Assert.js" />
-        <option value="$PROJECT_DIR$/src/js/common/EventBuilder.js" />
-        <option value="$PROJECT_DIR$/src/js/common/Id.js" />
-        <option value="$PROJECT_DIR$/src/js/component/AbstractionProxy.js" />
-        <option value="$PROJECT_DIR$/src/js/component/CompositeModel.js" />
-        <option value="$PROJECT_DIR$/src/js/view/2_Presentation.js" />
-        <option value="$PROJECT_DIR$/src/js/view/3_CompositePresentation.js" />
         <option value="$PROJECT_DIR$/src/TransitionManagerTest.html" />
-        <option value="$PROJECT_DIR$/src/js/component/ComponentRepository.js" />
         <option value="$PROJECT_DIR$/src/js/common/Maps.js" />
-        <option value="$PROJECT_DIR$/src/js/view/5_Widget.js" />
         <option value="$PROJECT_DIR$/src/IntegrationTest.html" />
-        <option value="$PROJECT_DIR$/build.xml" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/dist/pac.js" />
+        <option value="$PROJECT_DIR$/src/js/common/Assert.js" />
+        <option value="$PROJECT_DIR$/src/js/common/HttpClient.js" />
+        <option value="$PROJECT_DIR$/src/js/common/Id.js" />
+        <option value="$PROJECT_DIR$/build.properties" />
+        <option value="$PROJECT_DIR$/build.xml" />
+        <option value="$PROJECT_DIR$/src/js/common/EventBuilder.js" />
+        <option value="$PROJECT_DIR$/src/EventBuilderTest.html" />
+        <option value="$PROJECT_DIR$/src/js/component/AbstractionProxy.js" />
+        <option value="$PROJECT_DIR$/src/js/component/ComponentRepository.js" />
+        <option value="$PROJECT_DIR$/src/js/component/Control.js" />
+        <option value="$PROJECT_DIR$/src/js/view/2_Presentation.js" />
+        <option value="$PROJECT_DIR$/src/js/view/4_TransitionManager.js" />
+        <option value="$PROJECT_DIR$/src/js/view/5_Widget.js" />
+        <option value="$PROJECT_DIR$/src/js/view/1_Application.js" />
+        <option value="$PROJECT_DIR$/src/js/component/CompositeModel.js" />
+        <option value="$PROJECT_DIR$/src/js/view/3_CompositePresentation.js" />
       </list>
     </option>
   </component>
@@ -210,8 +412,10 @@
     <treeState />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="width" value="1280" />
-    <option name="height" value="720" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1296" />
+    <option name="height" value="736" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -383,6 +587,28 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="external" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="my_lib_js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="simple-pac" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="component" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -437,11 +663,57 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="my_lib_js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="simple-pac" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="phantomjs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="my_lib_js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="simple-pac" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="doc" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="img" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="my_lib_js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="simple-pac" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dist" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -471,21 +743,22 @@
     <property name="LayoutCode.rearrangeEntriesJavaScript" value="false" />
     <property name="full.screen.before.presentation.mode" value="true" />
     <property name="LayoutCode.rearrangeEntries" value="false" />
+    <property name="recentsLimit" value="5" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\zyake\Documents\GitHub\simple-pac\lib" />
       <recent name="C:\Users\zyake\Documents\GitHub\simple-pac\src\js\component" />
       <recent name="C:\Users\zyake\Documents\GitHub\my_lib_js\src" />
       <recent name="C:\Users\zyake\Documents\GitHub\my_lib_js\doc\img" />
       <recent name="C:\Users\zyake\Documents\GitHub\my_lib_js\src\template" />
-      <recent name="C:\Users\zyake\Documents\GitHub\my_lib_js\src\js" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\zyake\Documents\GitHub\simple-pac\lib" />
       <recent name="C:\Users\zyake\Documents\GitHub\simple-pac\doc\img" />
       <recent name="C:\Users\zyake\Documents\GitHub\simple-pac\doc" />
       <recent name="C:\Users\zyake\Documents\GitHub\my_lib_js\src\js\common" />
       <recent name="C:\Users\zyake\Documents\GitHub\my_lib_js\src\js\component" />
-      <recent name="C:\Users\zyake\Documents\GitHub\my_lib_js\src\js\view" />
     </key>
   </component>
   <component name="RunManager">
@@ -743,7 +1016,7 @@
       <workItem from="1396449656416" duration="15122000" />
       <workItem from="1396697610950" duration="897000" />
       <workItem from="1396699917042" duration="3486000" />
-      <workItem from="1396716146437" duration="475000" />
+      <workItem from="1396716146437" duration="13043000" />
     </task>
     <task id="LOCAL-00001" summary="directly transit to hash url when the URL has already had a hash.">
       <created>1396099222600</created>
@@ -765,11 +1038,15 @@
       <created>1396280099542</created>
       <updated>1396280099542</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="- Refine component definition.">
+      <created>1396716735578</created>
+      <updated>1396716735578</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="57371000" />
+    <option name="totallyTimeSpent" value="69939000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -792,35 +1069,35 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1280" height="720" extended-state="6" />
+    <frame x="-8" y="-8" width="1296" height="736" extended-state="6" />
     <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32980332" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32331902" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32159266" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2125" sideWeight="0.6784074" order="4" side_tool="false" content_ui="tabs" x="776" y="81" width="387" height="653" />
+      <window_info id="Ant Build" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19765624" sideWeight="0.53598773" order="4" side_tool="true" content_ui="tabs" x="-54" y="202" width="387" height="653" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31602374" sideWeight="0.5003879" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22109374" sideWeight="0.31712472" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20469256" sideWeight="0.31904763" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32941177" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3104435" sideWeight="0.4996121" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3078101" sideWeight="0.4996121" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32980332" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24838188" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.18986385" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32901135" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="left" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20469256" sideWeight="0.31904763" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19765624" sideWeight="0.6807611" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19765624" sideWeight="0.46248084" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" x="96" y="96" width="1174" height="576" />
+      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" x="96" y="96" width="1174" height="576" />
       <window_info id="Statistic" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32980332" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32980332" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4449213" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -845,10 +1122,13 @@
     <MESSAGE value="- Simplified init method overriding&#10;- Add CompositeModel&#10;" />
     <MESSAGE value="- Add EventBuilder class&#10;- Replace event handling methods from presentation and abstraction&#10;" />
     <MESSAGE value="- Improve event reference mechanism" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Improve event reference mechanism" />
+    <MESSAGE value="- Refine component definition." />
+    <option name="LAST_COMMIT_MESSAGE" value="- Refine component definition." />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -864,22 +1144,6 @@
     </buildFile>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/js/common/Maps.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="72" max-vertical-offset="414">
-          <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/view/5_Widget.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="342" max-vertical-offset="2304">
-          <caret line="19" column="29" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1970" max-vertical-offset="3978">
@@ -1051,13 +1315,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/EventBuilderTest.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.6666667" vertical-offset="666" max-vertical-offset="1422">
-          <caret line="41" column="54" selection-start-line="41" selection-start-column="54" selection-end-line="41" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/HttpClientTest.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="738">
@@ -1069,159 +1326,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1350">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/common/Assert.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="486">
-          <caret line="11" column="19" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/common/HttpClient.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="612">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/common/Id.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1444" max-vertical-offset="2628">
-          <caret line="119" column="18" selection-start-line="119" selection-start-column="18" selection-end-line="119" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/component/AbstractionProxy.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1804" max-vertical-offset="2502">
-          <caret line="71" column="9" selection-start-line="71" selection-start-column="9" selection-end-line="71" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/component/Control.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1332">
-          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/view/1_Application.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1218">
-          <caret line="40" column="22" selection-start-line="40" selection-start-column="22" selection-end-line="40" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/view/2_Presentation.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1404" max-vertical-offset="2106">
-          <caret line="97" column="18" selection-start-line="97" selection-start-column="18" selection-end-line="97" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ComponentRepositoryTest.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.6666667" vertical-offset="648" max-vertical-offset="1926">
-          <caret line="37" column="8" selection-start-line="37" selection-start-column="8" selection-end-line="37" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/common/EventBuilder.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1874" max-vertical-offset="2916">
-          <caret line="117" column="41" selection-start-line="117" selection-start-column="41" selection-end-line="117" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AcceptanceTest.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.111111" vertical-offset="375" max-vertical-offset="1440">
-          <caret line="27" column="38" selection-start-line="27" selection-start-column="38" selection-end-line="27" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/view/3_CompositePresentation.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="648">
-          <caret line="25" column="18" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/component/CompositeModel.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="666">
-          <caret line="26" column="18" selection-start-line="26" selection-start-column="18" selection-end-line="26" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/view/4_TransitionManager.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="126" max-vertical-offset="1620">
-          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/TransitionManagerTest.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="301" max-vertical-offset="1296">
-          <caret line="52" column="48" selection-start-line="52" selection-start-column="48" selection-end-line="52" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/common/Maps.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="414">
-          <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/IntegrationTest.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="990" max-vertical-offset="1332">
-          <caret line="55" column="39" selection-start-line="55" selection-start-column="39" selection-end-line="55" selection-end-column="39" />
-          <folding>
-            <marker date="1396700669396" expanded="false" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/component/ComponentRepository.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1043" max-vertical-offset="3456">
-          <caret line="136" column="17" selection-start-line="136" selection-start-column="17" selection-end-line="136" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/view/5_Widget.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2304">
-          <caret line="19" column="29" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="636">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="990">
-          <caret line="21" column="10" selection-start-line="21" selection-start-column="10" selection-end-line="21" selection-end-column="10" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1237,6 +1341,171 @@
       </provider>
       <provider selected="true" editor-type-id="MarkdownPreviewEditor">
         <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/common/Assert.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="504">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/common/HttpClient.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="630">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/common/Maps.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="414">
+          <caret line="12" column="25" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/common/Id.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2646">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="144">
+          <caret line="1" column="10" selection-start-line="1" selection-start-column="10" selection-end-line="1" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="652" max-vertical-offset="1080">
+          <caret line="52" column="13" selection-start-line="52" selection-start-column="13" selection-end-line="52" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TransitionManagerTest.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-38.77778" vertical-offset="141" max-vertical-offset="1296">
+          <caret line="66" column="7" selection-start-line="66" selection-start-column="7" selection-end-line="66" selection-end-column="7" />
+          <folding>
+            <marker date="1396698446304" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1396698446304" expanded="false" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/IntegrationTest.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="25.333334" vertical-offset="774" max-vertical-offset="1332">
+          <caret line="5" column="55" selection-start-line="5" selection-start-column="55" selection-end-line="5" selection-end-column="55" />
+          <folding>
+            <marker date="1396700669396" expanded="false" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/common/EventBuilder.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="554" max-vertical-offset="2934">
+          <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/EventBuilderTest.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-26.0" vertical-offset="540" max-vertical-offset="1422">
+          <caret line="69" column="20" selection-start-line="69" selection-start-column="20" selection-end-line="69" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/component/ComponentRepository.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="452" max-vertical-offset="3510">
+          <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="44" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/view/2_Presentation.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="108" max-vertical-offset="2178">
+          <caret line="25" column="2" selection-start-line="25" selection-start-column="2" selection-end-line="27" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/view/4_TransitionManager.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="108" max-vertical-offset="1692">
+          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="28" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/view/5_Widget.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1508" max-vertical-offset="2376">
+          <caret line="96" column="24" selection-start-line="96" selection-start-column="24" selection-end-line="96" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/view/1_Application.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="500" max-vertical-offset="1188">
+          <caret line="56" column="8" selection-start-line="56" selection-start-column="8" selection-end-line="56" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/component/Control.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1404">
+          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="22" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/component/AbstractionProxy.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="486" max-vertical-offset="2574">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/component/CompositeModel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="720">
+          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/view/3_CompositePresentation.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="122" max-vertical-offset="774">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ComponentRepositoryTest.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.016" vertical-offset="1301" max-vertical-offset="1926">
+          <caret line="37" column="8" selection-start-line="37" selection-start-column="8" selection-end-line="37" selection-end-column="8" />
+          <folding />
+        </state>
       </provider>
     </entry>
   </component>

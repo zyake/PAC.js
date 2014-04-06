@@ -40,6 +40,9 @@ ComponentRepository = {
             parent : { value : arg.parent }
         });
         Object.defineProperties(repository, this.fields || {});
+        for ( var key in arg ) {
+            repository[key] == null && (repository[key] = arg[key]);
+        }
         Object.seal(repository);
         repository.initialize();
 

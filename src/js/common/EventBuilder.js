@@ -1,3 +1,4 @@
+
 /**
  * A event builder class that can define view and model events by fluent interface.
  *
@@ -35,13 +36,13 @@ EventBuilder = {
         },
 
         failure : function (handler) {
-            this.target.control.addEventRef( this.id.failure(), this.target.id);
+            this.target.control.addEventRef( this.id.failure(), this.target);
             this.builder.eventMap[this.id.failure()] = handler;
             return this.builder;
         },
 
         other : function (handler) {
-            this.target.control.addEventRef(this.id.other(), this.target.id);
+            this.target.control.addEventRef(this.id.other(),  this.target);
             this.builder.eventMap[this.id.other()] = handler;
             return this.builder;
         }

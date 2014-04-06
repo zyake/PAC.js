@@ -35,7 +35,7 @@
         equal(args, target.control.capture[2]);
     });
 
-    test("raise a load event from an presentation", function() {
+    test("raise a load event from a presentation", function() {
         var myPresentation = Object.create(Presentation, {
             fields: { value: { capture: { value: null, writable: true } } }
         });
@@ -53,7 +53,7 @@
         equal(args, target.control.capture[2]);
     });
 
-    test("ref a load event from an presentation", function() {
+    test("ref a load event from a presentation", function() {
         var myPresentation = Object.create(Presentation, {
             fields: { value: { capture: { value: null, writable: true } } }
         });
@@ -64,7 +64,7 @@
         var builder = EventBuilder.create(target);
 
         var args = {};
-        builder.ref().onAbstraction().load();
+        builder.ref().onAbstraction().load(target.notify);
 
         equal("widget1.control1.abstraction1.load", target.control.capture[0]);
         equal(target, target.control.capture[1]);

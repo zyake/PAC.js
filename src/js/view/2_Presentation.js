@@ -1,3 +1,4 @@
+
 /**
  * A html presentation component.
  *
@@ -22,6 +23,9 @@ Presentation = {
         presentation.eventBuilder = EventBuilder.create(presentation);
         ;
         Object.defineProperties(presentation, this.fields || {});
+        for ( var key in arg ) {
+            presentation[key] == null && (presentation[key] = arg[key]);
+        }
         Object.seal(presentation);
 
         return presentation;

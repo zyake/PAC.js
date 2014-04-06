@@ -1,3 +1,4 @@
+
 /**
  * A control to mediate exchanging data among Presentation, Abstraction, and Widgets.
  */
@@ -17,6 +18,9 @@ Control = {
             abstraction : { value : arg.abstraction }
         });
         Object.defineProperties(control, this.fields || {});
+        for ( var key in arg ) {
+            control[key] == null && (control[key] = arg[key]);
+        }
         Object.seal(control);
 
         return control;

@@ -1,3 +1,4 @@
+
 /**
  *  An abstraction of a whole application
  *
@@ -17,7 +18,7 @@ Application = {
         ]);
         var app = Object.create(this, {
             id : { value : arg.id },
-            centralRepository : { value : ComponentRepository.create("applicationRepository") },
+            centralRepository : { value : ComponentRepository.create({id: "applicationRepository" }) },
             transitionManager : { value : null, writable : true }
         });
         Object.defineProperties(app, this.fields || {});
@@ -32,18 +33,25 @@ Application = {
             [appElem, "appElem" ],
             [ widgetDef, "widgetDef" ]
         ]);
-        this.centralRepository.defineFactories(widgetDef);
-        this.transitionManager = TransitionManager.create(appElem, this.centralRepository);
+        for ( var key in widgetDef ) {
+            this.centralRepository.addDefinition(key, {
+                target: widgetDef[key]
+            });
+        }
+        this.transitionManager = TransitionManager.create({
+            containerElem: appElem,
+            repository: this.centralRepository});
     },
 
     start : function (initWidgetId) {
         Assert.notNull(this, initWidgetId, "initWidgetId");
         var me = this;
         window.addEventListener("hashchange", function (event) {
-            var hashIndex = event.newURL.lastIndexOf("#");
-            var newWidgetId = event.newURL.substring(hashIndex + 1);
+            var hashIndex = location.hash.lastIndexOf("#");
+            var newWidgetId = location.hash.substring(hashIndex + 1);
             me.transitionManager.transit(newWidgetId);
         });
+
         var hasHash = location.hash != "";
         if ( hasHash ) {
             initWidgetId = location.hash.substring(1);

@@ -1,3 +1,4 @@
+
 /**
  * A widget to manage underlying controls.
  *
@@ -35,6 +36,9 @@ Widget = {
             }
         });
         Object.defineProperties(widget, this.fields || {});
+        for ( var key in arg ) {
+            widget[key] == null && (widget[key] = arg[key]);
+        }
         Object.seal(widget);
         return widget;
     },

@@ -9,10 +9,17 @@ CompositePresentation = Object.create(Presentation, {
 
     create : { value : function (arg) {
         Assert.notNullAll(this, [ [ arg.id, "arg.id" ], [ arg.views, "arg.views" ] ]);
-        var presentation = Presentation.create.call(this, { id: arg.id, rootQuery: {} });
+
+        var presentation = Presentation.create.call(this, arg);
         presentation.views = arg.views;
 
         return presentation;
+    }},
+
+    initialize : { value: function (control) {
+        Assert.notNull(this, control, "control");
+        this.control = control;
+        this.doInitialize();
     }},
 
     doInitialize : { value : function () {

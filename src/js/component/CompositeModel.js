@@ -1,3 +1,4 @@
+
 /**
  * A composition of models.
  *
@@ -10,7 +11,9 @@ CompositeModel = Object.create(AbstractionProxy, {
     create : { value : function (arg) {
         Assert.notNullAll(this, [ [ arg.id, "id" ], [ arg.models, "arg.models" ] ]);
 
-        var model = AbstractionProxy.create.call(this, arg.id, {}, "");
+        arg.reqResMap = {};
+        arg.url = {};
+        var model = AbstractionProxy.create.call(this, arg);
         model.models = arg.models;
 
         return model;

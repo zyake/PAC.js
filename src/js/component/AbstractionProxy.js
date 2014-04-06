@@ -52,14 +52,17 @@ AbstractionProxy = {
             url : { value : arg.url },
             httpClient : { value : window.HttpClient },
             isRequesting : { value : false },
-            reqHandler : { value : this.FOR_JSON, writable : true },
-            resHandler : { value : this.AS_JSON, writable : true },
+            reqHandler : { value : arg.reqHandler || AbstractionProxy.FOR_JSON, writable : true },
+            resHandler : { value : arg.resHandler || AbstractionProxy.AS_JSON, writable : true },
             control : { value : null, writable : true },
-            method : { value : "GET", writable : true },
+            method : { value : arg.method || "GET", writable : true },
             eventBuilder : { value : null, writable : true }
         });
         proxy.eventBuilder = EventBuilder.create(proxy);
         Object.defineProperties(proxy, this.fields || {});
+        for ( var key in arg ) {
+            proxy[key] == null && (proxy[key] = arg[key]);
+        }
         Object.seal(proxy);
 
         return proxy;
@@ -69,7 +72,7 @@ AbstractionProxy = {
         Assert.notNull(this, control, "control");
         this.control = control;
         for ( var key  in this.reqResMap ) {
-            this.event().ref().onPresentation()[key.substring(1)]();
+            this.event().ref().onPresentation()[key.substring(1)](this.notify);
         }
         this.doInitialize();
     },

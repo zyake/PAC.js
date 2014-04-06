@@ -1,3 +1,4 @@
+
 /**
  * A widget transition manager in the SPA(Single Page Application) model.
  *
@@ -23,6 +24,9 @@ TransitionManager = {
             } }
         });
         Object.defineProperties(manager, this.fields || {});
+        for ( var key in arg ) {
+            manager[key] == null && (manager[key] = arg[key]);
+        }
         Object.seal(manager);
         return manager;
     },
