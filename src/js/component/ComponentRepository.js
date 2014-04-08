@@ -2,6 +2,7 @@
 /**
  *  A central repository to manage components.
  *
+ *  # Basics
  *  A component can be registered as definition basis, and
  *  the component will be instantiated when it retrieved at first time.
  *  The component instance will be cached in the repository.
@@ -21,6 +22,18 @@
  * // The value "ID-1-001" will be showed.
  * alert(repository.get("defaultName"));
  *
+ * # The specification of the component definition
+ *
+ * COMPONENT_ID: {
+ *  target: TARGET_OBJECT // required. The target object must have a "create" method.
+ *  arg: // optional. It is fixed value to pass the "create" method.
+ *  { KEY1: VALUE1, KEY2: VALUE2 ... },
+ *  ref: // optional. It is used for referring other components. It will be merged into the "arg".
+ *  { KEY1: OTHER_COMPONENT_ID1, KEY2: OTHER_COMPONENT_ID2 ... }
+ *  scope: request // optional. It specifies component scope. Default is singleton.
+ * }
+ *
+ * # Managing events
  * The central repository also supports hierarchical event propagating mechanism,
  * which can be used to notify an event data to parent repositories that
  * can manage the whole application configuration.
