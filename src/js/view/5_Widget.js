@@ -40,6 +40,10 @@ Widget = {
             widget[key] == null && (widget[key] = arg[key]);
         }
         Object.seal(widget);
+
+        arg.components && this.defineComponents(arg.components);
+        arg.controls && this.defineControls(arg.controls);
+
         return widget;
     },
 
