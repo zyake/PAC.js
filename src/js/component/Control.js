@@ -1,6 +1,8 @@
 
 /**
  * A control to mediate exchanging data among Presentation, Abstraction, and Widgets.
+ *
+ * It makes up of a "PAC agent".
  */
 Control = {
 

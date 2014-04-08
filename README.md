@@ -206,7 +206,7 @@ SearchWidgetFactory = function (arg) {
 }
 ```
 
-### Defines an applications.
+### Defines an application.
 ```javascript:index.js
 
       /**

@@ -2,8 +2,8 @@
 /**
  * A proxy of an abstraction.
  *
- * It is a proxy for an abstraction that resides in anapplication server.
- * Using json interface, the proxy doesn't have to realize
+ * It is a proxy for an abstraction that resides in an application server.
+ * Using json and text interface, the proxy doesn't have to realize
  * the actual implementation of the abstraction.
  *
  * If an AbstractionProxy was received a request event,

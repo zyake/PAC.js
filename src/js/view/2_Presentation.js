@@ -1,9 +1,44 @@
 
 /**
- * A html presentation component.
+ * A html visual component.
  *
- * Because Presentation is very simple and has no rendering logic,
+ * It accommodates all of html elements and some states
+ * and acts as both View and Control in MVC frameworks.
+ * It also provides some useful methods to manipulate DOM elements.
+ *
+ * The "elem" field is root element of a Presentation and
+ * a Presentation expects all of queried elements exist in the "elem".
+ * - for example
+ * // This method queries on the "elem" field and bind elements into each fields.
+ * this.doQueries({ button : ".button", input: ".input" });
+ *
+ * To send requests to abstractions and receive responses from abstractions,
+ * you can use event method.
+ * - for example
+ * // To send a request to an abstraction
+ * this.event().raise().load({ name: "test" });
+ * // To receive a response from an abstraction
+ * this.event().onAbstraction().change(this.receive); // register a callback method.
+ *
+ * Because Presentation has no rendering logic,
  * you must extend it and implement own rendering logic.
+ * At least, you should override the "doInitialize" method and
+ * register DOM and framework events.
+ * - for example
+ * // Implements initialization logic
+ * doInitialize: { value: function() {
+ *  // Load elements into fields.
+ *  this.doQueries({ button: ".button" });
+ *
+ *  // Register a DOM event
+ *  this.on(button, "click", this.submit);
+ *
+ *  // Register a framework event on an abstraction
+ *  this.event().onAbstraction().load(this.onLoad);
+ *
+ *  // Raise a framework event
+ *  this.event().rase().load({ text: "completed!" });
+ * }}
  */
 Presentation = {
 
@@ -21,7 +56,6 @@ Presentation = {
             eventBuilder : { value : null, writable : true }
         });
         presentation.eventBuilder = EventBuilder.create(presentation);
-        ;
         Object.defineProperties(presentation, this.fields || {});
         for ( var key in arg ) {
             presentation[key] == null && (presentation[key] = arg[key]);
