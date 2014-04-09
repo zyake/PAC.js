@@ -2,13 +2,52 @@
 /**
  * A proxy of an abstraction.
  *
+ * # Basics
  * It is a proxy for an abstraction that resides in an application server.
  * Using json and text interface, the proxy doesn't have to realize
  * the actual implementation of the abstraction.
  *
+ * So, you can reuse all of existing resources like JSP based frameworks
+ * (Struts, Spring MVC etc...), java code, libraries, and tools.
+ *
+ * As it adopts the Interceptor design pattern, you can arbitrarily replace
+ * object of http request handling and http response handling.
+ * - for example
+ *  - request -> POST(JSON, FormData, XML), GET(query string) etc...
+ *  - response -> TEXT(JSP that are produced by Struts, Spring MVC etc...), JSON etc...
+ *
  * If an AbstractionProxy was received a request event,
  * it sends the event as json to an abstraction that
  * resides in a server.
+ *
+ * # How to use
+ * Unlike Presentation, AbstractionProxy is basically usable for most usages.
+ * In following example code, an AbstractionProxy object is defined in a Widget definition.
+ * Object.create(Widget, {
+ *   ...
+ *   myModel: {
+ *       // Reuse AbstractionProxy
+ *       target: AbstractionProxy,
+ *
+ *       // Define request-response event mapping.
+ *       reqResMap: Maps.putAll(
+ *           Id.START, Id.LOAD,
+ *           Id.CHANGE, Id.LOAD),
+ *
+ *       // Map a request into a JSON object.
+ *       reqHandler: AbstractionProxy.TO_JSON,
+ *
+ *       // Map a response into a JSON object.
+ *       // If you want to use server side template engines (ex. JSP),
+ *       // you should specify "AbstractionProxy.AS_TEXT".
+ *       resHandler: AbstractionProxy.AS_JSON,
+ *
+ *       // Specify a destination url.
+ *       url: "/api/blogic001"
+ *
+ *       // Specify a HTTP method.
+ *       method: "POST"
+ * });
  */
 AbstractionProxy = {
 
