@@ -25,9 +25,9 @@
  * <!-- An application container element  -->
  * <div id="appContainer">
  *     <!-- The loaded "search" widget-->
- *     <div id="search">～</div>
+ *     <div id="search">...</div>
  *     <!-- The loaded "setting" widget -->
- *     <div id="setting">～</div>
+ *     <div id="setting">...</div>
  * </div>
  *
  * By starting an "Application" instance, each widget can be accessed by a hash URL.

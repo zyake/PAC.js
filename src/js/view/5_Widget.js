@@ -2,13 +2,51 @@
 /**
  * A widget to manage underlying controls.
  *
- * A widget is an unit of reusable component,
+ * Widget is an unit of reusable component,
  * which manages all of components
  * that make up of a widget.
  *
- * Components are classified in the following two categories:
- * - Component: general purpose component
+ * Widget is used for functional "transition" basis
+ * (ex. a search screen to a settings screen etc...)
+ * so Widget is similar with  traditional web page.
+ *
+ * Components that can be registered in Widget
+ * are classified in the following two categories.
+ * - Component: a general purpose component
  * - Control: a central control point of an UI component
+ *
+ * You can define components and controls as follows.
+ * // As Widget will be called by TransitionManager,
+ * // you should extend Widget.
+ * MyWidget = Object.create(Widget, {
+ *  fields: {  value: {
+ *      // Define components.
+ *      // The specification of the component definition is
+ *      // as same as ComponentRepository has.
+ *      components: {
+ *          myModel: {
+ *              target: AbstractionProxy,
+ *              ...
+ *           },
+ *           myView: {
+ *              target: MyPresentation,
+ *              ...
+ *           }
+ *      },
+ *
+ *      // Define controls.
+ *      // The specification of the control definition is
+ *      // as same as ComponentRepository has.
+ *      // The only difference is that controls are used for
+ *      // event notification points.
+ *      controls: {
+ *          myControl: {
+ *              target: Control,
+ *              ...
+ *          }
+ *      }
+ *  }}
+ * });
  *
  * All of components that reside in a widget communicate
  * with each other using widget event mechanism.
