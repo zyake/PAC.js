@@ -15,4 +15,6 @@ Maps = {
 
         return map;
     }
-}
+};
+
+Object.seal(Maps);

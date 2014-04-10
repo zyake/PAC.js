@@ -36,3 +36,5 @@ CompositePresentation = Object.create(Presentation, {
         }
     }}
 });
+
+Object.seal(CompositePresentation);

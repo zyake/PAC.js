@@ -108,21 +108,15 @@ ComponentRepository = {
         ]);
 
         var targetRequired = def.target == null;
-        if ( targetRequired ) {
-            throw new Error(
+        targetRequired && Assert.doThrow(
             "The definition must have a correct target!: id=" + id + ", definition=" + def);
-        }
 
         var isFactoryFunc = def.target instanceof Function;
-        if ( isFactoryFunc ) {
-            def.target = { create: def.target };
-        }
+        isFactoryFunc && ( def.target = { create: def.target } );
 
         var isFactoryObject =  def.target instanceof  Object && def.target.create instanceof Function;
-        if ( ! isFactoryObject ) {
-            throw new Error(
+        ! isFactoryObject && Assert.doThrow(
             "The definition must have a correct target!: id=" + id + ", definition=" + def);
-        }
 
         this.definitions[id] = def;
 
@@ -135,7 +129,7 @@ ComponentRepository = {
         ]);
 
         var recursiveRefFound = this.routeStack.indexOf(id) > -1;
-        recursiveRefFound && this.doThrow("The recursive reference found: route=" + this.routeStack);
+        recursiveRefFound && Assert.doThrow("The recursive reference found: route=" + this.routeStack);
 
         try {
             this.routeStack.push(id);
@@ -175,16 +169,14 @@ ComponentRepository = {
 
                 mergedArg.id = id;
                 var component = def.target.create(mergedArg);
-                if ( isSingleton ) {
-                    this.singletons[id] = component;
-                }
+                isSingleton && (this.singletons[id] = component);
 
                 return component;
             }
 
-            this.parent == null && this.doThrow("target factory not found: id=" + id);
+            this.parent == null && Assert.doThrow("target factory not found: id=" + id);
             var component = this.parent.get(id, arg);
-            component == null && this.doThrow("target factory not found: id=" + id);
+            component == null && Assert.doThrow("target factory not found: id=" + id);
 
             return component;
         } finally {
@@ -192,12 +184,9 @@ ComponentRepository = {
         }
     },
 
-    doThrow : function (msg) {
-        Assert.notNull(this, msg, "msg");
-        throw new Error(msg);
-    },
-
     toString : function () {
         return "id: " + this.id;
     }
 };
+
+Object.seal(ComponentRepository);

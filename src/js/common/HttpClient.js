@@ -28,3 +28,5 @@ HttpClient = {
         return isSuccess;
     }
 };
+
+Object.seal(HttpClient);

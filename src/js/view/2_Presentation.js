@@ -144,12 +144,9 @@ Presentation = {
         }
     },
 
-    doThrow : function (msg) {
-        Assert.notNull(this, msg, "msg");
-        throw new Error(msg);
-    },
-
     toString : function () {
         return "id: " + this.id;
     }
 };
+
+Object.seal(Presentation);

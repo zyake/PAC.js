@@ -73,3 +73,5 @@ Control = {
         return "id: " + this.id;
     }
 };
+
+Object.seal(Control);

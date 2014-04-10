@@ -175,3 +175,5 @@ AbstractionProxy = {
         return "id: " + this.id + ", url: " + this.url;
     }
 };
+
+Object.seal(AbstractionProxy);

@@ -33,3 +33,5 @@ CompositeModel = Object.create(AbstractionProxy, {
         }
     }}
 });
+
+Object.seal(CompositeModel);

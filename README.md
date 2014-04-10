@@ -9,5 +9,5 @@ Due to its philosophy, PAC.js is far more suitable for the system integration in
 
 For more information, please read the following wiki page.
 
-[Getting started!](https://github.com/zyake/PAC.js/wiki/Getting%20Started!)
+[PAC.js Wiki](https://github.com/zyake/PAC.js/wiki)
 

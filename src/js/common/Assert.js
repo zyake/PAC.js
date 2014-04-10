@@ -20,3 +20,5 @@ Assert = {
         throw new Error(msg);
     }
 };
+
+Object.seal(Assert);

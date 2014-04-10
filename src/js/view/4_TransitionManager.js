@@ -49,9 +49,9 @@ TransitionManager = {
             var xhr = event.target;
             if ( me.httpClient.isSuccess(xhr) ) {
                 var newElem = document.createElement("DIV");
-                if ( document.getElementById(id) != null ) {
-                    throw new Error("duplicated id found!: id=" + id);
-                }
+                document.getElementById(id) != null  && Assert.doThrow(
+                    "duplicated id found!: id=" + id);
+
                 newElem.id = id;
                 newElem.style.display = "none";
                 newElem.innerHTML = xhr.responseText;
@@ -87,3 +87,5 @@ TransitionManager = {
         return "TransitionManager [ currentId: " + this.currentId + ", idToElemMap: " + this.idToElemMap + " ]";
     }
 };
+
+Object.seal(TransitionManager);

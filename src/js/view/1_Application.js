@@ -82,9 +82,9 @@ Application = {
         });
 
         var hasHash = location.hash != "";
-        if ( hasHash ) {
-            initWidgetId = location.hash.substring(1);
-        }
+        hasHash && ( initWidgetId = location.hash.substring(1) );
         this.transitionManager.transit(initWidgetId);
     }
 };
+
+Object.seal(Application);

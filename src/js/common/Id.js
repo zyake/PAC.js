@@ -47,7 +47,7 @@ Id = {
             id.idString += ("." + target.id);
             id.idString += ("." + target.abstraction.id);
         } else {
-            throw new Error("invalid target:" + target);
+            Assert.doThrow("invalid target:" + target);
         }
 
         return id;
@@ -73,7 +73,7 @@ Id = {
             id.idString += ("." + target.id);
             id.idString += ("." + target.presentation.id);
         } else {
-            throw new Error("invalid target:" + target);
+            Assert.doThrow("invalid target:" + target);
         }
         return id;
     },
@@ -86,7 +86,7 @@ Id = {
         } else if ( AbstractionProxy.isPrototypeOf(target) ) {
             return Id.onAbstraction(target);
         } else {
-            throw new Error("invalid target:" + target);
+            Assert.doThrow("invalid target:" + target);
         }
     },
 
@@ -131,7 +131,7 @@ Id = {
     getAction : function (event) {
         var separatorIndex = event.lastIndexOf(".");
         if ( separatorIndex < 0 ) {
-            throw new Error("separator couldn't find!: event=" + event);
+            Assert.doThrow("separator couldn't find!: event=" + event);
         }
         return event.substring(separatorIndex);
     },
@@ -139,4 +139,6 @@ Id = {
     toString : function () {
         return "idString: " + this.idString + ", target: " + this.target;
     }
-}
+};
+
+Object.seal(Id);

@@ -156,3 +156,5 @@ EventBuilder = {
         }
     }
 };
+
+Object.seal(EventBuilder);

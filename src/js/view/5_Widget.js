@@ -23,7 +23,7 @@
  *      // Define components.
  *      // The specification of the component definition is
  *      // as same as ComponentRepository has.
- *      components: {
+ *      componentDefs: {value: {
  *          myModel: {
  *              target: AbstractionProxy,
  *              ...
@@ -32,19 +32,19 @@
  *              target: MyPresentation,
  *              ...
  *           }
- *      },
+ *      }},
  *
  *      // Define controls.
  *      // The specification of the control definition is
  *      // as same as ComponentRepository has.
  *      // The only difference is that controls are used for
  *      // event notification points.
- *      controls: {
+ *      controlDefs: { value: {
  *          myControl: {
  *              target: Control,
  *              ...
  *          }
- *      }
+ *      }}
  *  }}
  * });
  *
@@ -79,8 +79,8 @@ Widget = {
         }
         Object.seal(widget);
 
-        arg.components && this.defineComponents(arg.components);
-        arg.controls && this.defineControls(arg.controls);
+        this.controlDefs && widget.defineControls(this.controlDefs);
+        this.componentDefs && widget.defineComponents(this.componentDefs);
 
         return widget;
     },
@@ -91,9 +91,9 @@ Widget = {
         }
         var me = this;
         this.initialized = true;
-        this.controls.forEach(function (controlId) {
-            this.repository.get(controlId, this).initialize();
-        }, this);
+        for (var key in this.controls ) {
+            this.repository.get(this.controls[key], this).initialize();
+        }
         this.doInitialize();
     },
 
@@ -137,7 +137,7 @@ Widget = {
 
     getControl : function (id) {
         Assert.notNull(this, id, "id");
-        this.controls.indexOf(id) == -1 && this.doThrow(id + " is not control!");
+        this.controls.indexOf(id) == -1 && Assert.doThrow(id + " is not control!");
         return this.repository.get(id, this);
     },
 
@@ -158,12 +158,9 @@ Widget = {
         this.repository.addEventRef(id, eventRef);
     },
 
-    doThrow : function (msg) {
-        Assert.notNull(this, msg, "msg");
-        throw new Error(msg);
-    },
-
     toString : function () {
         return "id: " + this.id;
     }
 };
+
+Object.seal(Widget);
