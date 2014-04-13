@@ -37,7 +37,7 @@
  *
  * If a hash url has been already specified, it is used for navigation.
  */
-Application = {
+this.Application = {
 
     create : function (arg) {
         Assert.notNullAll(this, [
@@ -87,4 +87,4 @@ Application = {
     }
 };
 
-Object.seal(Application);
+Object.seal(this.Application);

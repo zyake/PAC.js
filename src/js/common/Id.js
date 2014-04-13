@@ -13,7 +13,7 @@
  * And the format of the id string is following.
  * ${WIDGET_ID}.${CONTROL_ID}.[${PRESENTATION_ID} | ${ABSTRACTION_ID}].${ACTION_CODE}
  */
-Id = {
+this.Id = {
 
     idString : "",
 
@@ -141,4 +141,4 @@ Id = {
     }
 };
 
-Object.seal(Id);
+Object.seal(this.Id);

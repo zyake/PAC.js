@@ -4,7 +4,7 @@
  *
  * It makes up of a "PAC agent".
  */
-Control = {
+this.Control = {
 
     create : function (arg) {
         Assert.notNullAll(this, [
@@ -74,4 +74,4 @@ Control = {
     }
 };
 
-Object.seal(Control);
+Object.seal(this.Control);

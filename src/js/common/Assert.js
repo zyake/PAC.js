@@ -2,7 +2,7 @@
 /**
  * An Assert class to validate arguments
  */
-Assert = {
+this.Assert = {
 
     notNull : function (obj, elem, param, msg) {
         elem == null && this.doThrow(
@@ -21,4 +21,4 @@ Assert = {
     }
 };
 
-Object.seal(Assert);
+Object.seal(this.Assert);

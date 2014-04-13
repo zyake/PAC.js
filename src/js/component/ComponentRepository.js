@@ -38,7 +38,7 @@
  * which can be used to notify an event data to parent repositories that
  * can manage the whole application configuration.
  */
-ComponentRepository = {
+this.ComponentRepository = {
 
     create : function (arg) {
         Assert.notNull(this, arg.id, "arg.id");
@@ -189,4 +189,4 @@ ComponentRepository = {
     }
 };
 
-Object.seal(ComponentRepository);
+Object.seal(this.ComponentRepository);

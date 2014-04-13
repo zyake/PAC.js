@@ -2,7 +2,7 @@
 /**
  * Very simple map utility.
  */
-Maps = {
+this.Maps = {
 
     putAll: function() {
         arguments.length % 2 != 0 && Assert.doThrow(
@@ -17,4 +17,4 @@ Maps = {
     }
 };
 
-Object.seal(Maps);
+Object.seal(this.Maps);

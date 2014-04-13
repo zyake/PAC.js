@@ -2,7 +2,7 @@
 /**
  * VERY simple http client.
  */
-HttpClient = {
+this.HttpClient = {
 
     send : function (url, loaded, data/* can be null! */, reqCallback /* can be null! */, method /* can be null! */) {
         Assert.notNullAll(this, [
@@ -29,4 +29,4 @@ HttpClient = {
     }
 };
 
-Object.seal(HttpClient);
+Object.seal(this.HttpClient);

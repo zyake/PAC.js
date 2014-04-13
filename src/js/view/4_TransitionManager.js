@@ -5,7 +5,7 @@
  * Registering widgets into a central repository, the manager will
  * turn on and off the widgets by a widget id.
  */
-TransitionManager = {
+this.TransitionManager = {
 
     create : function (arg) {
         Assert.notNullAll(this, [
@@ -20,6 +20,7 @@ TransitionManager = {
             templateRootPath : { value : "template/" },
             templateSuffix : { value : ".html" },
             httpClient : { value : window.HttpClient, writable : true },
+            isTransiting: { value: false, writable: true },
             errorHandler : { value : arg.errorHandler || function () {
             } }
         });
@@ -88,4 +89,4 @@ TransitionManager = {
     }
 };
 
-Object.seal(TransitionManager);
+Object.seal(this.TransitionManager);

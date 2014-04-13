@@ -54,7 +54,7 @@
  * the event that was raised by a component may be
  * propagated to parent repositories and other widgets.
  */
-Widget = {
+this.Widget = {
 
     create : function (arg) {
         Assert.notNullAll(this, [
@@ -66,7 +66,7 @@ Widget = {
             elem : { value : arg.elem },
             controls : { value : [] },
             components : { value : [] },
-            initialized : { value : false },
+            initialized : { value : false, writable: true },
             repository : { value :
                 ComponentRepository.create({
                     id: arg.id + "Repository",
@@ -163,4 +163,4 @@ Widget = {
     }
 };
 
-Object.seal(Widget);
+Object.seal(this.Widget);

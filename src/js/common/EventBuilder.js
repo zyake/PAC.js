@@ -9,7 +9,7 @@
  *  .ref().onAbstraction().start(this.start)
  *  .raise().start({});
  */
-EventBuilder = {
+this.EventBuilder = {
 
     REF_INVOKER : {
 
@@ -157,4 +157,4 @@ EventBuilder = {
     }
 };
 
-Object.seal(EventBuilder);
+Object.seal(this.EventBuilder);

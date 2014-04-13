@@ -3,7 +3,7 @@
  *
  * It propagates events into child presentations.
  */
-CompositePresentation = Object.create(Presentation, {
+this.CompositePresentation = Object.create(this.Presentation, {
 
     fields : { value : { views : { value : null, writable : true } } },
 
@@ -37,4 +37,4 @@ CompositePresentation = Object.create(Presentation, {
     }}
 });
 
-Object.seal(CompositePresentation);
+Object.seal(this.CompositePresentation);

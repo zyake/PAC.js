@@ -23,7 +23,8 @@
     </target>
 
     <target name="concat-js">
-        <concat destfile="dist/PAC.js" append="false">
+        <echo file="${dist.path}">"use strict";</echo>
+        <concat destfile="${dist.path}" append="true">
             <fileset dir="src/js/component">
                 <include name="*.js"/>
             </fileset>

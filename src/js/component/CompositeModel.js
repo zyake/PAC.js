@@ -4,7 +4,7 @@
  *
  * It propagates events into child models.
  */
-CompositeModel = Object.create(AbstractionProxy, {
+this.CompositeModel = Object.create(this.AbstractionProxy, {
 
     fields : { value : { models : { value : null, writable : true } } },
 
@@ -34,4 +34,4 @@ CompositeModel = Object.create(AbstractionProxy, {
     }}
 });
 
-Object.seal(CompositeModel);
+Object.seal(this.CompositeModel);

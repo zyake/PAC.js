@@ -49,7 +49,7 @@
  *       method: "POST"
  * });
  */
-AbstractionProxy = {
+this.AbstractionProxy = {
 
     AS_JSON : function (xhr) {
         Assert.notNull(this, xhr, "xhr");
@@ -90,7 +90,7 @@ AbstractionProxy = {
             reqResMap : { value : arg.reqResMap },
             url : { value : arg.url },
             httpClient : { value : window.HttpClient },
-            isRequesting : { value : false },
+            isRequesting : { value : false, writable: true },
             reqHandler : { value : arg.reqHandler || AbstractionProxy.FOR_JSON, writable : true },
             resHandler : { value : arg.resHandler || AbstractionProxy.AS_JSON, writable : true },
             control : { value : null, writable : true },
@@ -124,10 +124,6 @@ AbstractionProxy = {
 
     event : function () {
         return this.eventBuilder;
-    },
-
-    notify : function (event, arg) {
-        this.event().handle(event, arg);
     },
 
     fetch : function (eventKey, args) {
@@ -176,4 +172,4 @@ AbstractionProxy = {
     }
 };
 
-Object.seal(AbstractionProxy);
+Object.seal(this.AbstractionProxy);

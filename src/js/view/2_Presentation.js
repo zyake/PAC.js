@@ -40,7 +40,7 @@
  *  this.event().rase().load({ text: "completed!" });
  * }}
  */
-Presentation = {
+this.Presentation = {
 
     create : function (arg) {
         Assert.notNullAll(this, [
@@ -149,4 +149,4 @@ Presentation = {
     }
 };
 
-Object.seal(Presentation);
+Object.seal(this.Presentation);
