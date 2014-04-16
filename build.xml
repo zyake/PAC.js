@@ -23,8 +23,8 @@
     </target>
 
     <target name="concat-js">
-        <echo file="${dist.path}">"use strict";</echo>
         <concat destfile="${dist.path}" append="true">
+            <file file="src/js/header.js"/>
             <fileset dir="src/js/component">
                 <include name="*.js"/>
             </fileset>
@@ -43,7 +43,7 @@
             <echo>--------- start @{name} ---------</echo>
             <exec failonerror="true" executable="${phantomjs.path}">
                 <arg value="${qunit.path}"/>
-                <arg value="src/@{name}.html"/>
+                <arg value="src/test/@{name}.html"/>
             </exec>
             <echo>--------- end @{name} ---------</echo>
         </sequential>

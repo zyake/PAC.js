@@ -8,10 +8,10 @@
 <body>
 <div id="qunit"></div>
 <div id="qunit-fixture"></div>
-<script src="js/external/qunit-1.13.0.js"></script>
-<script src="js/QUnitCommon.js"></script>
-<script src="js/common/HttpClient.js"></script>
-<script src="js/common/Assert.js"></script>
+<script src="../js/external/qunit-1.13.0.js"></script>
+<script src="QUnitCommon.js"></script>
+<script src="../js/common/HttpClient.js"></script>
+<script src="../js/common/Assert.js"></script>
 <script>
     test("isSuccess SuccessCode0", function() {
       ok(HttpClient.isSuccess({ status: 0 }));
