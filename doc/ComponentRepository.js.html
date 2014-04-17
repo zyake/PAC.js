@@ -1,4 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: component/ComponentRepository.js</title>
 
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: component/ComponentRepository.js</h1>
+
+    
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>
 /**
  *  A central repository to manage components.
  *
@@ -57,7 +84,7 @@ this.ComponentRepository = {
         });
         Object.defineProperties(repository, this.fields || {});
         for ( var key in arg ) {
-            repository[key] == null && (repository[key] = arg[key]);
+            repository[key] == null &amp;&amp; (repository[key] = arg[key]);
         }
         Object.seal(repository);
         repository.initialize();
@@ -66,7 +93,7 @@ this.ComponentRepository = {
     },
 
     initialize : function () {
-        this.parent != null && this.parent.children.push(this);
+        this.parent != null &amp;&amp; this.parent.children.push(this);
     },
 
     addEventRef : function (id, listener) {
@@ -95,8 +122,8 @@ this.ComponentRepository = {
             listeners[key].notify(event, arg);
         }
 
-        var parentShouldBeCalled = this.parent != null && this.parent != caller;
-        parentShouldBeCalled && this.parent.raiseEvent(event, this, arg);
+        var parentShouldBeCalled = this.parent != null &amp;&amp; this.parent != caller;
+        parentShouldBeCalled &amp;&amp; this.parent.raiseEvent(event, this, arg);
         for ( var key in this.children ) {
             this.children[key].raiseEvent(event, this, arg);
         }
@@ -111,14 +138,14 @@ this.ComponentRepository = {
         ]);
 
         var targetRequired = def.target == null;
-        targetRequired && Assert.doThrow(
+        targetRequired &amp;&amp; Assert.doThrow(
             "The definition must have a correct target!: id=" + id + ", definition=" + def);
 
         var isFactoryFunc = def.target instanceof Function;
-        isFactoryFunc && ( def.target = { create: def.target } );
+        isFactoryFunc &amp;&amp; ( def.target = { create: def.target } );
 
-        var isFactoryObject =  def.target instanceof  Object && def.target.create instanceof Function;
-        ! isFactoryObject && Assert.doThrow(
+        var isFactoryObject =  def.target instanceof  Object &amp;&amp; def.target.create instanceof Function;
+        ! isFactoryObject &amp;&amp; Assert.doThrow(
             "The definition must have a correct target!: id=" + id + ", definition=" + def);
 
         this.definitions[id] = def;
@@ -132,14 +159,14 @@ this.ComponentRepository = {
         ]);
 
         var recursiveRefFound = this.routeStack.indexOf(id) > -1;
-        recursiveRefFound && Assert.doThrow("The recursive reference found: route=" + this.routeStack);
+        recursiveRefFound &amp;&amp; Assert.doThrow("The recursive reference found: route=" + this.routeStack);
 
         try {
             this.routeStack.push(id);
             var def = this.definitions[id];
             if ( def != null ) {
                 var isSingleton = def.scope === "singleton" || def.scope == null;
-                var useCachedInstance = isSingleton && this.singletons[id] != null;
+                var useCachedInstance = isSingleton &amp;&amp; this.singletons[id] != null;
                 if ( useCachedInstance ) {
                     return this.singletons[id];
                 }
@@ -172,14 +199,14 @@ this.ComponentRepository = {
 
                 mergedArg.id = id;
                 var component = def.target.create(mergedArg);
-                isSingleton && (this.singletons[id] = component);
+                isSingleton &amp;&amp; (this.singletons[id] = component);
 
                 return component;
             }
 
-            this.parent == null && Assert.doThrow("target factory not found: id=" + id);
+            this.parent == null &amp;&amp; Assert.doThrow("target factory not found: id=" + id);
             var component = this.parent.get(id, arg);
-            component == null && Assert.doThrow("target factory not found: id=" + id);
+            component == null &amp;&amp; Assert.doThrow("target factory not found: id=" + id);
 
             return component;
         } finally {
@@ -193,3 +220,26 @@ this.ComponentRepository = {
 };
 
 Object.seal(this.ComponentRepository);
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Index</a></h2><h3>Global</h3><ul><li><a href="global.html#AbstractionProxy">AbstractionProxy</a></li><li><a href="global.html#Application">Application</a></li><li><a href="global.html#Assert">Assert</a></li><li><a href="global.html#ComponentRepository">ComponentRepository</a></li><li><a href="global.html#CompositeModel">CompositeModel</a></li><li><a href="global.html#CompositePresentation">CompositePresentation</a></li><li><a href="global.html#Control">Control</a></li><li><a href="global.html#EventBuilder">EventBuilder</a></li><li><a href="global.html#HttpClient">HttpClient</a></li><li><a href="global.html#Id">Id</a></li><li><a href="global.html#Maps">Maps</a></li><li><a href="global.html#Presentation">Presentation</a></li><li><a href="global.html#TransitionManager">TransitionManager</a></li><li><a href="global.html#Widget">Widget</a></li></ul>
+</nav>
+
+<br clear="both">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.3.0-alpha5</a> on Thu Apr 17 2014 23:54:39 GMT+0900 (JST)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

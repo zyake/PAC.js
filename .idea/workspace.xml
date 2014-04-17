@@ -1,25 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/js/view/2_Presentation.js" line="18" mnemonic="2" />
+    <bookmark url="file://$PROJECT_DIR$/src/js/view/2_Presentation.js" line="21" mnemonic="2" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="39257a0f-548a-4da6-87e0-5429559af94c" name="Default" comment="- Adopt Strict Mode&#10;- Fix some bugs">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/js/header.js" />
-      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\src\ComponentRepositoryTest.html" afterPath="$PROJECT_DIR$/src/test/ComponentRepositoryTest.html" />
-      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\src\EventBuilderTest.html" afterPath="$PROJECT_DIR$/src/test/EventBuilderTest.html" />
-      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\src\HttpClientTest.html" afterPath="$PROJECT_DIR$/src/test/HttpClientTest.html" />
-      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\src\IdTest.html" afterPath="$PROJECT_DIR$/src/test/IdTest.html" />
-      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\src\IntegrationTest.html" afterPath="$PROJECT_DIR$/src/test/IntegrationTest.html" />
-      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\src\TransitionManagerTest.html" afterPath="$PROJECT_DIR$/src/test/TransitionManagerTest.html" />
-      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\src\css\qunit-1.13.0.css" afterPath="$PROJECT_DIR$/src/test/css/qunit-1.13.0.css" />
-      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\src\js\QUnitCommon.js" afterPath="$PROJECT_DIR$/src/test/QUnitCommon.js" />
-      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\src\resources\Test.txt" afterPath="$PROJECT_DIR$/src/test/resources/Test.txt" />
-      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\src\resources\contents.json" afterPath="$PROJECT_DIR$/src/test/resources/contents.json" />
-      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\src\template\form.html" afterPath="$PROJECT_DIR$/src/test/template/form.html" />
-      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\src\template\search.html" afterPath="$PROJECT_DIR$/src/test/template/search.html" />
-      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\src\template\widget1.html" afterPath="$PROJECT_DIR$/src/test/template/widget1.html" />
-      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\src\template\widget2.html" afterPath="$PROJECT_DIR$/src/test/template/widget2.html" />
+    <list default="true" id="39257a0f-548a-4da6-87e0-5429559af94c" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jsdoc/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jsdoc/.jshintrc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jsdoc/.npmignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jsdoc/.travis.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/1_Application.js.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/2_Presentation.js.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/3_CompositePresentation.js.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/4_TransitionManager.js.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/5_Widget.js.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/AbstractionProxy.js.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/scripts/prettify/Apache-License-2.0.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jsdoc/Apache_License_2.0.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/Assert.js.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jsdoc/CONTRIBUTING.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/ComponentRepository.js.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/CompositeModel.js.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/Control.js.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/EventBuilder.js.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jsdoc/Gruntfile.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/HttpClient.js.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/Id.js.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jsdoc/LICENSE.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/Maps.js.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jsdoc/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jsdoc/changes.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jsdoc/cli.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/global.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/styles/jsdoc-default.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jsdoc/jsdoc.cmd" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jsdoc/jsdoc.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jsdoc/jsdoc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/scripts/prettify/lang-css.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/scripts/linenumber.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jsdoc/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/styles/prettify-jsdoc.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/styles/prettify-tomorrow.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/scripts/prettify/prettify.js" />
+      <change type="MOVED" beforePath="C:\Users\zyake\Documents\GitHub\simple-pac\src\js\external\qunit-1.13.0.js" afterPath="$PROJECT_DIR$/src/test/external/qunit-1.13.0.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/view/1_Application.js" afterPath="$PROJECT_DIR$/src/js/view/1_Application.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/view/2_Presentation.js" afterPath="$PROJECT_DIR$/src/js/view/2_Presentation.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/view/5_Widget.js" afterPath="$PROJECT_DIR$/src/js/view/5_Widget.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/component/AbstractionProxy.js" afterPath="$PROJECT_DIR$/src/js/component/AbstractionProxy.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/component/ComponentRepository.js" afterPath="$PROJECT_DIR$/src/js/component/ComponentRepository.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/ComponentRepositoryTest.html" afterPath="$PROJECT_DIR$/src/test/ComponentRepositoryTest.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/common/EventBuilder.js" afterPath="$PROJECT_DIR$/src/js/common/EventBuilder.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/EventBuilderTest.html" afterPath="$PROJECT_DIR$/src/test/EventBuilderTest.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/HttpClientTest.html" afterPath="$PROJECT_DIR$/src/test/HttpClientTest.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/common/Id.js" afterPath="$PROJECT_DIR$/src/js/common/Id.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/IdTest.html" afterPath="$PROJECT_DIR$/src/test/IdTest.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/IntegrationTest.html" afterPath="$PROJECT_DIR$/src/test/IntegrationTest.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/TransitionManagerTest.html" afterPath="$PROJECT_DIR$/src/test/TransitionManagerTest.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.properties" afterPath="$PROJECT_DIR$/build.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.xml" afterPath="$PROJECT_DIR$/build.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
@@ -91,31 +128,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="header.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/js/header.js">
+      <file leaf-file-name="5_Widget.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/js/view/5_Widget.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.28653294" vertical-offset="0" max-vertical-offset="698">
-              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PAC.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dist/PAC.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="28340">
-              <caret line="7" column="3" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="build.properties" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/build.properties">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="220">
-              <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3480">
+              <caret line="17" column="15" selection-start-line="17" selection-start-column="15" selection-end-line="17" selection-end-column="15" />
               <folding />
             </state>
           </provider>
@@ -124,23 +141,40 @@
       <file leaf-file-name="build.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/build.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1220">
-              <caret line="25" column="34" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="34" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="672" max-vertical-offset="1320">
+              <caret line="57" column="36" selection-start-line="57" selection-start-column="36" selection-end-line="57" selection-end-column="36" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LICENCE" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/LICENCE">
+      <file leaf-file-name="jsdoc" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/jsdoc/jsdoc">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="560">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="45" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="780">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
-          <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
-            <state />
+        </entry>
+      </file>
+      <file leaf-file-name="jsdoc.cmd" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/jsdoc/jsdoc.cmd">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-11.2" vertical-offset="0" max-vertical-offset="640">
+              <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="build.properties" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/build.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.15432099" vertical-offset="0" max-vertical-offset="648">
+              <caret line="5" column="16" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
+              <folding />
+            </state>
           </provider>
         </entry>
       </file>
@@ -180,25 +214,26 @@
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/dist/PAC.js" />
         <option value="$PROJECT_DIR$/src/js/common/Assert.js" />
-        <option value="$PROJECT_DIR$/src/js/common/EventBuilder.js" />
         <option value="$PROJECT_DIR$/src/js/common/HttpClient.js" />
-        <option value="$PROJECT_DIR$/src/js/common/Id.js" />
         <option value="$PROJECT_DIR$/src/js/common/Maps.js" />
-        <option value="$PROJECT_DIR$/src/js/component/AbstractionProxy.js" />
-        <option value="$PROJECT_DIR$/src/js/component/ComponentRepository.js" />
         <option value="$PROJECT_DIR$/src/js/component/CompositeModel.js" />
         <option value="$PROJECT_DIR$/src/js/component/Control.js" />
-        <option value="$PROJECT_DIR$/src/js/view/1_Application.js" />
-        <option value="$PROJECT_DIR$/src/js/view/2_Presentation.js" />
         <option value="$PROJECT_DIR$/src/js/view/3_CompositePresentation.js" />
         <option value="$PROJECT_DIR$/src/js/view/4_TransitionManager.js" />
-        <option value="$PROJECT_DIR$/src/js/view/5_Widget.js" />
-        <option value="$PROJECT_DIR$/build.properties" />
         <option value="$PROJECT_DIR$/src/header.js" />
         <option value="$PROJECT_DIR$/src/test/IdTest.html" />
         <option value="$PROJECT_DIR$/src/test/HttpClientTest.html" />
-        <option value="$PROJECT_DIR$/build.xml" />
         <option value="$PROJECT_DIR$/src/js/header.js" />
+        <option value="$PROJECT_DIR$/src/js/common/EventBuilder.js" />
+        <option value="$PROJECT_DIR$/src/js/common/Id.js" />
+        <option value="$PROJECT_DIR$/src/js/component/AbstractionProxy.js" />
+        <option value="$PROJECT_DIR$/src/js/component/ComponentRepository.js" />
+        <option value="$PROJECT_DIR$/src/js/view/1_Application.js" />
+        <option value="$PROJECT_DIR$/src/js/view/2_Presentation.js" />
+        <option value="$PROJECT_DIR$/src/js/view/5_Widget.js" />
+        <option value="$PROJECT_DIR$/lib/jsdoc/jsdoc.cmd" />
+        <option value="$PROJECT_DIR$/build.xml" />
+        <option value="$PROJECT_DIR$/build.properties" />
       </list>
     </option>
   </component>
@@ -210,8 +245,10 @@
     <treeState />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="width" value="1280" />
-    <option name="height" value="720" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1296" />
+    <option name="height" value="736" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -322,39 +359,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="my_lib_js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="simple-pac" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="my_lib_js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="simple-pac" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dist" />
+              <option name="myItemId" value="doc" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -394,11 +399,11 @@
       <recent name="C:\Users\zyake\Documents\GitHub\my_lib_js\src\template" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\zyake\Documents\GitHub\simple-pac\lib\jsdoc" />
       <recent name="C:\Users\zyake\Documents\GitHub\simple-pac\src\test" />
       <recent name="C:\Users\zyake\Documents\GitHub\simple-pac\src" />
       <recent name="C:\Users\zyake\Documents\GitHub\simple-pac\src\js" />
       <recent name="C:\Users\zyake\Documents\GitHub\simple-pac\lib" />
-      <recent name="C:\Users\zyake\Documents\GitHub\simple-pac\doc\img" />
     </key>
   </component>
   <component name="RunManager">
@@ -665,7 +670,7 @@
       <workItem from="1397322382732" duration="49000" />
       <workItem from="1397391053887" duration="4751000" />
       <workItem from="1397469424483" duration="134000" />
-      <workItem from="1397573710776" duration="1916000" />
+      <workItem from="1397573710776" duration="5646000" />
     </task>
     <task id="LOCAL-00001" summary="directly transit to hash url when the URL has already had a hash.">
       <created>1396099222600</created>
@@ -743,11 +748,15 @@
       <created>1397393410734</created>
       <updated>1397393410734</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="- Add header.js&#10;- Move test resources">
+      <created>1397655288966</created>
+      <updated>1397655288966</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="106030000" />
+    <option name="totallyTimeSpent" value="109760000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -770,30 +779,30 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1280" height="720" extended-state="6" />
+    <frame x="-8" y="-8" width="1296" height="736" extended-state="6" />
     <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32980332" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31759655" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3174114" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4423963" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.196875" sideWeight="0.5379113" order="4" side_tool="true" content_ui="tabs" x="-54" y="202" width="387" height="653" />
+      <window_info id="Ant Build" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.196875" sideWeight="0.53775036" order="4" side_tool="true" content_ui="tabs" x="-54" y="202" width="387" height="653" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31490016" sideWeight="0.5003879" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20469256" sideWeight="0.31904763" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32941177" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3051576" sideWeight="0.4996121" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30401236" sideWeight="0.4996121" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32980332" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24838188" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.18986385" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="left" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20469256" sideWeight="0.31904763" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.196875" sideWeight="0.4620887" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.196875" sideWeight="0.4622496" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" x="96" y="96" width="1174" height="576" />
       <window_info id="Statistic" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
@@ -865,7 +874,8 @@
     <MESSAGE value="- Add LICENCE!" />
     <MESSAGE value="- Remove unnecessary functions&#10;- Remove redundant codes&#10;- Improve Invulnerability&#10;" />
     <MESSAGE value="- Adopt Strict Mode&#10;- Fix some bugs" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Adopt Strict Mode&#10;- Fix some bugs" />
+    <MESSAGE value="- Add header.js&#10;- Move test resources" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Add header.js&#10;- Move test resources" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -886,13 +896,6 @@
     </buildFile>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/test/resources/Test.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="108">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/js/component/AbstractionProxy.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1998">
@@ -1012,7 +1015,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/external/qunit-1.13.0.js">
+    <entry file="file://$PROJECT_DIR$/src/test/external/qunit-1.13.0.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="23926" max-vertical-offset="39726">
           <caret line="1466" column="4" selection-start-line="1466" selection-start-column="4" selection-end-line="1466" selection-end-column="4" />
@@ -1075,117 +1078,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/common/Assert.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="540">
-          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/common/EventBuilder.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2320" max-vertical-offset="2988">
-          <caret line="160" column="0" selection-start-line="160" selection-start-column="0" selection-end-line="160" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/common/Id.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2032" max-vertical-offset="2700">
-          <caret line="144" column="0" selection-start-line="144" selection-start-column="0" selection-end-line="144" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/component/CompositeModel.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="106" max-vertical-offset="774">
-          <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/component/Control.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="826" max-vertical-offset="1494">
-          <caret line="77" column="0" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/view/1_Application.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1060" max-vertical-offset="1728">
-          <caret line="90" column="0" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/view/3_CompositePresentation.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="160" max-vertical-offset="828">
-          <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/view/4_TransitionManager.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1109" max-vertical-offset="1764">
-          <caret line="92" column="0" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/view/5_Widget.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3096">
-          <caret line="13" column="22" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/common/Maps.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="468">
-          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/component/ComponentRepository.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3564">
-          <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/common/HttpClient.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="16" max-vertical-offset="684">
-          <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/component/AbstractionProxy.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3258">
-          <caret line="92" column="61" selection-start-line="92" selection-start-column="61" selection-end-line="92" selection-end-column="61" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/view/2_Presentation.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3160">
-          <caret line="12" column="25" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/IdTest.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="1500">
@@ -1207,8 +1099,8 @@
         <state vertical-scroll-proportion="-23.310345" vertical-offset="544" max-vertical-offset="1440">
           <caret line="61" column="32" selection-start-line="61" selection-start-column="32" selection-end-line="61" selection-end-column="32" />
           <folding>
-            <marker date="1397655035717" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1397655035717" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1397657879520" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1397657879520" expanded="false" signature="-1:-1" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -1248,26 +1140,154 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/build.properties">
+    <entry file="file://$PROJECT_DIR$/src/js/header.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="220">
-          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="320">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/common/Assert.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="600">
+          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/common/EventBuilder.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3340">
+          <caret line="9" column="47" selection-start-line="9" selection-start-column="47" selection-end-line="9" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/common/HttpClient.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="16" max-vertical-offset="684">
+          <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/common/Id.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3020">
+          <caret line="13" column="2" selection-start-line="13" selection-start-column="2" selection-end-line="13" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/common/Maps.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="468">
+          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/component/AbstractionProxy.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="600" max-vertical-offset="3660">
+          <caret line="51" column="6" selection-start-line="51" selection-start-column="6" selection-end-line="51" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/component/ComponentRepository.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="4020">
+          <caret line="37" column="2" selection-start-line="37" selection-start-column="2" selection-end-line="37" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/component/CompositeModel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="106" max-vertical-offset="774">
+          <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/component/Control.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="826" max-vertical-offset="1494">
+          <caret line="77" column="0" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/view/1_Application.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="360" max-vertical-offset="2000">
+          <caret line="39" column="5" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/view/2_Presentation.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="420" max-vertical-offset="3280">
+          <caret line="46" column="6" selection-start-line="46" selection-start-column="6" selection-end-line="46" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/view/3_CompositePresentation.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="160" max-vertical-offset="828">
+          <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/view/4_TransitionManager.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1109" max-vertical-offset="1764">
+          <caret line="92" column="0" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/jsdoc/jsdoc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="780">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/jsdoc/jsdoc.cmd">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.2" vertical-offset="0" max-vertical-offset="640">
+          <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/view/5_Widget.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3480">
+          <caret line="17" column="15" selection-start-line="17" selection-start-column="15" selection-end-line="17" selection-end-column="15" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/build.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="342" max-vertical-offset="1220">
-          <caret line="25" column="34" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="34" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="672" max-vertical-offset="1320">
+          <caret line="57" column="36" selection-start-line="57" selection-start-column="36" selection-end-line="57" selection-end-column="36" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/header.js">
+    <entry file="file://$PROJECT_DIR$/build.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.28653294" vertical-offset="0" max-vertical-offset="698">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.15432099" vertical-offset="0" max-vertical-offset="648">
+          <caret line="5" column="16" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
           <folding />
         </state>
       </provider>

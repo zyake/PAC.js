@@ -6,6 +6,7 @@
         <antcall target="run-uts"/>
         <antcall target="concat-js"/>
         <antcall target="compress-js"/>
+        <antcall target="generate-jsdoc"/>
     </target>
 
     <target name="clean">
@@ -51,5 +52,9 @@
 
     <target name="compress-js">
         <exec command="java -jar ${yuicompressor.path} dist/PAC.js -o dist/PAC-min.js"/>
+    </target>
+
+    <target name="generate-jsdoc">
+        <exec command="${jsdoc.path} -d doc -r src/js"/>
     </target>
 </project>
