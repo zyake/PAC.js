@@ -1,41 +1,282 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/js/view/2_Presentation.js" line="22" mnemonic="2" />
-    <bookmark url="file://$PROJECT_DIR$/src/js/component/Control.js" line="4" mnemonic="3" />
-  </component>
   <component name="ChangeListManager">
     <list default="true" id="39257a0f-548a-4da6-87e0-5429559af94c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/1_Application.js.html" afterPath="$PROJECT_DIR$/doc/1_Application.js.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/view/1_Application.js" afterPath="$PROJECT_DIR$/src/js/view/1_Application.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/2_Presentation.js.html" afterPath="$PROJECT_DIR$/doc/2_Presentation.js.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/view/2_Presentation.js" afterPath="$PROJECT_DIR$/src/js/view/2_Presentation.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/3_CompositePresentation.js.html" afterPath="$PROJECT_DIR$/doc/3_CompositePresentation.js.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/view/3_CompositePresentation.js" afterPath="$PROJECT_DIR$/src/js/view/3_CompositePresentation.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/4_TransitionManager.js.html" afterPath="$PROJECT_DIR$/doc/4_TransitionManager.js.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/view/4_TransitionManager.js" afterPath="$PROJECT_DIR$/src/js/view/4_TransitionManager.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/5_Widget.js.html" afterPath="$PROJECT_DIR$/doc/5_Widget.js.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/view/5_Widget.js" afterPath="$PROJECT_DIR$/src/js/view/5_Widget.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/AbstractionProxy.js.html" afterPath="$PROJECT_DIR$/doc/AbstractionProxy.js.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/component/AbstractionProxy.js" afterPath="$PROJECT_DIR$/src/js/component/AbstractionProxy.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/Assert.js.html" afterPath="$PROJECT_DIR$/doc/Assert.js.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/common/Assert.js" afterPath="$PROJECT_DIR$/src/js/common/Assert.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/ComponentRepository.js.html" afterPath="$PROJECT_DIR$/doc/ComponentRepository.js.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/component/ComponentRepository.js" afterPath="$PROJECT_DIR$/src/js/component/ComponentRepository.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/CompositeModel.js.html" afterPath="$PROJECT_DIR$/doc/CompositeModel.js.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/component/CompositeModel.js" afterPath="$PROJECT_DIR$/src/js/component/CompositeModel.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/Control.js.html" afterPath="$PROJECT_DIR$/doc/Control.js.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/component/Control.js" afterPath="$PROJECT_DIR$/src/js/component/Control.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/EventBuilder.js.html" afterPath="$PROJECT_DIR$/doc/EventBuilder.js.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/common/EventBuilder.js" afterPath="$PROJECT_DIR$/src/js/common/EventBuilder.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/HttpClient.js.html" afterPath="$PROJECT_DIR$/doc/HttpClient.js.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/common/HttpClient.js" afterPath="$PROJECT_DIR$/src/js/common/HttpClient.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/Id.js.html" afterPath="$PROJECT_DIR$/doc/Id.js.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/Maps.js.html" afterPath="$PROJECT_DIR$/doc/Maps.js.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/common/Maps.js" afterPath="$PROJECT_DIR$/src/js/common/Maps.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/global.html" afterPath="$PROJECT_DIR$/doc/global.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/index.html" afterPath="$PROJECT_DIR$/doc/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\.gitattributes" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\.idea\.name" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\.idea\ant.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\.idea\compiler.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\.idea\copyright\profiles_settings.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\.idea\encodings.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\.idea\gradle.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\.idea\misc.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\.idea\modules.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\.idea\scopes\scope_settings.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\.idea\uiDesigner.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\.idea\vcs.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\.idea\workspace.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\LICENCE" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\README.md" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\build.properties" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\build.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\jsdoc\.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\jsdoc\.jshintrc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\jsdoc\.npmignore" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\jsdoc\.travis.yml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\jsdoc\Apache_License_2.0.txt" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\jsdoc\CONTRIBUTING.md" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\jsdoc\Gruntfile.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\jsdoc\LICENSE.md" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\jsdoc\README.md" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\jsdoc\changes.md" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\jsdoc\cli.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\jsdoc\jsdoc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\jsdoc\jsdoc.cmd" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\jsdoc\jsdoc.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\jsdoc\package.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\linux\ChangeLog" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\linux\LICENSE.BSD" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\linux\README.md" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\linux\examples\arguments.coffee" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\linux\examples\arguments.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\linux\examples\child_process-examples.coffee" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\linux\examples\child_process-examples.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\linux\examples\colorwheel.coffee" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\linux\examples\colorwheel.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\linux\examples\countdown.coffee" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\linux\examples\countdown.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\linux\examples\detectsniff.coffee" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\linux\examples\detectsniff.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\linux\examples\direction.coffee" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\linux\examples\direction.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\linux\examples\echoToFile.coffee" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\linux\examples\echoToFile.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\linux\examples\features.coffee" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\linux\examples\features.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\linux\examples\fibo.coffee" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\linux\examples\fibo.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\linux\examples\follow.coffee" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\linux\examples\follow.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\linux\examples\hello.coffee" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\linux\examples\hello.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\linux\examples\imagebin.coffee" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\linux\examples\imagebin.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\linux\examples\injectme.coffee" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\linux\examples\injectme.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\linux\examples\ipgeocode.coffee" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\linux\examples\ipgeocode.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\linux\examples\loadspeed.coffee" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\linux\examples\loadspeed.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\linux\examples\loadurlwithoutcss.coffee" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\linux\examples\loadurlwithoutcss.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\linux\examples\modernizr.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\linux\examples\module.coffee" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\linux\examples\module.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\linux\examples\movies.coffee" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\linux\examples\movies.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\linux\examples\netlog.coffee" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\linux\examples\netlog.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\linux\examples\netsniff.coffee" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\linux\examples\netsniff.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\linux\examples\outputEncoding.coffee" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\linux\examples\outputEncoding.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\linux\examples\page_events.coffee" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\linux\examples\page_events.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\linux\examples\pagecallback.coffee" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\linux\examples\pagecallback.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\linux\examples\phantomwebintro.coffee" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\linux\examples\phantomwebintro.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\linux\examples\pizza.coffee" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\linux\examples\pizza.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\linux\examples\post.coffee" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\linux\examples\post.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\linux\examples\postserver.coffee" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\linux\examples\postserver.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\linux\examples\printenv.coffee" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\linux\examples\printenv.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\linux\examples\printheaderfooter.coffee" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\linux\examples\printheaderfooter.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\linux\examples\printmargins.coffee" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\linux\examples\printmargins.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\linux\examples\rasterize.coffee" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\linux\examples\rasterize.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\linux\examples\render_multi_url.coffee" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\linux\examples\render_multi_url.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\linux\examples\run-jasmine.coffee" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\linux\examples\run-jasmine.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\linux\examples\run-qunit.coffee" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\linux\examples\run-qunit.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\linux\examples\scandir.coffee" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\linux\examples\scandir.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\linux\examples\seasonfood.coffee" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\linux\examples\seasonfood.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\linux\examples\server.coffee" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\linux\examples\server.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\linux\examples\serverkeepalive.coffee" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\linux\examples\serverkeepalive.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\linux\examples\simpleserver.coffee" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\linux\examples\simpleserver.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\linux\examples\sleepsort.coffee" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\linux\examples\sleepsort.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\linux\examples\stdin-stdout-stderr.coffee" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\linux\examples\stdin-stdout-stderr.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\linux\examples\technews.coffee" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\linux\examples\technews.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\linux\examples\tweets.coffee" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\linux\examples\tweets.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\linux\examples\universe.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\linux\examples\unrandomize.coffee" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\linux\examples\unrandomize.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\linux\examples\useragent.coffee" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\linux\examples\useragent.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\linux\examples\version.coffee" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\linux\examples\version.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\linux\examples\waitfor.coffee" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\linux\examples\waitfor.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\linux\examples\walk_through_frames.coffee" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\linux\examples\walk_through_frames.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\linux\examples\weather.coffee" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\linux\examples\weather.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\linux\phantomjs" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\linux\third-party.txt" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\windows\ChangeLog" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\windows\LICENSE.BSD" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\windows\README.md" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\windows\examples\arguments.coffee" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\windows\examples\arguments.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\windows\examples\child_process-examples.coffee" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\windows\examples\child_process-examples.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\windows\examples\colorwheel.coffee" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\windows\examples\colorwheel.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\windows\examples\countdown.coffee" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\windows\examples\countdown.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\windows\examples\detectsniff.coffee" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\windows\examples\detectsniff.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\windows\examples\direction.coffee" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\windows\examples\direction.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\windows\examples\echoToFile.coffee" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\windows\examples\echoToFile.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\windows\examples\features.coffee" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\windows\examples\features.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\windows\examples\fibo.coffee" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\windows\examples\fibo.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\windows\examples\follow.coffee" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\windows\examples\follow.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\windows\examples\hello.coffee" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\windows\examples\hello.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\windows\examples\imagebin.coffee" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\windows\examples\imagebin.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\windows\examples\injectme.coffee" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\windows\examples\injectme.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\windows\examples\ipgeocode.coffee" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\windows\examples\ipgeocode.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\windows\examples\loadspeed.coffee" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\windows\examples\loadspeed.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\windows\examples\loadurlwithoutcss.coffee" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\windows\examples\loadurlwithoutcss.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\windows\examples\modernizr.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\windows\examples\module.coffee" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\windows\examples\module.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\windows\examples\movies.coffee" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\windows\examples\movies.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\windows\examples\netlog.coffee" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\windows\examples\netlog.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\windows\examples\netsniff.coffee" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\windows\examples\netsniff.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\windows\examples\outputEncoding.coffee" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\windows\examples\outputEncoding.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\windows\examples\page_events.coffee" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\windows\examples\page_events.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\windows\examples\pagecallback.coffee" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\windows\examples\pagecallback.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\windows\examples\phantomwebintro.coffee" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\windows\examples\phantomwebintro.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\windows\examples\pizza.coffee" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\windows\examples\pizza.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\windows\examples\post.coffee" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\windows\examples\post.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\windows\examples\postserver.coffee" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\windows\examples\postserver.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\windows\examples\printenv.coffee" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\windows\examples\printenv.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\windows\examples\printheaderfooter.coffee" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\windows\examples\printheaderfooter.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\windows\examples\printmargins.coffee" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\windows\examples\printmargins.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\windows\examples\rasterize.coffee" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\windows\examples\rasterize.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\windows\examples\render_multi_url.coffee" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\windows\examples\render_multi_url.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\windows\examples\run-jasmine.coffee" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\windows\examples\run-jasmine.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\windows\examples\run-qunit.coffee" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\windows\examples\run-qunit.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\windows\examples\scandir.coffee" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\windows\examples\scandir.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\windows\examples\seasonfood.coffee" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\windows\examples\seasonfood.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\windows\examples\server.coffee" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\windows\examples\server.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\windows\examples\serverkeepalive.coffee" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\windows\examples\serverkeepalive.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\windows\examples\simpleserver.coffee" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\windows\examples\simpleserver.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\windows\examples\sleepsort.coffee" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\windows\examples\sleepsort.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\windows\examples\stdin-stdout-stderr.coffee" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\windows\examples\stdin-stdout-stderr.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\windows\examples\technews.coffee" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\windows\examples\technews.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\windows\examples\tweets.coffee" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\windows\examples\tweets.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\windows\examples\universe.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\windows\examples\unrandomize.coffee" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\windows\examples\unrandomize.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\windows\examples\useragent.coffee" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\windows\examples\useragent.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\windows\examples\version.coffee" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\windows\examples\version.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\windows\examples\waitfor.coffee" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\windows\examples\waitfor.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\windows\examples\walk_through_frames.coffee" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\windows\examples\walk_through_frames.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\windows\examples\weather.coffee" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\windows\examples\weather.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\windows\phantomjs.exe" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\phantomjs\windows\third-party.txt" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\lib\yuicompressor-2.4.8.jar" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\my_lib_js.iml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\src\js\common\Assert.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\src\js\common\EventBuilder.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\src\js\common\HttpClient.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\src\js\common\Id.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\src\js\common\Maps.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\src\js\component\AbstractionProxy.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\src\js\component\ComponentRepository.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\src\js\component\CompositeModel.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\src\js\component\Control.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\src\js\header.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\src\js\view\1_Application.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\src\js\view\2_Presentation.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\src\js\view\3_CompositePresentation.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\src\js\view\4_TransitionManager.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\src\js\view\5_Widget.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\src\test\ComponentRepositoryTest.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\src\test\EventBuilderTest.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\src\test\HttpClientTest.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\src\test\IdTest.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\src\test\IntegrationTest.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\src\test\QUnitCommon.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\src\test\TransitionManagerTest.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\src\test\css\qunit-1.13.0.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\src\test\external\qunit-1.13.0.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\src\test\resources\Test.txt" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\src\test\resources\contents.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\src\test\template\form.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\src\test\template\search.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\src\test\template\widget1.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\zyake\IdeaProjects\PAC.js\src\test\template\widget2.html" afterPath="" />
     </list>
     <ignored path="my_lib_js.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -104,51 +345,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="3_CompositePresentation.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/js/view/3_CompositePresentation.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="642" max-vertical-offset="1480">
-              <caret line="57" column="62" selection-start-line="57" selection-start-column="62" selection-end-line="57" selection-end-column="62" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ComponentRepository.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/js/component/ComponentRepository.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="295" max-vertical-offset="4760">
-              <caret line="41" column="3" selection-start-line="41" selection-start-column="3" selection-end-line="41" selection-end-column="3" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="4_TransitionManager.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/js/view/4_TransitionManager.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1895" max-vertical-offset="2660">
-              <caret line="127" column="0" selection-start-line="127" selection-start-column="0" selection-end-line="127" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="5_Widget.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/js/view/5_Widget.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.94160587" vertical-offset="3915" max-vertical-offset="4680">
-              <caret line="228" column="0" selection-start-line="228" selection-start-column="0" selection-end-line="228" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/doc/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.3793104" vertical-offset="20" max-vertical-offset="1360">
-              <caret line="3" column="26" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
+            <state vertical-scroll-proportion="0.45731708" vertical-offset="20" max-vertical-offset="1360">
+              <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -163,6 +364,11 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
   </component>
   <component name="GitLogSettings">
     <option name="myDateState">
@@ -306,6 +512,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -320,89 +527,12 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="simple-pac" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="my_lib_js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="simple-pac" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="my_lib_js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="simple-pac" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="my_lib_js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="simple-pac" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="view" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="my_lib_js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="simple-pac" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="component" />
+              <option name="myItemId" value="PAC.js" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -713,6 +843,7 @@
       <workItem from="1397971148595" duration="200000" />
       <workItem from="1397971461772" duration="5281000" />
       <workItem from="1397976883633" duration="4339000" />
+      <workItem from="1397983517499" duration="149000" />
     </task>
     <task id="LOCAL-00001" summary="directly transit to hash url when the URL has already had a hash.">
       <created>1396099222600</created>
@@ -802,7 +933,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="125717000" />
+    <option name="totallyTimeSpent" value="125866000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -833,9 +964,8 @@
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31616595" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.44206008" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19609375" sideWeight="0.5064378" order="4" side_tool="true" content_ui="tabs" x="-54" y="202" width="387" height="653" />
+      <window_info id="Ant Build" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19609375" sideWeight="0.5057307" order="4" side_tool="true" content_ui="tabs" x="-54" y="202" width="387" height="653" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31490016" sideWeight="0.5003879" order="8" side_tool="true" content_ui="tabs" />
@@ -848,7 +978,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.18986385" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="left" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20469256" sideWeight="0.31904763" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19609375" sideWeight="0.49356222" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19609375" sideWeight="0.49283668" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" x="96" y="96" width="1174" height="576" />
       <window_info id="Statistic" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
@@ -856,17 +986,18 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32980332" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.44206008" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
-      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" x="96" y="96" width="1174" height="576" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Statistic" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" x="96" y="96" width="1174" height="576" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32980332" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Statistic" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19765624" sideWeight="0.53763443" order="4" side_tool="true" content_ui="tabs" x="-54" y="202" width="387" height="653" />
-      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31490016" sideWeight="0.5003879" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32941177" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32980332" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -885,8 +1016,8 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20469256" sideWeight="0.31904763" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30721965" sideWeight="0.4996121" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24838188" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="left" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20469256" sideWeight="0.31904763" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.18986385" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="left" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20469256" sideWeight="0.31904763" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
@@ -932,112 +1063,13 @@
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
-    <buildFile url="file://$PROJECT_DIR$/build.xml">
-      <targetFilters>
-        <filter targetName="main" isVisible="false" />
-        <filter targetName="clean" isVisible="false" />
-        <filter targetName="run-uts" isVisible="false" />
-        <filter targetName="concat-js" isVisible="false" />
-      </targetFilters>
-      <expanded value="true" />
-    </buildFile>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/js/component/AbstractionProxy.js">
+    <entry file="file://$PROJECT_DIR$/doc/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1887">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/view/1_Application.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="301" max-vertical-offset="884">
-          <caret line="43" column="9" selection-start-line="43" selection-start-column="9" selection-end-line="43" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/common/HttpClient.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/component/Control.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="850">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/contents.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="102">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/Test.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="102">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/component/AbstractionProxy.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1887">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/common/HttpClient.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/component/Control.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="850">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/Test.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../solr_ui/solr_ui.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="1974">
-          <caret line="5" column="20" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/external/qunit-1.13.0.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="23926" max-vertical-offset="39726">
-          <caret line="1466" column="4" selection-start-line="1466" selection-start-column="4" selection-end-line="1466" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/EventBuilderTest.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-26.0" vertical-offset="540" max-vertical-offset="1422">
-          <caret line="69" column="20" selection-start-line="69" selection-start-column="20" selection-end-line="69" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/css/qunit-1.13.0.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4518">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="20" max-vertical-offset="1360">
+          <caret line="3" column="26" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1062,132 +1094,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
-      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.068966" vertical-offset="0" max-vertical-offset="342">
-          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/IntegrationTest.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-16.407408" vertical-offset="169" max-vertical-offset="1332">
-          <caret line="34" column="25" selection-start-line="34" selection-start-column="25" selection-end-line="34" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/IdTest.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="1500">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/ComponentRepositoryTest.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-66.89655" vertical-offset="0" max-vertical-offset="2140">
-          <caret line="97" column="7" selection-start-line="97" selection-start-column="7" selection-end-line="97" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/TransitionManagerTest.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-23.310345" vertical-offset="544" max-vertical-offset="1440">
-          <caret line="61" column="32" selection-start-line="61" selection-start-column="32" selection-end-line="61" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/contents.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="120">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/HttpClientTest.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.206897" vertical-offset="151" max-vertical-offset="820">
-          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LICENCE">
-      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="560">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dist/PAC.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="28320">
-          <caret line="7" column="3" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/jsdoc/jsdoc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="780">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/jsdoc/jsdoc.cmd">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.2" vertical-offset="0" max-vertical-offset="640">
-          <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="220">
-          <caret line="5" column="32" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1885" max-vertical-offset="4420">
-          <caret line="192" column="5" selection-start-line="192" selection-start-column="5" selection-end-line="192" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitattributes">
-      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="560">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="672" max-vertical-offset="1320">
-          <caret line="57" column="36" selection-start-line="57" selection-start-column="36" selection-end-line="57" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/jsdoc/conf.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="380" max-vertical-offset="520">
-          <caret line="19" column="5" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/doc/global.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-13.310345" vertical-offset="3914" max-vertical-offset="22920">
@@ -1202,125 +1108,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/common/Assert.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="295" max-vertical-offset="980">
-          <caret line="17" column="6" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/common/Id.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3020">
-          <caret line="13" column="2" selection-start-line="13" selection-start-column="2" selection-end-line="13" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/header.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="320">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/common/HttpClient.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="415" max-vertical-offset="1260">
-          <caret line="47" column="89" selection-start-line="47" selection-start-column="89" selection-end-line="47" selection-end-column="89" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/common/EventBuilder.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2235" max-vertical-offset="4260">
-          <caret line="144" column="22" selection-start-line="144" selection-start-column="22" selection-end-line="144" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/common/Maps.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="920">
-          <caret line="17" column="6" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/component/Control.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1975" max-vertical-offset="2740">
-          <caret line="131" column="0" selection-start-line="131" selection-start-column="0" selection-end-line="131" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/view/1_Application.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1715" max-vertical-offset="2480">
-          <caret line="113" column="49" selection-start-line="113" selection-start-column="49" selection-end-line="113" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/component/AbstractionProxy.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="3352" max-vertical-offset="5220">
-          <caret line="180" column="1" selection-start-line="180" selection-start-column="1" selection-end-line="180" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/view/2_Presentation.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="4075" max-vertical-offset="4840">
-          <caret line="228" column="6" selection-start-line="228" selection-start-column="6" selection-end-line="228" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/component/CompositeModel.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1280">
-          <caret line="14" column="3" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/view/3_CompositePresentation.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="642" max-vertical-offset="1480">
-          <caret line="57" column="62" selection-start-line="57" selection-start-column="62" selection-end-line="57" selection-end-column="62" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/view/4_TransitionManager.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1895" max-vertical-offset="2660">
-          <caret line="127" column="0" selection-start-line="127" selection-start-column="0" selection-end-line="127" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/doc/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.3793104" vertical-offset="20" max-vertical-offset="1360">
-          <caret line="3" column="26" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/component/ComponentRepository.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="295" max-vertical-offset="4760">
-          <caret line="41" column="3" selection-start-line="41" selection-start-column="3" selection-end-line="41" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/view/5_Widget.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.94160587" vertical-offset="3915" max-vertical-offset="4680">
-          <caret line="228" column="0" selection-start-line="228" selection-start-column="0" selection-end-line="228" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.45731708" vertical-offset="20" max-vertical-offset="1360">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
           <folding />
         </state>
       </provider>
