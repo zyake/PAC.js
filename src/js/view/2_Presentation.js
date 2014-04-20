@@ -2,6 +2,7 @@
 /**
  * A html visual component.
  *
+ * # Basics
  * It accommodates all of html elements and some states
  * and acts as both View and Control in MVC frameworks.
  * It also provides some useful methods to manipulate DOM elements.
@@ -24,6 +25,7 @@
  * this.event().onAbstraction().change(this.receive); // register a callback method.
  * ```
  *
+ * # How to use
  * Because Presentation has no rendering logic,
  * you must extend it and implement own rendering logic.
  * At least, you should override the "doInitialize" method and
@@ -48,6 +50,13 @@
  */
 this.Presentation = {
 
+    /**
+     * Create a Presentation object.
+     *
+     * @param arg The argument. The properties of the argument are following.
+     * - rootQuery -> The root CSS selector query to obtain the root HTML element of the Presentation object.
+     * - id -> The object id.
+     */
     create : function (arg) {
         Assert.notNullAll(this, [
             [ arg.rootQuery, "arg.rootQuery" ],
@@ -71,6 +80,12 @@ this.Presentation = {
         return presentation;
     },
 
+    /**
+     * Initialize the object.
+     * This method will be called from a control.
+     *
+     * @param control The control object.
+     */
     initialize : function (control) {
         Assert.notNull(this, control, "control");
         this.control = control;
@@ -80,10 +95,17 @@ this.Presentation = {
 
     /**
      * For internal usage.
+     * You should override this method in inherited objects.
      */
     doInitialize : function () {
     },
 
+    /**
+     * Get a HTML element by id form the root HTML element of the Presentation object.
+     *
+     * @param id The id attribute of the root HTML element.
+     * @returns {HTMLElement}
+     */
     getById : function (id) {
         Assert.notNull(this, id, "id");
         var elemById = this.elem.getElementById(id);
@@ -91,6 +113,13 @@ this.Presentation = {
         return elemById;
     },
 
+    /**
+     * Query a HTML element form the root HTML element of the Presentation object.
+     *
+     * @param query The CSS Selector.
+     * @param target The target HTML element.
+     * @returns {Node}
+     */
     query : function (query, target /* can be null! */) {
         Assert.notNull(this, query, "query");
         target == null && (target = this.elem);
@@ -99,6 +128,13 @@ this.Presentation = {
         return queriedElem;
     },
 
+    /**
+     * Query HTML elements form the root HTML element of the Presentation object.
+     *
+     * @param query The CSS Selector.
+     * @param target The target HTML element.
+     * @returns {Node}
+     */
     queryAll : function (query, target /* can be null */) {
         Assert.notNull(this, query, "query");
         target == null && (target = this.elem);
@@ -107,6 +143,12 @@ this.Presentation = {
         return queriedElem;
     },
 
+    /**
+     * Iterate the HTMLNodeCollection and call the callback.
+     *
+     * @param nodeList The HTMLNodeCollection.
+     * @param func The callback.
+     */
     forEachNode : function (nodeList, func) {
         Assert.notNullAll(this, [
             [ nodeList, "nodeList" ],
@@ -115,6 +157,13 @@ this.Presentation = {
         Array.prototype.slice.call(nodeList).forEach(func, this);
     },
 
+    /**
+     * Bind a callback to a DOM event by event name.
+     *
+     * @param elem The target HTML element.
+     * @param event The event name.
+     * @param callback  The event callback.
+     */
     on : function (elem, event, callback) {
         Assert.notNullAll(this, [
             [ elem, "elem" ],
@@ -127,19 +176,48 @@ this.Presentation = {
         });
     },
 
+    /**
+     * Bind a callback to a DOM event by CSS selector.
+     *
+     * @param query The CSS selector query to obtain a HTML element.
+     * @param event The event name.
+     * @param callback The event callback.
+     */
     onQuery: function(query, event, callback) {
         var elem = this.query(query);
         this.on(elem, event, callback);
     },
 
+    /**
+     * Get the EventBuilder for this object.
+     * You can use this method for custom logic.
+     *
+     * @returns {*|presentation.eventBuilder|c.eventBuilder|proxy.eventBuilder|proxy|eventBuilder}
+     */
     event : function () {
         return this.eventBuilder;
     },
 
+    /**
+     * Handle an event.
+     * The event will be handled by the enclosed EventBuilder object.
+     *
+     * @param event The event id.
+     * @param arg The event argument.
+     */
     notify : function (event, arg) {
         this.event().handle(event, arg);
     },
 
+    /**
+     * Bind queried HTML elements into the fields.
+     *
+     * It obtains HTML elements by specified CSS selector queries and
+     * bind these elements into the fields.
+     * The fields must be defined before invocation.
+     *
+     * @param queryMap The CSS selector query to field name map.
+     */
     doQueries : function (queryMap) {
         Assert.notNullAll(this, [
             [ queryMap, "queryMap" ]

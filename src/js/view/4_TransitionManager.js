@@ -2,11 +2,31 @@
 /**
  * A widget transition manager in the SPA(Single Page Application) model.
  *
+ * # Basics
  * Registering widgets into a central repository, the manager will
  * turn on and off the widgets by a widget id.
+ * The manager uses template HTML fragments to render the required widget.
+ *
+ * If a transition request is made, the manager retrieves a widget HTML fragment
+ * as a widget template and pass through it into the required widget.
+ *
+ * # How to use
+ * You don't have to use the manager directly,
+ * ```
  */
 this.TransitionManager = {
 
+    /**
+     * Create a TransitionManager object.
+     *
+     * @param arg The argument. The properties of the argument are following.
+     * - containerElem -> Required. The container HTML element.
+     * - repository -> Required. The repository to obtain the required widget.
+     * - templatePath -> Optional. The root path of the HTML template. The default value is "template/".
+     * - templateSuffix -> Optional. The templateSuffix of the HTML element. The default value is ".html".
+     * - httpClient -> Optional. The HttpClient object to obtain the HTML template.
+     * - errorHandler - > Optional. The error handler callback.
+     */
     create : function (arg) {
         Assert.notNullAll(this, [
             [ arg.containerElem, "arg.containerElem" ],
@@ -17,9 +37,9 @@ this.TransitionManager = {
             containerElem : { value : arg.containerElem },
             idToElemMap : { value : [] },
             repository : { value : arg.repository },
-            templateRootPath : { value : "template/" },
-            templateSuffix : { value : ".html" },
-            httpClient : { value : window.HttpClient, writable : true },
+            templateRootPath : { value : arg.templatePath ||"template/" },
+            templateSuffix : { value : arg.templateSuffix || ".html" },
+            httpClient : { value : arg.httpClient || window.HttpClient },
             isTransiting: { value: false, writable: true },
             errorHandler : { value : arg.errorHandler || function () {
             } }
@@ -32,6 +52,15 @@ this.TransitionManager = {
         return manager;
     },
 
+    /**
+     * Transit current widget to the specified widget.
+     *
+     * If the specified widget has already been loaded, the transition will be achieved by
+     * showing the existing widget.
+     * If not, the manager will retrieve the required HTML template through a HTML request asynchronously.
+     *
+     * @param id The widgetr id.
+     */
     transit : function (id) {
         Assert.notNull(this, id, "id");
         if ( this.isTransiting ) {
@@ -66,6 +95,12 @@ this.TransitionManager = {
         });
     },
 
+    /**
+     * do transition internally.
+     *
+     * @param id The widget id.
+     * @param newElem The widget template HTML element.
+     */
     doTransit : function (id, newElem) {
         Assert.notNullAll(this, [
             [ id, "id" ],

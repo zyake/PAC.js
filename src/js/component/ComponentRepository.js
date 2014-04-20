@@ -11,6 +11,7 @@
  * you can refer to them using the "ref" property in the definition.
  *
  * - for example
+ *
  * ```javascript
  * var repository = ComponentRepository.create({ id: "repository1" });
  * repository
@@ -25,6 +26,7 @@
  *```
  *
  * # The specification of the component definition
+ *
  *```javascript
  * COMPONENT_ID: {
  *  target: TARGET_OBJECT // required. The target object must have a "create" method.
@@ -35,7 +37,6 @@
  *  scope: request // optional. It specifies component scope. Default is singleton.
  * }
  *```
- *
  * # Managing events
  * The central repository also supports hierarchical event propagating mechanism,
  * which can be used to notify an event data to parent repositories that
@@ -43,6 +44,13 @@
  */
 this.ComponentRepository = {
 
+    /**
+     * Create a ComponentRepository object.
+     *
+     * @param arg The constructor argument. The properties of the argument are following.
+     * - id -> Required. The object id.
+     * - parent -> Optional. The parent repository. The default value is null.
+     */
     create : function (arg) {
         Assert.notNull(this, arg.id, "arg.id");
 
@@ -80,6 +88,15 @@ this.ComponentRepository = {
         return this;
     },
 
+    /**
+     * Raise an event.
+     * The event will be propagated other components.
+     *
+     * @param event The raised event.
+     * @param caller The event caller.
+     * @param arg The event data.
+     * @returns {this.ComponentRepository} The repository.
+     */
     raiseEvent : function (event, caller, arg /* can be null! */) {
         Assert.notNullAll(this, [
             [ event, "event" ],
@@ -104,6 +121,14 @@ this.ComponentRepository = {
         return this;
     },
 
+    /**
+     * Add a component definition,
+     * The specification of the definition  is written in the top comment.
+     *
+     * @param id The component id.
+     * @param def The definition.
+     * @returns {this.ComponentRepository} The repository.
+     */
     addDefinition : function (id, def) {
         Assert.notNullAll(this, [
             [ id, "id" ],
@@ -126,6 +151,18 @@ this.ComponentRepository = {
         return this;
     },
 
+    /**
+     * Get a component that is defined in this repository.
+     * If the component is not found and the repository has a parent,
+     * the repository will delegate the request to the parent repository.
+     *
+     * If all of repositories didn't have the required component,
+     * the repository will throw an Error.
+     *
+     * @param id The component id.
+     * @param arg The component argument.
+     * @returns {*} The component.
+     */
     get : function (id, arg /* can be null! */) {
         Assert.notNullAll(this, [
             [ id, "id" ]

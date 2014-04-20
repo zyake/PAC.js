@@ -1,14 +1,39 @@
 
 /**
- * A event builder class that can define view and model events by fluent interface.
+ * An event builder object that can define view and model events by fluent interface.
  *
- * For example...
+ * # Basics
+ * EventBuilder is a convenient object to reference and raise events by its fluent interface.
+ * Using EventBuilder, you can eliminate string id literals and shorten lines of code.
+ *
+ * It has two main functions.
+ * - Reference API -> reference the other side object(Presentation -> Abstraction or Abstraction -> Presentation)
+ *  - you can start with the "ref" method.
+ * - Invocation API -> raise an event
+ *  - you can start with the "raise" method.
+ *
+ * # How to use
+ *
+ * ## Reference API
+ *
  * ```javascript
- * EventBuilder.create(target) // create an event builder object.
- *  .ref().onAbstraction().load(this.load) // bind the load function into the load event.
- *  .ref().onAbstraction().start(this.start) // bind the start function into the start event.
- *  .raise().start({}); // raise a start event.
- *  ```
+ *  // create an event builder object.
+ * var builder = EventBuilder.create(target);
+ *
+ *  // refer to other side object and register a callback function.
+ *  // If the target is an abstraction object, you should use "onPresentation" instead.
+ *  builder.ref().onAbstraction().load(this.load);
+ * ```
+ *
+ * ## Invocation API
+ *
+ * ```javascript
+ *  // create an event builder object.
+ * var builder = EventBuilder.create(target);
+ *
+ * // raise an event with an argument.
+ * builder.raise().load({ time: new Date() });
+ * ```
  */
 this.EventBuilder = {
 
@@ -96,6 +121,11 @@ this.EventBuilder = {
         }
     },
 
+    /**
+     * Create a new EventBuilder object.
+     *
+     * @param target The target object(Presentation or AbstractionProxy)
+     */
     create : function (target) {
         Assert.notNullAll(this, [
             [ target, "target"]
@@ -109,6 +139,11 @@ this.EventBuilder = {
         return builder;
     },
 
+    /**
+     * Start a reference method chain.
+     *
+     * @returns {{target: *, onAbstraction: onAbstraction, onPresentation: onPresentation, on: on}}
+     */
     ref : function () {
         var me = this;
         return {
@@ -138,6 +173,11 @@ this.EventBuilder = {
         };
     },
 
+    /**
+     * Start a raise method chain.
+     *
+     * @returns {EventBuilder.RAISE_INVOKER}
+     */
     raise : function () {
         var me = this;
         var raise = Object.create(EventBuilder.RAISE_INVOKER, {
@@ -149,6 +189,12 @@ this.EventBuilder = {
         return raise;
     },
 
+    /**
+     * Handle events with registered callbacks.
+     *
+     * @param id The event id.
+     * @param arg The argument.
+     */
     handle : function (id, arg) {
         if ( this.eventMap[id] != null ) {
             this.eventMap[id].call(this.target, arg, id);

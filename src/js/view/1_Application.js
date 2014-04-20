@@ -2,6 +2,7 @@
 /**
  *  An abstraction of a whole application
  *
+ * # Basics
  * It can accommodate all widgets that consist of a SPA(Single Page  Application).
  *
  * You can register widget definitions as follows.
@@ -21,6 +22,7 @@
  * });
  * ```
  *
+ * # How to use
  * An "Application" instance uses single "container" element to maintain widgets.
  * So, all of widgets that were loaded will be stored in the "container" element.
  * For example...
@@ -43,6 +45,14 @@
  */
 this.Application = {
 
+    /**
+     * Create an Application object.
+     *
+     * @param arg The argument. The properties of the argument are following.
+     * - id -> Required. The object id.
+     * - appElem -> Required. The application container HTML element.
+     * - widgetDef-> Required. The widget definition object.
+     */
     create : function (arg) {
         Assert.notNullAll(this, [
             [ arg.id, "arg.id" ],
@@ -61,6 +71,13 @@ this.Application = {
         return app;
     },
 
+    /**
+     * Initialize the Application object.
+     * All of widget definitions will be registered.
+     *
+     * @param appElem The HTML container element.
+     * @param widgetDef The Widget definition.
+     */
     initialize : function (appElem, widgetDef) {
         Assert.notNullAll(this, [
             [appElem, "appElem" ],
@@ -76,6 +93,13 @@ this.Application = {
             repository: this.centralRepository});
     },
 
+    /**
+     * Start the Application object specifying th initial widget id.
+     * If current URL already has a hash URL, then the initial widget id will be ignored and
+     * the current hash URL is used as widget id instead.
+     *
+     * @param initWidgetId The initial widget id.
+     */
     start : function (initWidgetId) {
         Assert.notNull(this, initWidgetId, "initWidgetId");
         var me = this;

@@ -2,6 +2,7 @@
 /**
  * A widget to manage underlying controls.
  *
+ * # Basics
  * Widget is an unit of reusable component,
  * which manages all of components
  * that make up of a widget.
@@ -15,6 +16,13 @@
  * - Component: a general purpose component
  * - Control: a central control point of an UI component
  *
+ * All of components that reside in a widget communicate
+ * with each other using widget event mechanism.
+ * Because a widget has a hierarchy repository structure,
+ * the event that was raised by a component may be
+ * propagated to parent repositories and other widgets.
+ *
+ * # How to use
  * You can define components and controls as follows.
  * ```javascript
  * // As Widget will be called by TransitionManager,
@@ -49,15 +57,17 @@
  *  }}
  * });
  * ```
- *
- * All of components that reside in a widget communicate
- * with each other using widget event mechanism.
- * Because a widget has a hierarchy repository structure,
- * the event that was raised by a component may be
- * propagated to parent repositories and other widgets.
  */
 this.Widget = {
 
+    /**
+     * Create a Widget object.
+     *
+     * @param arg The argument. The properties of the argument are following.
+     * - id -> Required. The object id.
+     * - elem -> Required. The HTML element to render the widget.
+     * - parentRepository -> Optional. The parent repository.
+     */
     create : function (arg) {
         Assert.notNullAll(this, [
             [ arg.id, "arg.id" ],
@@ -87,6 +97,11 @@ this.Widget = {
         return widget;
     },
 
+    /**
+     * Initialize the widget.
+     *
+     * All of the enclosed controls will be initialized.
+     */
     initialize : function () {
         if ( this.initialized ) {
             return;
@@ -105,6 +120,14 @@ this.Widget = {
     doInitialize : function () {
     },
 
+    /**
+     * Define component definitions.
+     *
+     * The specification of the definition equals to ComponentRepository.
+     * @param def The component definition object. It can be key(id) value(definition) pair.
+     *
+     * @returns {this.Widget} The widget.
+     */
     defineComponents : function (def) {
         Assert.notNull(this, def, "def");
         for ( var id in def ) {
@@ -115,6 +138,13 @@ this.Widget = {
         return this;
     },
 
+    /**
+     * Get the required component.
+     *
+     * @param id The component id.
+     * @param args The component argument.
+     * @returns {*|Object} The required component.
+     */
     getComponent : function (id, args) {
         Assert.notNullAll(this, [
             [ id, "id" ],
@@ -124,6 +154,15 @@ this.Widget = {
         return this.repository.get(id, args);
     },
 
+    /**
+     * Define Control objects.
+     *
+     * Control is used for a management basis.
+     * If the widget is initialized, all of the enclosed Control objects will be initialized at same time.
+     *
+     * @param def The definition of the Control object. It equals to ComponentRepository.
+     * @returns {this.Widget} the widget.
+     */
     defineControls : function (def) {
         Assert.notNull(this, def, "def");
         for ( var id in def ) {
@@ -137,12 +176,27 @@ this.Widget = {
         return this;
     },
 
+    /**
+     * Get a Control object.
+     *
+     * @param id The Control id.
+     * @returns {*|Object} The required Control object.
+     */
     getControl : function (id) {
         Assert.notNull(this, id, "id");
         this.controls.indexOf(id) == -1 && Assert.doThrow(id + " is not control!");
         return this.repository.get(id, this);
     },
 
+    /**
+     * Raise an event.
+     *
+     * The raised event will be propagated to other Control objects and the parent repository.
+     *
+     * @param event The event id.
+     * @param target The event caller.
+     * @param args The event argument.
+     */
     raiseEvent : function (event, target, args) {
         Assert.notNullAll(this, [
             [ event, "event" ],
@@ -152,6 +206,12 @@ this.Widget = {
         this.repository.raiseEvent(event, target, args);
     },
 
+    /**
+     * Add an event handler.
+     *
+     * @param id The event id.
+     * @param eventRef The event callback.
+     */
     addEventRef : function (id, eventRef) {
         Assert.notNullAll(this, [
             [ id, "id" ],
